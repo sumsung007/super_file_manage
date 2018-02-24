@@ -1,0 +1,123 @@
+INFO 2018-01-15 10:12:32,424 DailyAUCollect 6512 13256 ----- 开始处理：from 2018-01-15 to 2018-01-15 -------
+INFO 2018-01-15 10:12:32,697 DailyAUCollect 6512 13256 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-15 10:12:32,697 DailyAUCollect 6512 13256 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-15 10:12:32,705 CollectCommon 6512 13256 当天访问用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser0000001', 'testuser00000001'}
+DEBUG 2018-01-15 10:12:32,707 CollectCommon 6512 13256 不在UserData中的新用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001'}
+DEBUG 2018-01-15 10:12:32,708 CollectCommon 6512 13256 所有的新用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001'}
+DEBUG 2018-01-15 10:12:32,712 CollectCommon 6512 13256 写入到UserData中的用户：---> ['okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001']
+INFO 2018-01-15 10:12:32,715 DailyAUCollect 6512 13256 +++++ 数据更新完毕，耗时：0.01765727996826172 秒 +++++++
+
+DEBUG 2018-01-15 10:12:32,715 DailyAUCollect 6512 13256 正在处理 DAU 数据...
+DEBUG 2018-01-15 10:12:32,716 DailyAUCollect 6512 13256 DAU：[3]
+DEBUG 2018-01-15 10:12:32,716 DailyAUCollect 6512 13256 NAU：[2]
+INFO 2018-01-15 10:12:32,726 DailyAUCollect 6512 13256 ===== 处理 2018-01-15 完毕，耗时: 0.010793924331665039 秒。 =======
+
+INFO 2018-01-15 10:12:32,726 DailyAUCollect 6512 13256 ----- 处理结束 -------
+
+
+
+INFO 2018-01-15 13:48:31,928 DailyPVCollect 15152 16364 ----- 开始处理：from 2018-01-15 to 2018-01-15 -------
+INFO 2018-01-15 13:48:31,932 DailyPVCollect 15152 16364 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-15 13:48:31,932 DailyPVCollect 15152 16364 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-15 13:48:31,934 CollectCommon 15152 16364 当天访问用户： ---> {'cris', 'testuser00000001', 'testuser0000001', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-15 13:48:31,935 CollectCommon 15152 16364 不在UserData中的新用户： ---> {'cris'}
+DEBUG 2018-01-15 13:48:31,935 CollectCommon 15152 16364 所有的新用户： ---> {'cris', 'testuser00000001', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-15 13:48:31,935 CollectCommon 15152 16364 写入到UserData中的用户：---> ['cris']
+INFO 2018-01-15 13:48:31,944 DailyPVCollect 15152 16364 +++++ 数据更新完毕，耗时：0.012266159057617188 秒 +++++++
+
+DEBUG 2018-01-15 13:48:31,944 DailyPVCollect 15152 16364 正在计算 pv 数据...
+DEBUG 2018-01-15 13:48:31,946 DailyPVCollect 15152 16364 pv：54
+DEBUG 2018-01-15 13:48:31,946 DailyPVCollect 15152 16364 正在计算大厅总用户数...
+DEBUG 2018-01-15 13:48:31,947 DailyPVCollect 15152 16364 大厅总用户数：4
+DEBUG 2018-01-15 13:48:31,947 DailyPVCollect 15152 16364 正在计算大厅新增用户数...
+DEBUG 2018-01-15 13:48:31,947 DailyPVCollect 15152 16364 大厅新增用户数：4
+INFO 2018-01-15 13:48:31,951 DailyPVCollect 15152 16364 ===== 处理 2018-01-15 完毕，耗时: 0.0074710845947265625 秒。 =======
+
+INFO 2018-01-15 13:48:31,951 DailyPVCollect 15152 16364 ----- 处理结束 -------
+
+
+
+INFO 2018-01-15 13:49:19,346 DailyPVCollect 14868 5032 ----- 开始处理：from 2018-01-15 to 2018-01-15 -------
+INFO 2018-01-15 13:49:19,350 DailyPVCollect 14868 5032 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-15 13:49:19,350 DailyPVCollect 14868 5032 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-15 13:49:19,352 CollectCommon 14868 5032 当天访问用户： ---> {'testuser00000001', 'testuser0000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-15 13:49:19,353 CollectCommon 14868 5032 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-15 13:49:19,353 CollectCommon 14868 5032 所有的新用户： ---> {'testuser00000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-15 13:49:19,353 CollectCommon 14868 5032 写入到UserData中的用户：---> []
+INFO 2018-01-15 13:49:19,353 DailyPVCollect 14868 5032 +++++ 数据更新完毕，耗时：0.0021517276763916016 秒 +++++++
+
+DEBUG 2018-01-15 13:49:19,354 DailyPVCollect 14868 5032 正在计算 pv 数据...
+DEBUG 2018-01-15 13:49:19,355 DailyPVCollect 14868 5032 pv：54
+DEBUG 2018-01-15 13:49:19,355 DailyPVCollect 14868 5032 正在计算大厅总用户数...
+DEBUG 2018-01-15 13:49:19,356 DailyPVCollect 14868 5032 大厅总用户数：4
+DEBUG 2018-01-15 13:49:19,356 DailyPVCollect 14868 5032 正在计算大厅新增用户数...
+DEBUG 2018-01-15 13:49:19,356 DailyPVCollect 14868 5032 大厅新增用户数：4
+INFO 2018-01-15 13:49:19,365 DailyPVCollect 14868 5032 ===== 处理 2018-01-15 完毕，耗时: 0.01276087760925293 秒。 =======
+
+INFO 2018-01-15 13:49:19,365 DailyPVCollect 14868 5032 ----- 处理结束 -------
+
+
+
+INFO 2018-01-15 13:49:45,562 DailyAUCollect 13828 7532 ----- 开始处理：from 2018-01-15 to 2018-01-15 -------
+INFO 2018-01-15 13:49:45,562 DailyAUCollect 13828 7532 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-15 13:49:45,562 DailyAUCollect 13828 7532 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-15 13:49:45,567 CollectCommon 13828 7532 当天访问用户： ---> {'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser0000001', 'testuser00000001'}
+DEBUG 2018-01-15 13:49:45,568 CollectCommon 13828 7532 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-15 13:49:45,568 CollectCommon 13828 7532 所有的新用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'cris', 'testuser00000001'}
+DEBUG 2018-01-15 13:49:45,568 CollectCommon 13828 7532 写入到UserData中的用户：---> []
+INFO 2018-01-15 13:49:45,568 DailyAUCollect 13828 7532 +++++ 数据更新完毕，耗时：0.0058879852294921875 秒 +++++++
+
+DEBUG 2018-01-15 13:49:45,568 DailyAUCollect 13828 7532 正在处理 DAU 数据...
+DEBUG 2018-01-15 13:49:45,568 DailyAUCollect 13828 7532 DAU：[4]
+DEBUG 2018-01-15 13:49:45,568 DailyAUCollect 13828 7532 NAU：[3]
+INFO 2018-01-15 13:49:45,578 DailyAUCollect 13828 7532 ===== 处理 2018-01-15 完毕，耗时: 0.010794401168823242 秒。 =======
+
+INFO 2018-01-15 13:49:45,578 DailyAUCollect 13828 7532 ----- 处理结束 -------
+
+
+
+INFO 2018-01-15 14:33:06,882 DailyPVCollect 13136 9564 ----- 开始处理：from 2018-01-15 to 2018-01-15 -------
+INFO 2018-01-15 14:33:06,887 DailyPVCollect 13136 9564 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-15 14:33:06,887 DailyPVCollect 13136 9564 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-15 14:33:06,889 CollectCommon 13136 9564 当天访问用户： ---> {'testuser00000001', 'testuser0000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'LILI', 'CRISchou'}
+DEBUG 2018-01-15 14:33:06,890 CollectCommon 13136 9564 不在UserData中的新用户： ---> {'CRISchou', 'LILI'}
+DEBUG 2018-01-15 14:33:06,891 CollectCommon 13136 9564 所有的新用户： ---> {'testuser00000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'LILI', 'CRISchou'}
+DEBUG 2018-01-15 14:33:06,891 CollectCommon 13136 9564 写入到UserData中的用户：---> ['CRISchou', 'LILI']
+INFO 2018-01-15 14:33:06,893 DailyPVCollect 13136 9564 +++++ 数据更新完毕，耗时：0.006155490875244141 秒 +++++++
+
+DEBUG 2018-01-15 14:33:06,893 DailyPVCollect 13136 9564 正在计算 pv 数据...
+DEBUG 2018-01-15 14:33:06,894 DailyPVCollect 13136 9564 pv：92
+DEBUG 2018-01-15 14:33:06,895 DailyPVCollect 13136 9564 正在计算大厅总用户数...
+DEBUG 2018-01-15 14:33:06,895 DailyPVCollect 13136 9564 大厅总用户数：6
+DEBUG 2018-01-15 14:33:06,895 DailyPVCollect 13136 9564 正在计算大厅新增用户数...
+DEBUG 2018-01-15 14:33:06,896 DailyPVCollect 13136 9564 大厅新增用户数：6
+INFO 2018-01-15 14:33:06,899 DailyPVCollect 13136 9564 ===== 处理 2018-01-15 完毕，耗时: 0.005712747573852539 秒。 =======
+
+INFO 2018-01-15 14:33:06,899 DailyPVCollect 13136 9564 ----- 处理结束 -------
+
+
+
+INFO 2018-01-15 14:33:13,420 DailyAUCollect 1460 2812 ----- 开始处理：from 2018-01-15 to 2018-01-15 -------
+INFO 2018-01-15 14:33:13,420 DailyAUCollect 1460 2812 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-15 14:33:13,420 DailyAUCollect 1460 2812 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-15 14:33:13,425 CollectCommon 1460 2812 当天访问用户： ---> {'CRISchou', 'testuser00000001', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser0000001', 'cris'}
+DEBUG 2018-01-15 14:33:13,426 CollectCommon 1460 2812 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-15 14:33:13,426 CollectCommon 1460 2812 所有的新用户： ---> {'CRISchou', 'testuser00000001', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'cris'}
+DEBUG 2018-01-15 14:33:13,427 CollectCommon 1460 2812 写入到UserData中的用户：---> []
+INFO 2018-01-15 14:33:13,427 DailyAUCollect 1460 2812 +++++ 数据更新完毕，耗时：0.00684046745300293 秒 +++++++
+
+DEBUG 2018-01-15 14:33:13,427 DailyAUCollect 1460 2812 正在处理 DAU 数据...
+DEBUG 2018-01-15 14:33:13,427 DailyAUCollect 1460 2812 DAU：[6]
+DEBUG 2018-01-15 14:33:13,427 DailyAUCollect 1460 2812 NAU：[5]
+INFO 2018-01-15 14:33:13,437 DailyAUCollect 1460 2812 ===== 处理 2018-01-15 完毕，耗时: 0.009911298751831055 秒。 =======
+
+INFO 2018-01-15 14:33:13,437 DailyAUCollect 1460 2812 ----- 处理结束 -------
+
+
+

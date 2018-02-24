@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/themes/default/style.min.css">
+</head>
+<body>
+    <div id="jstree">
+
+    </div>
+    <div id="event_result">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="./dist/jstree.min.js"></script>
+    <!-- <script src="./jstree/src/jstree.checkbox.js"></script> -->
+    <script>
+        $(function () { $('#jstree').jstree(
+            { 'core' : {
+                'data' : [
+                   { "id" : "ajson1", "parent" : "#", "text" : "Simple root node" ,},
+                   { "id" : "ajson2", "parent" : "#", "text" : "Root node 2" },
+                   { "id" : "ajson3", "parent" : "ajson2", "text" : "Child 1" },
+                   { "id" : "ajson4", "parent" : "ajson2", "text" : "Child 2" },
+                   { "id" : 'ajson5', 'parent' : 'ajson4', 'text' : 'cris', 'mytype':'image',"icon":"https://jstree.com/tree.png"},
+                ],
+                "check_callback": true,
+            },
+            "plugins" : ['contextmenu','dnd'],
+            
+        }); 
+        $('#jstree').on('select_node.jstree', function (e, data) {
+                //var i, j, r = [];
+                //for(i = 0, j = data.selected.length; i < j; i++) {
+                //r.push(data.instance.get_node(data.selected[i]).text);
+                //}
+                //$('#event_result').html(r[0]);
+                //alert(data.instance.get_node(data.selected[0]).parent);
+                //console.log(data.selected[0])
+              
+                
+                
+            }).jstree(true);
+    });
+        
+
+    </script>
+</body>
+</html>

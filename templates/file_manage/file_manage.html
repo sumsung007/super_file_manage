@@ -1,0 +1,474 @@
+{% extends "file_manage/base.html" %}
+{% block css %}
+    <link href="/static/file_manage/css/video-js.css" rel="stylesheet">
+    <style>
+        .my_active{
+            background-color: skyblue;
+        }
+    </style>
+{% endblock css %}  
+{% block component %}
+    <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        ViewMode <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+        <li><a class="view_mode">List</a></li>
+        <li><a class="view_mode">Box</a></li>
+        </ul>
+    </li>
+{% endblock component %}
+{% block content %}
+
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+
+<div id="modale_back" style="top: 0%;left: 0%;width: 100%;height: 100%;background-color:black;position:fixed;opacity: .80;z-index:1001;display:none;">
+    <div id="progressbar" style="width:400px;top: 35%;left: 40%;position:absolute;display:none;"></div>
+    <div id='video_box' style="top: 30%;left: 35%;position:absolute;display:none;">
+        <span class="video_close_button"><span class="glyphicon glyphicon-remove"></span>关闭</span>
+        <video id="my_video_1" class="video-js vjs-default-skin" controls  width="640" height="268" >
+            <source src=""  type='video/mp4'>
+        </video>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">ReName</h4>
+            </div>
+            <div class="modal-body">
+                <form id="renama_form">
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">FileName:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="new_file_name">
+                        <input type="text" name="old_file_path" style="display:none;">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary submit_rename">Enter</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="file_path_choices" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">ChoicesFilePath</h4>
+            </div>
+            <div id="move_jstree">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary submit_rename">Enter</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- this is mouse rbutton -->
+<div id="context-menu">
+    <ul class="dropdown-menu" role="menu">
+        <li><a tabindex="-1" href="#" operator="top" href="#" operator="top" >ReName</a></li>
+    </ul>
+</div>
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="row">
+            <div class="col-md-3" >
+                <div id="jstree">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default btn-success add_file"><span class="glyphicon glyphicon-plus"></span>Add</button>
+                        <input type="file" name="add_new_file" multiple style="display:none;">
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default btn-info"><span class="glyphicon glyphicon-new-window"></span>Move</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default btn-warning delete_button"><span class="glyphicon glyphicon-trash"></span>Delete</button>
+                    </div>
+                </div>
+                <ul class="list-group" id="file_list" style="display:none;">
+                
+                </ul>
+                <div class="row" id="file_box" style="display:none;">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="/static/file_manage/js/video.js"></script>
+<script src="/static/file_manage/js/videojs-contrib-hls.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-contextmenu/0.3.4/bootstrap-contextmenu.min.js"></script>
+<script>
+
+    $(function (){
+    $('#jstree').jstree({ 
+        "plugins" : ['contextmenu','unique','state'],
+        'core' : {
+            'data' : {
+                "url" : "/file_manage/api/request_file_tree?lazy",
+                "data" : function (node) {
+                    var parents = $('#jstree').jstree(true).get_path(node)
+                    var file_path = '#/';
+                    for(var i=0;i<parents.length-1;i++){
+                        file_path += parents[i] + '/';
+                    };
+                    file_path += node.text + '/';
+                    return { "id" : node.id,"file_path":file_path};
+                },
+            },
+            "check_callback": true,
+        }, 
+    });
+    
+
+    $('#jstree').on('select_node.jstree', function (e, data) {
+        var parents = $('#jstree').jstree(true).get_path(data.node)
+        var file_path = '#/'
+        for(var i=0;i<parents.length-1;i++){
+            file_path += parents[i] + '/'
+        }
+        file_path += data.node.text    
+        $.get(
+            '/file_manage/api/request_file_list',
+            {'file_path':file_path},
+            function(value){
+                $('.file_item').remove()
+                $('#file_list').append(value.li_ele)
+                $('#file_box').append(value.div_ele)
+                $('ul .file_item').hover(
+                function(){
+                    $(this).addClass('list-group-item-warning')
+                },
+                function(){
+                    $(this).removeClass('list-group-item-warning')
+                })
+                
+                if($('.file_item').attr('file_type')=='dir'){
+                    $('.file_item').dblclick(
+                        request_file_list
+                    )
+                }else if(["mp4","ts",].indexOf($('.file_item').attr('file_type'))!=-1){
+                    $('.file_item').dblclick(
+                        play_video
+                    )
+                }
+                $('ul .file_item').click(
+                    selected_list_item
+                )
+                $('div .file_item').click(
+                    selected_box_item
+                )
+                
+                $('.file_item').contextmenu({
+                    target:'#context-menu', 
+                    before: function(e,context) {
+                        // execute code before context menu if shown
+                    },
+                    onItem: function(context,e) {
+                        // execute on menu item selection
+                        // click button(e.target)  select ele context[0]
+                        var text = $(e.target)[0].innerText
+                        if(text == 'ReName'){
+                            $('#exampleModal').modal()
+                            rename_click(context[0])
+                        }
+                    }
+                })   
+            },
+            'json'
+        )
+        }).jstree(true);
+
+    
+    $('#jstree').on('rename_node.jstree', function(e, data){
+        var parents = $('#jstree').jstree(true).get_path(data.node)
+        var file_path = '#/'
+        var old_file_path = '#/'
+        data.instance.set_icon(data.node,"/static/file_manage/jstree/ico/file.ico")
+        for(var i=0;i<parents.length-1;i++){
+            file_path += parents[i] + '/'
+            old_file_path += parents[i] + '/'
+        }
+        
+        file_path += data.node.text
+        old_file_path += data.old
+        if(data.old == 'New node'){
+            $.post(
+                '/file_manage/api/create_dir',
+                {'file_path':file_path},
+                function(value){
+                    //data.node.id = value.id 
+                    data.old = value.dir_name
+                },
+                'json'
+            )
+        }else{
+            $.post(
+                '/file_manage/api/rename_dir',
+                {'file_path':file_path,'old_file_path':old_file_path},
+                function(value){
+                    //data.node.id = value.id 
+                    data.old = value.dir_name
+                },
+                'json'
+            )
+        }
+
+        }).jstree(true);
+    $('#jstree').on('delete_node.jstree', function (e, data) {
+        var parents = $('#jstree').jstree(true).get_path(data.node)
+        var file_path = '#/'
+        for(var i=0;i<parents.length-1;i++){
+            file_path += parents[i] + '/'
+        }
+        file_path += data.node.text
+        $.post(
+            '/file_manage/api/delete_dir',
+            {'file_path':file_path},
+            function(value){
+            },
+            'json'
+        )             
+        }).jstree(true);
+    var last_path = null
+    function request_file_list(){
+        var file_path = $(this).attr('file_path')
+        var file_type = $(this).attr('file_type')
+        $.get(
+            '/file_manage/api/request_file_list',
+            {'file_path':file_path},
+            function(value){
+                $('.file_item').remove()
+                $('#file_list').append(value.li_ele)
+                $('#file_box').append(value.div_ele)
+                $('ul .file_item').hover(
+                function(){
+                    $(this).addClass('list-group-item-warning')
+                },
+                function(){
+                    $(this).removeClass('list-group-item-warning')
+                })
+                if($('.file_item').attr('file_type')=='dir'){
+                    $('.file_item').dblclick(
+                        request_file_list
+                    )
+                }else if(["mp4","ts",].indexOf($('.file_item').attr('file_type'))!=-1){
+                    $('.file_item').dblclick(
+                        play_video
+                    )
+                }
+                $('ul .file_item').click(
+                    selected_list_item
+                )
+                $('div .file_item').click(
+                    selected_box_item
+                )
+                
+                $('.file_item').contextmenu({
+                    target:'#context-menu', 
+                    before: function(e,context) {
+                        // execute code before context menu if shown
+                    },
+                    onItem: function(context,e) {
+                        // execute on menu item selection
+                        // click button(e.target)  select ele(context[0])
+                        var text = $(e.target)[0].innerText
+                        if(text == 'Rename'){
+                            $('#exampleModal').modal()
+                            rename_click(context[0])
+                        }
+                    }
+                })   
+            },
+            'json'
+        )
+        }
+    function selected_list_item(){
+        if($(this).hasClass('list-group-item-info')){
+            $(this).removeClass('list-group-item-info')
+        }else{
+            $(this).addClass('list-group-item-info')
+        }
+    }
+    function selected_box_item(){
+        if($(this).children('a').hasClass('my_active')){
+            $(this).children('a').removeClass('my_active')
+        }else{
+            $(this).children('a').addClass('my_active')
+        }
+    }
+    function rename_click(target){
+        var old_file_name = $(target).text().trim()
+        var old_file_path = $(target).attr('file_path')
+        $("input[name=new_file_name]").val(old_file_name)
+        $("input[name=old_file_path]").val(old_file_path)
+        $(".submit_rename").click(function(){
+            var rename_form = document.getElementById("renama_form")
+            var input = rename_form.getElementsByTagName('input')
+            var data = {}
+            for(var i=0;i<input.length;i++){
+                data[input[i].name]=input[i].value
+            }
+            $.post(
+                '/file_manage/api/rename_dir',
+                data,
+                function(value){
+                    location.reload()
+                    
+                },
+                'json',
+            )
+            
+        })
+    }
+    $(".add_file").click(function(){
+        $("input[name=add_new_file]").trigger("click")
+        
+    })
+    var progressbar_value = 0
+    function set_progressbar_value(){
+        $( "#progressbar" ).progressbar({
+            value: progressbar_value += 5
+        });
+    }
+    $("input[name=add_new_file]").change(function(){
+        var file =  $(this)[0].files
+        var formData = new FormData();
+        for(var i=0;i<file.length;i++){
+            formData.append(file[i].name,file[i])
+        }
+        var file_path  = $('#jstree').jstree(true).get_selected()
+        formData.append('file_path', file_path)
+        $('#modale_back').css("display", "block");
+        $('#progressbar').css("display", "block")
+        var i = setInterval(set_progressbar_value,1000);
+        $.ajax({
+            type:'post',
+            url:"/file_manage/api/add_files",
+            data:formData,
+            dataType:'json',
+            contentType:false,
+            processData:false,
+            success:function(data){
+                clearInterval(i)
+                location.reload()
+			}
+        })
+    })
+    var video_obj = null
+    function play_video(){
+        var video_path = $(this).attr('file_path')
+        $('#modale_back').css("display", "block");
+        $('#video_box').css("display", "block");
+        $('#my_video_1').children().attr('src',video_path)
+        var video_obj = videojs('my_video_1');
+        video_obj.play();
+    }
+    $('.video_close_button').hover(
+        function(){
+            $(this).css('background-color','darkgray')
+        },
+        function(){
+            $(this).css('background-color','')
+        }
+    )
+    $('.video_close_button').click(
+        function(){
+            $('#modale_back').css("display", "none");
+            $('#video_box').css("display", "none");
+            var video_obj = videojs('my_video_1');
+            video_obj.pause();
+        }
+    )
+    $('.delete_button').click(
+        function(){
+            var select_item = $('.list-group-item-info')
+            for(var i=0;i<select_item.length;i++){
+                console.log(select_item[i])
+            }
+        }
+    )
+    function request_page_mode(){
+        $.get(
+            '/file_manage/api/request_page_mode',
+            function(data){
+                var page_mode = data.data.page_mode
+                if(page_mode == 'List'){
+                    $('#file_box').attr('style','display:none;')
+                    $('#file_list').attr('style','display:block;')
+                }else{
+                    $('#file_list').attr('style','display:none;')
+                    $('#file_box').attr('style','display:block;')
+                }
+            },
+            'json',
+        )
+    };
+   
+    $('.view_mode').click(function(){
+        var mode = $(this).text()
+        $.post(
+            '/file_manage/api/request_page_mode',
+            {'mode':mode},
+            function(data){
+                location.reload()   
+            },
+            'json',
+        )
+    });
+
+    $('.btn-info').click(function(){
+        $('#file_path_choices').modal()
+        $('#move_jstree').jstree({ 
+            "plugins" : ['contextmenu','unique','state'],
+            'core' : {
+                'data' : {
+                    "url" : "/file_manage/api/request_file_tree?lazy",
+                    "data" : function (node) {
+                        var parents = $('#move_jstree').jstree(true).get_path(node)
+                        var file_path = '#/';
+                        for(var i=0;i<parents.length-1;i++){
+                            file_path += parents[i] + '/';
+                        };
+                        file_path += node.text + '/';
+                        return { "id" : node.id,"file_path":file_path};
+                    },
+                },
+                "check_callback": true,
+            }, 
+        });
+
+    })
+
+     
+    function init_page(){
+        request_page_mode()
+    };
+    init_page();    
+    
+});
+</script>
+{% endblock %}

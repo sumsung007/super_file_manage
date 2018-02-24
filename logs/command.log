@@ -1,0 +1,1431 @@
+INFO 2018-01-16 16:14:39,199 DailyAUCollect 10164 5740 ----- 开始处理：from 2018-01-15 to 2018-01-16 -------
+INFO 2018-01-16 16:14:39,200 DailyAUCollect 10164 5740 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-16 16:14:39,200 DailyAUCollect 10164 5740 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 16:14:39,212 CollectCommon 10164 5740 当天访问用户： ---> {'LILI', 'testuser00000001', 'testuser0000001', 'CRISchou', 'zhang', 'zhao', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'cris'}
+DEBUG 2018-01-16 16:14:39,216 CollectCommon 10164 5740 不在UserData中的新用户： ---> {'zhang', 'zhao'}
+DEBUG 2018-01-16 16:14:39,216 CollectCommon 10164 5740 所有的新用户： ---> {'LILI', 'testuser00000001', 'CRISchou', 'zhang', 'zhao', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'cris'}
+DEBUG 2018-01-16 16:14:39,217 CollectCommon 10164 5740 写入到UserData中的用户：---> ['zhang', 'zhao']
+INFO 2018-01-16 16:14:39,219 DailyAUCollect 10164 5740 +++++ 数据更新完毕，耗时：0.01836395263671875 秒 +++++++
+
+DEBUG 2018-01-16 16:14:39,219 DailyAUCollect 10164 5740 正在处理 DAU 数据...
+DEBUG 2018-01-16 16:14:39,219 DailyAUCollect 10164 5740 DAU：[8]
+DEBUG 2018-01-16 16:14:39,219 DailyAUCollect 10164 5740 NAU：[7]
+INFO 2018-01-16 16:14:39,224 DailyAUCollect 10164 5740 ===== 处理 2018-01-15 完毕，耗时: 0.00451207160949707 秒。 =======
+
+INFO 2018-01-16 16:14:39,224 DailyAUCollect 10164 5740 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-16 16:14:39,224 DailyAUCollect 10164 5740 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 16:14:39,225 CollectCommon 10164 5740 当天访问用户： ---> {'LILI', '2222', 'CRISchou', 'liugege', 'zhao', 'cris', 'wang', '11111'}
+DEBUG 2018-01-16 16:14:39,227 CollectCommon 10164 5740 不在UserData中的新用户： ---> {'11111', '2222', 'liugege', 'wang'}
+DEBUG 2018-01-16 16:14:39,227 CollectCommon 10164 5740 所有的新用户： ---> {'2222', '11111', 'liugege', 'wang'}
+DEBUG 2018-01-16 16:14:39,227 CollectCommon 10164 5740 写入到UserData中的用户：---> ['liugege', 'wang', '11111', '2222']
+INFO 2018-01-16 16:14:39,229 DailyAUCollect 10164 5740 +++++ 数据更新完毕，耗时：0.00554203987121582 秒 +++++++
+
+DEBUG 2018-01-16 16:14:39,229 DailyAUCollect 10164 5740 正在处理 DAU 数据...
+DEBUG 2018-01-16 16:14:39,230 DailyAUCollect 10164 5740 DAU：[8]
+DEBUG 2018-01-16 16:14:39,230 DailyAUCollect 10164 5740 NAU：[4]
+INFO 2018-01-16 16:14:39,234 DailyAUCollect 10164 5740 ===== 处理 2018-01-16 完毕，耗时: 0.0049855709075927734 秒。 =======
+
+INFO 2018-01-16 16:14:39,234 DailyAUCollect 10164 5740 ----- 处理结束 -------
+
+
+
+INFO 2018-01-16 16:15:04,351 DailyPVCollect 2016 10412 ----- 开始处理：from 2018-01-15 to 2018-01-16 -------
+INFO 2018-01-16 16:15:04,356 DailyPVCollect 2016 10412 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-16 16:15:04,356 DailyPVCollect 2016 10412 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 16:15:04,358 CollectCommon 2016 10412 当天访问用户： ---> {'CRISchou', 'cris', 'zhang', 'LILI', 'testuser00000001', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhao', 'testuser0000001'}
+DEBUG 2018-01-16 16:15:04,360 CollectCommon 2016 10412 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 16:15:04,360 CollectCommon 2016 10412 所有的新用户： ---> {'CRISchou', 'cris', 'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'LILI', 'zhao'}
+DEBUG 2018-01-16 16:15:04,360 CollectCommon 2016 10412 写入到UserData中的用户：---> []
+INFO 2018-01-16 16:15:04,360 DailyPVCollect 2016 10412 +++++ 数据更新完毕，耗时：0.003481626510620117 秒 +++++++
+
+DEBUG 2018-01-16 16:15:04,360 DailyPVCollect 2016 10412 正在计算 pv 数据...
+DEBUG 2018-01-16 16:15:04,361 DailyPVCollect 2016 10412 pv：139
+DEBUG 2018-01-16 16:15:04,361 DailyPVCollect 2016 10412 正在计算大厅总用户数...
+DEBUG 2018-01-16 16:15:04,362 DailyPVCollect 2016 10412 大厅总用户数：8
+DEBUG 2018-01-16 16:15:04,362 DailyPVCollect 2016 10412 正在计算大厅新增用户数...
+DEBUG 2018-01-16 16:15:04,362 DailyPVCollect 2016 10412 大厅新增用户数：8
+INFO 2018-01-16 16:15:04,372 DailyPVCollect 2016 10412 ===== 处理 2018-01-15 完毕，耗时: 0.012059926986694336 秒。 =======
+
+INFO 2018-01-16 16:15:04,372 DailyPVCollect 2016 10412 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-16 16:15:04,372 DailyPVCollect 2016 10412 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 16:15:04,374 CollectCommon 2016 10412 当天访问用户： ---> {'CRISchou', 'cris', 'wang', 'liugege', 'LILI', '11111', 'zhao', '2222'}
+DEBUG 2018-01-16 16:15:04,375 CollectCommon 2016 10412 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 16:15:04,375 CollectCommon 2016 10412 所有的新用户： ---> {'wang', '11111', 'liugege', '2222'}
+DEBUG 2018-01-16 16:15:04,375 CollectCommon 2016 10412 写入到UserData中的用户：---> []
+INFO 2018-01-16 16:15:04,375 DailyPVCollect 2016 10412 +++++ 数据更新完毕，耗时：0.003007650375366211 秒 +++++++
+
+DEBUG 2018-01-16 16:15:04,375 DailyPVCollect 2016 10412 正在计算 pv 数据...
+DEBUG 2018-01-16 16:15:04,376 DailyPVCollect 2016 10412 pv：73
+DEBUG 2018-01-16 16:15:04,376 DailyPVCollect 2016 10412 正在计算大厅总用户数...
+DEBUG 2018-01-16 16:15:04,377 DailyPVCollect 2016 10412 大厅总用户数：12
+DEBUG 2018-01-16 16:15:04,377 DailyPVCollect 2016 10412 正在计算大厅新增用户数...
+DEBUG 2018-01-16 16:15:04,377 DailyPVCollect 2016 10412 大厅新增用户数：4
+INFO 2018-01-16 16:15:04,381 DailyPVCollect 2016 10412 ===== 处理 2018-01-16 完毕，耗时: 0.0060443878173828125 秒。 =======
+
+INFO 2018-01-16 16:15:04,382 DailyPVCollect 2016 10412 ----- 处理结束 -------
+
+
+
+INFO 2018-01-16 17:50:32,453 DailyPVCollect 8748 1496 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-16 17:50:32,457 DailyPVCollect 8748 1496 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-16 17:50:32,457 DailyPVCollect 8748 1496 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:50:32,459 CollectCommon 8748 1496 当天访问用户： ---> {'cris', 'zhang', 'testuser00000001', 'testuser0000001', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhao', 'LILI', 'CRISchou'}
+DEBUG 2018-01-16 17:50:32,460 CollectCommon 8748 1496 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:50:32,460 CollectCommon 8748 1496 所有的新用户： ---> {'cris', 'zhang', 'testuser00000001', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhao', 'LILI', 'CRISchou'}
+DEBUG 2018-01-16 17:50:32,461 CollectCommon 8748 1496 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:50:32,461 DailyPVCollect 8748 1496 +++++ 数据更新完毕，耗时：0.003633260726928711 秒 +++++++
+
+DEBUG 2018-01-16 17:50:32,461 DailyPVCollect 8748 1496 正在计算 pv 数据...
+DEBUG 2018-01-16 17:50:32,462 DailyPVCollect 8748 1496 pv：139
+DEBUG 2018-01-16 17:50:32,462 DailyPVCollect 8748 1496 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:50:32,463 DailyPVCollect 8748 1496 大厅总用户数：8
+DEBUG 2018-01-16 17:50:32,463 DailyPVCollect 8748 1496 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:50:32,463 DailyPVCollect 8748 1496 大厅新增用户数：8
+INFO 2018-01-16 17:50:32,473 DailyPVCollect 8748 1496 ===== 处理 2018-01-15 完毕，耗时: 0.012367486953735352 秒。 =======
+
+INFO 2018-01-16 17:50:32,473 DailyPVCollect 8748 1496 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-16 17:50:32,473 DailyPVCollect 8748 1496 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:50:32,475 CollectCommon 8748 1496 当天访问用户： ---> {'liugege', 'cris', '2222', 'zhao', 'wang', 'LILI', '11111', 'CRISchou'}
+DEBUG 2018-01-16 17:50:32,476 CollectCommon 8748 1496 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:50:32,476 CollectCommon 8748 1496 所有的新用户： ---> {'wang', '2222', 'liugege', '11111'}
+DEBUG 2018-01-16 17:50:32,476 CollectCommon 8748 1496 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:50:32,477 DailyPVCollect 8748 1496 +++++ 数据更新完毕，耗时：0.0035130977630615234 秒 +++++++
+
+DEBUG 2018-01-16 17:50:32,477 DailyPVCollect 8748 1496 正在计算 pv 数据...
+DEBUG 2018-01-16 17:50:32,478 DailyPVCollect 8748 1496 pv：73
+DEBUG 2018-01-16 17:50:32,478 DailyPVCollect 8748 1496 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:50:32,479 DailyPVCollect 8748 1496 大厅总用户数：12
+DEBUG 2018-01-16 17:50:32,479 DailyPVCollect 8748 1496 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:50:32,479 DailyPVCollect 8748 1496 大厅新增用户数：4
+INFO 2018-01-16 17:50:32,483 DailyPVCollect 8748 1496 ===== 处理 2018-01-16 完毕，耗时: 0.006015777587890625 秒。 =======
+
+INFO 2018-01-16 17:50:32,483 DailyPVCollect 8748 1496 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-16 17:50:32,483 DailyPVCollect 8748 1496 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:50:32,484 CollectCommon 8748 1496 当天访问用户： ---> set()
+DEBUG 2018-01-16 17:50:32,485 CollectCommon 8748 1496 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:50:32,485 CollectCommon 8748 1496 所有的新用户： ---> set()
+DEBUG 2018-01-16 17:50:32,485 CollectCommon 8748 1496 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:50:32,485 DailyPVCollect 8748 1496 +++++ 数据更新完毕，耗时：0.0020041465759277344 秒 +++++++
+
+DEBUG 2018-01-16 17:50:32,485 DailyPVCollect 8748 1496 正在计算 pv 数据...
+DEBUG 2018-01-16 17:50:32,486 DailyPVCollect 8748 1496 pv：0
+DEBUG 2018-01-16 17:50:32,486 DailyPVCollect 8748 1496 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:50:32,487 DailyPVCollect 8748 1496 大厅总用户数：12
+DEBUG 2018-01-16 17:50:32,487 DailyPVCollect 8748 1496 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:50:32,487 DailyPVCollect 8748 1496 大厅新增用户数：0
+INFO 2018-01-16 17:50:32,491 DailyPVCollect 8748 1496 ===== 处理 2018-01-17 完毕，耗时: 0.0065174102783203125 秒。 =======
+
+INFO 2018-01-16 17:50:32,491 DailyPVCollect 8748 1496 ----- 处理结束 -------
+
+
+
+INFO 2018-01-16 17:51:00,591 DailyPVCollect 14736 10412 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-16 17:51:00,595 DailyPVCollect 14736 10412 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-16 17:51:00,595 DailyPVCollect 14736 10412 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:51:00,598 CollectCommon 14736 10412 当天访问用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhang', 'LILI', 'cris', 'testuser00000001', 'zhao', 'CRISchou', 'testuser0000001'}
+DEBUG 2018-01-16 17:51:00,599 CollectCommon 14736 10412 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:51:00,599 CollectCommon 14736 10412 所有的新用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhang', 'LILI', 'cris', 'testuser00000001', 'zhao', 'CRISchou'}
+DEBUG 2018-01-16 17:51:00,599 CollectCommon 14736 10412 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:51:00,599 DailyPVCollect 14736 10412 +++++ 数据更新完毕，耗时：0.003674745559692383 秒 +++++++
+
+DEBUG 2018-01-16 17:51:00,599 DailyPVCollect 14736 10412 正在计算 pv 数据...
+DEBUG 2018-01-16 17:51:00,600 DailyPVCollect 14736 10412 pv：139
+DEBUG 2018-01-16 17:51:00,600 DailyPVCollect 14736 10412 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:51:00,601 DailyPVCollect 14736 10412 大厅总用户数：8
+DEBUG 2018-01-16 17:51:00,601 DailyPVCollect 14736 10412 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:51:00,601 DailyPVCollect 14736 10412 大厅新增用户数：8
+INFO 2018-01-16 17:51:00,610 DailyPVCollect 14736 10412 ===== 处理 2018-01-15 完毕，耗时: 0.011378049850463867 秒。 =======
+
+INFO 2018-01-16 17:51:00,610 DailyPVCollect 14736 10412 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-16 17:51:00,611 DailyPVCollect 14736 10412 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:51:00,612 CollectCommon 14736 10412 当天访问用户： ---> {'LILI', 'wang', 'cris', 'zhao', '2222', 'liugege', '11111', 'CRISchou'}
+DEBUG 2018-01-16 17:51:00,613 CollectCommon 14736 10412 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:51:00,613 CollectCommon 14736 10412 所有的新用户： ---> {'wang', '11111', '2222', 'liugege'}
+DEBUG 2018-01-16 17:51:00,613 CollectCommon 14736 10412 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:51:00,613 DailyPVCollect 14736 10412 +++++ 数据更新完毕，耗时：0.002483367919921875 秒 +++++++
+
+DEBUG 2018-01-16 17:51:00,613 DailyPVCollect 14736 10412 正在计算 pv 数据...
+DEBUG 2018-01-16 17:51:00,614 DailyPVCollect 14736 10412 pv：73
+DEBUG 2018-01-16 17:51:00,614 DailyPVCollect 14736 10412 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:51:00,615 DailyPVCollect 14736 10412 大厅总用户数：12
+DEBUG 2018-01-16 17:51:00,615 DailyPVCollect 14736 10412 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:51:00,615 DailyPVCollect 14736 10412 大厅新增用户数：4
+INFO 2018-01-16 17:51:00,619 DailyPVCollect 14736 10412 ===== 处理 2018-01-16 完毕，耗时: 0.005201578140258789 秒。 =======
+
+INFO 2018-01-16 17:51:00,619 DailyPVCollect 14736 10412 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-16 17:51:00,619 DailyPVCollect 14736 10412 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:51:00,620 CollectCommon 14736 10412 当天访问用户： ---> set()
+DEBUG 2018-01-16 17:51:00,620 CollectCommon 14736 10412 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:51:00,620 CollectCommon 14736 10412 所有的新用户： ---> set()
+DEBUG 2018-01-16 17:51:00,620 CollectCommon 14736 10412 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:51:00,620 DailyPVCollect 14736 10412 +++++ 数据更新完毕，耗时：0.0015058517456054688 秒 +++++++
+
+DEBUG 2018-01-16 17:51:00,620 DailyPVCollect 14736 10412 正在计算 pv 数据...
+DEBUG 2018-01-16 17:51:00,621 DailyPVCollect 14736 10412 pv：0
+DEBUG 2018-01-16 17:51:00,621 DailyPVCollect 14736 10412 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:51:00,622 DailyPVCollect 14736 10412 大厅总用户数：12
+DEBUG 2018-01-16 17:51:00,622 DailyPVCollect 14736 10412 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:51:00,622 DailyPVCollect 14736 10412 大厅新增用户数：0
+INFO 2018-01-16 17:51:00,624 DailyPVCollect 14736 10412 ===== 处理 2018-01-17 完毕，耗时: 0.004316091537475586 秒。 =======
+
+INFO 2018-01-16 17:51:00,624 DailyPVCollect 14736 10412 ----- 处理结束 -------
+
+
+
+INFO 2018-01-16 17:51:18,427 DailyAUCollect 13688 14304 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-16 17:51:18,427 DailyAUCollect 13688 14304 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-16 17:51:18,427 DailyAUCollect 13688 14304 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:51:18,432 CollectCommon 13688 14304 当天访问用户： ---> {'testuser0000001', 'CRISchou', 'cris', 'zhao', 'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'LILI'}
+DEBUG 2018-01-16 17:51:18,434 CollectCommon 13688 14304 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:51:18,434 CollectCommon 13688 14304 所有的新用户： ---> {'CRISchou', 'cris', 'zhao', 'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'LILI'}
+DEBUG 2018-01-16 17:51:18,434 CollectCommon 13688 14304 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:51:18,434 DailyAUCollect 13688 14304 +++++ 数据更新完毕，耗时：0.006436586380004883 秒 +++++++
+
+DEBUG 2018-01-16 17:51:18,434 DailyAUCollect 13688 14304 正在处理 DAU 数据...
+DEBUG 2018-01-16 17:51:18,434 DailyAUCollect 13688 14304 DAU：[8]
+DEBUG 2018-01-16 17:51:18,434 DailyAUCollect 13688 14304 NAU：[7]
+INFO 2018-01-16 17:51:18,444 DailyAUCollect 13688 14304 ===== 处理 2018-01-15 完毕，耗时: 0.01062917709350586 秒。 =======
+
+INFO 2018-01-16 17:51:18,444 DailyAUCollect 13688 14304 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-16 17:51:18,444 DailyAUCollect 13688 14304 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:51:18,446 CollectCommon 13688 14304 当天访问用户： ---> {'CRISchou', '2222', 'cris', 'zhao', '11111', 'wang', 'liugege', 'LILI'}
+DEBUG 2018-01-16 17:51:18,447 CollectCommon 13688 14304 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:51:18,447 CollectCommon 13688 14304 所有的新用户： ---> {'2222', '11111', 'wang', 'liugege'}
+DEBUG 2018-01-16 17:51:18,447 CollectCommon 13688 14304 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:51:18,448 DailyAUCollect 13688 14304 +++++ 数据更新完毕，耗时：0.003437042236328125 秒 +++++++
+
+DEBUG 2018-01-16 17:51:18,448 DailyAUCollect 13688 14304 正在处理 DAU 数据...
+DEBUG 2018-01-16 17:51:18,448 DailyAUCollect 13688 14304 DAU：[8]
+DEBUG 2018-01-16 17:51:18,448 DailyAUCollect 13688 14304 NAU：[4]
+INFO 2018-01-16 17:51:18,451 DailyAUCollect 13688 14304 ===== 处理 2018-01-16 完毕，耗时: 0.0036089420318603516 秒。 =======
+
+INFO 2018-01-16 17:51:18,451 DailyAUCollect 13688 14304 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-16 17:51:18,451 DailyAUCollect 13688 14304 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:51:18,453 CollectCommon 13688 14304 当天访问用户： ---> set()
+DEBUG 2018-01-16 17:51:18,453 CollectCommon 13688 14304 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:51:18,453 CollectCommon 13688 14304 所有的新用户： ---> set()
+DEBUG 2018-01-16 17:51:18,453 CollectCommon 13688 14304 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:51:18,453 DailyAUCollect 13688 14304 +++++ 数据更新完毕，耗时：0.002030611038208008 秒 +++++++
+
+DEBUG 2018-01-16 17:51:18,453 DailyAUCollect 13688 14304 正在处理 DAU 数据...
+DEBUG 2018-01-16 17:51:18,453 DailyAUCollect 13688 14304 DAU：[0]
+DEBUG 2018-01-16 17:51:18,453 DailyAUCollect 13688 14304 NAU：[0]
+INFO 2018-01-16 17:51:18,458 DailyAUCollect 13688 14304 ===== 处理 2018-01-17 完毕，耗时: 0.004765748977661133 秒。 =======
+
+INFO 2018-01-16 17:51:18,458 DailyAUCollect 13688 14304 ----- 处理结束 -------
+
+
+
+INFO 2018-01-16 17:52:13,881 DailyAUCollect 8748 7604 ----- 开始处理：from 2018-01-14 to 2018-01-16 -------
+INFO 2018-01-16 17:52:13,881 DailyAUCollect 8748 7604 ===== 正在处理 2018-01-14 =======
+INFO 2018-01-16 17:52:13,881 DailyAUCollect 8748 7604 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:52:13,886 CollectCommon 8748 7604 当天访问用户： ---> set()
+DEBUG 2018-01-16 17:52:13,886 CollectCommon 8748 7604 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:52:13,887 CollectCommon 8748 7604 所有的新用户： ---> set()
+DEBUG 2018-01-16 17:52:13,887 CollectCommon 8748 7604 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:52:13,887 DailyAUCollect 8748 7604 +++++ 数据更新完毕，耗时：0.00583648681640625 秒 +++++++
+
+DEBUG 2018-01-16 17:52:13,887 DailyAUCollect 8748 7604 正在处理 DAU 数据...
+DEBUG 2018-01-16 17:52:13,888 DailyAUCollect 8748 7604 DAU：[0, 0]
+DEBUG 2018-01-16 17:52:13,888 DailyAUCollect 8748 7604 NAU：[0, 0]
+INFO 2018-01-16 17:52:13,899 DailyAUCollect 8748 7604 ===== 处理 2018-01-14 完毕，耗时: 0.012291669845581055 秒。 =======
+
+INFO 2018-01-16 17:52:13,899 DailyAUCollect 8748 7604 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-16 17:52:13,899 DailyAUCollect 8748 7604 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:52:13,900 CollectCommon 8748 7604 当天访问用户： ---> {'CRISchou', 'LILI', 'testuser0000001', 'testuser00000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhang', 'zhao'}
+DEBUG 2018-01-16 17:52:13,902 CollectCommon 8748 7604 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:52:13,902 CollectCommon 8748 7604 所有的新用户： ---> {'CRISchou', 'LILI', 'testuser00000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhang', 'zhao'}
+DEBUG 2018-01-16 17:52:13,902 CollectCommon 8748 7604 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:52:13,902 DailyAUCollect 8748 7604 +++++ 数据更新完毕，耗时：0.002812623977661133 秒 +++++++
+
+DEBUG 2018-01-16 17:52:13,902 DailyAUCollect 8748 7604 正在处理 DAU 数据...
+DEBUG 2018-01-16 17:52:13,902 DailyAUCollect 8748 7604 DAU：[8]
+DEBUG 2018-01-16 17:52:13,902 DailyAUCollect 8748 7604 NAU：[7]
+INFO 2018-01-16 17:52:13,906 DailyAUCollect 8748 7604 ===== 处理 2018-01-15 完毕，耗时: 0.004364728927612305 秒。 =======
+
+INFO 2018-01-16 17:52:13,907 DailyAUCollect 8748 7604 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-16 17:52:13,907 DailyAUCollect 8748 7604 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:52:13,908 CollectCommon 8748 7604 当天访问用户： ---> {'LILI', 'CRISchou', '11111', '2222', 'cris', 'liugege', 'wang', 'zhao'}
+DEBUG 2018-01-16 17:52:13,910 CollectCommon 8748 7604 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:52:13,910 CollectCommon 8748 7604 所有的新用户： ---> {'11111', '2222', 'liugege', 'wang'}
+DEBUG 2018-01-16 17:52:13,910 CollectCommon 8748 7604 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:52:13,910 DailyAUCollect 8748 7604 +++++ 数据更新完毕，耗时：0.003157377243041992 秒 +++++++
+
+DEBUG 2018-01-16 17:52:13,910 DailyAUCollect 8748 7604 正在处理 DAU 数据...
+DEBUG 2018-01-16 17:52:13,910 DailyAUCollect 8748 7604 DAU：[8]
+DEBUG 2018-01-16 17:52:13,910 DailyAUCollect 8748 7604 NAU：[4]
+INFO 2018-01-16 17:52:13,914 DailyAUCollect 8748 7604 ===== 处理 2018-01-16 完毕，耗时: 0.003564119338989258 秒。 =======
+
+INFO 2018-01-16 17:52:13,914 DailyAUCollect 8748 7604 ----- 处理结束 -------
+
+
+
+INFO 2018-01-16 17:52:26,178 DailyPVCollect 13648 8572 ----- 开始处理：from 2018-01-14 to 2018-01-16 -------
+INFO 2018-01-16 17:52:26,183 DailyPVCollect 13648 8572 ===== 正在处理 2018-01-14 =======
+INFO 2018-01-16 17:52:26,183 DailyPVCollect 13648 8572 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:52:26,184 CollectCommon 13648 8572 当天访问用户： ---> set()
+DEBUG 2018-01-16 17:52:26,185 CollectCommon 13648 8572 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:52:26,185 CollectCommon 13648 8572 所有的新用户： ---> set()
+DEBUG 2018-01-16 17:52:26,185 CollectCommon 13648 8572 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:52:26,185 DailyPVCollect 13648 8572 +++++ 数据更新完毕，耗时：0.0015072822570800781 秒 +++++++
+
+DEBUG 2018-01-16 17:52:26,185 DailyPVCollect 13648 8572 正在计算 pv 数据...
+DEBUG 2018-01-16 17:52:26,186 DailyPVCollect 13648 8572 pv：0
+DEBUG 2018-01-16 17:52:26,186 DailyPVCollect 13648 8572 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:52:26,187 DailyPVCollect 13648 8572 大厅总用户数：1
+DEBUG 2018-01-16 17:52:26,187 DailyPVCollect 13648 8572 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:52:26,187 DailyPVCollect 13648 8572 大厅新增用户数：1
+INFO 2018-01-16 17:52:26,197 DailyPVCollect 13648 8572 ===== 处理 2018-01-14 完毕，耗时: 0.012273788452148438 秒。 =======
+
+INFO 2018-01-16 17:52:26,197 DailyPVCollect 13648 8572 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-16 17:52:26,197 DailyPVCollect 13648 8572 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:52:26,199 CollectCommon 13648 8572 当天访问用户： ---> {'testuser00000001', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhao', 'cris', 'testuser0000001', 'CRISchou', 'zhang'}
+DEBUG 2018-01-16 17:52:26,200 CollectCommon 13648 8572 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:52:26,200 CollectCommon 13648 8572 所有的新用户： ---> {'testuser00000001', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhao', 'cris', 'CRISchou', 'zhang'}
+DEBUG 2018-01-16 17:52:26,200 CollectCommon 13648 8572 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:52:26,200 DailyPVCollect 13648 8572 +++++ 数据更新完毕，耗时：0.0031905174255371094 秒 +++++++
+
+DEBUG 2018-01-16 17:52:26,200 DailyPVCollect 13648 8572 正在计算 pv 数据...
+DEBUG 2018-01-16 17:52:26,201 DailyPVCollect 13648 8572 pv：139
+DEBUG 2018-01-16 17:52:26,201 DailyPVCollect 13648 8572 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:52:26,202 DailyPVCollect 13648 8572 大厅总用户数：8
+DEBUG 2018-01-16 17:52:26,202 DailyPVCollect 13648 8572 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:52:26,202 DailyPVCollect 13648 8572 大厅新增用户数：7
+INFO 2018-01-16 17:52:26,206 DailyPVCollect 13648 8572 ===== 处理 2018-01-15 完毕，耗时: 0.0054225921630859375 秒。 =======
+
+INFO 2018-01-16 17:52:26,206 DailyPVCollect 13648 8572 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-16 17:52:26,206 DailyPVCollect 13648 8572 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:52:26,208 CollectCommon 13648 8572 当天访问用户： ---> {'wang', 'LILI', 'liugege', 'zhao', 'cris', '2222', '11111', 'CRISchou'}
+DEBUG 2018-01-16 17:52:26,209 CollectCommon 13648 8572 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:52:26,209 CollectCommon 13648 8572 所有的新用户： ---> {'11111', 'wang', 'liugege', '2222'}
+DEBUG 2018-01-16 17:52:26,209 CollectCommon 13648 8572 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:52:26,209 DailyPVCollect 13648 8572 +++++ 数据更新完毕，耗时：0.003333568572998047 秒 +++++++
+
+DEBUG 2018-01-16 17:52:26,209 DailyPVCollect 13648 8572 正在计算 pv 数据...
+DEBUG 2018-01-16 17:52:26,210 DailyPVCollect 13648 8572 pv：73
+DEBUG 2018-01-16 17:52:26,211 DailyPVCollect 13648 8572 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:52:26,211 DailyPVCollect 13648 8572 大厅总用户数：12
+DEBUG 2018-01-16 17:52:26,211 DailyPVCollect 13648 8572 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:52:26,211 DailyPVCollect 13648 8572 大厅新增用户数：4
+INFO 2018-01-16 17:52:26,215 DailyPVCollect 13648 8572 ===== 处理 2018-01-16 完毕，耗时: 0.0052411556243896484 秒。 =======
+
+INFO 2018-01-16 17:52:26,215 DailyPVCollect 13648 8572 ----- 处理结束 -------
+
+
+
+INFO 2018-01-16 17:53:29,135 DailyPVCollect 10048 10788 ----- 开始处理：from 2018-01-15 to 2018-01-16 -------
+INFO 2018-01-16 17:53:29,140 DailyPVCollect 10048 10788 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-16 17:53:29,140 DailyPVCollect 10048 10788 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:53:29,142 CollectCommon 10048 10788 当天访问用户： ---> {'cris', 'zhang', 'LILI', 'testuser0000001', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'zhao', 'CRISchou'}
+DEBUG 2018-01-16 17:53:29,144 CollectCommon 10048 10788 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:53:29,144 CollectCommon 10048 10788 所有的新用户： ---> {'cris', 'zhang', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'zhao', 'CRISchou'}
+DEBUG 2018-01-16 17:53:29,144 CollectCommon 10048 10788 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:53:29,144 DailyPVCollect 10048 10788 +++++ 数据更新完毕，耗时：0.00380706787109375 秒 +++++++
+
+DEBUG 2018-01-16 17:53:29,144 DailyPVCollect 10048 10788 正在计算 pv 数据...
+DEBUG 2018-01-16 17:53:29,145 DailyPVCollect 10048 10788 pv：139
+DEBUG 2018-01-16 17:53:29,145 DailyPVCollect 10048 10788 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:53:29,146 DailyPVCollect 10048 10788 大厅总用户数：8
+DEBUG 2018-01-16 17:53:29,146 DailyPVCollect 10048 10788 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:53:29,146 DailyPVCollect 10048 10788 大厅新增用户数：7
+INFO 2018-01-16 17:53:29,156 DailyPVCollect 10048 10788 ===== 处理 2018-01-15 完毕，耗时: 0.011860132217407227 秒。 =======
+
+INFO 2018-01-16 17:53:29,156 DailyPVCollect 10048 10788 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-16 17:53:29,156 DailyPVCollect 10048 10788 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:53:29,158 CollectCommon 10048 10788 当天访问用户： ---> {'cris', '11111', '2222', 'LILI', 'liugege', 'zhao', 'CRISchou', 'wang'}
+DEBUG 2018-01-16 17:53:29,159 CollectCommon 10048 10788 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:53:29,159 CollectCommon 10048 10788 所有的新用户： ---> {'11111', '2222', 'liugege', 'wang'}
+DEBUG 2018-01-16 17:53:29,159 CollectCommon 10048 10788 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:53:29,159 DailyPVCollect 10048 10788 +++++ 数据更新完毕，耗时：0.0025038719177246094 秒 +++++++
+
+DEBUG 2018-01-16 17:53:29,159 DailyPVCollect 10048 10788 正在计算 pv 数据...
+DEBUG 2018-01-16 17:53:29,160 DailyPVCollect 10048 10788 pv：73
+DEBUG 2018-01-16 17:53:29,160 DailyPVCollect 10048 10788 正在计算大厅总用户数...
+DEBUG 2018-01-16 17:53:29,161 DailyPVCollect 10048 10788 大厅总用户数：12
+DEBUG 2018-01-16 17:53:29,161 DailyPVCollect 10048 10788 正在计算大厅新增用户数...
+DEBUG 2018-01-16 17:53:29,161 DailyPVCollect 10048 10788 大厅新增用户数：4
+INFO 2018-01-16 17:53:29,165 DailyPVCollect 10048 10788 ===== 处理 2018-01-16 完毕，耗时: 0.005653858184814453 秒。 =======
+
+INFO 2018-01-16 17:53:29,165 DailyPVCollect 10048 10788 ----- 处理结束 -------
+
+
+
+INFO 2018-01-16 17:53:35,399 DailyAUCollect 12056 14508 ----- 开始处理：from 2018-01-15 to 2018-01-16 -------
+INFO 2018-01-16 17:53:35,399 DailyAUCollect 12056 14508 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-16 17:53:35,399 DailyAUCollect 12056 14508 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:53:35,404 CollectCommon 12056 14508 当天访问用户： ---> {'cris', 'CRISchou', 'testuser0000001', 'LILI', 'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'zhao'}
+DEBUG 2018-01-16 17:53:35,405 CollectCommon 12056 14508 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:53:35,405 CollectCommon 12056 14508 所有的新用户： ---> {'cris', 'CRISchou', 'LILI', 'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'zhao'}
+DEBUG 2018-01-16 17:53:35,405 CollectCommon 12056 14508 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:53:35,405 DailyAUCollect 12056 14508 +++++ 数据更新完毕，耗时：0.005889415740966797 秒 +++++++
+
+DEBUG 2018-01-16 17:53:35,405 DailyAUCollect 12056 14508 正在处理 DAU 数据...
+DEBUG 2018-01-16 17:53:35,405 DailyAUCollect 12056 14508 DAU：[8]
+DEBUG 2018-01-16 17:53:35,405 DailyAUCollect 12056 14508 NAU：[7]
+INFO 2018-01-16 17:53:35,417 DailyAUCollect 12056 14508 ===== 处理 2018-01-15 完毕，耗时: 0.011260032653808594 秒。 =======
+
+INFO 2018-01-16 17:53:35,417 DailyAUCollect 12056 14508 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-16 17:53:35,417 DailyAUCollect 12056 14508 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-16 17:53:35,419 CollectCommon 12056 14508 当天访问用户： ---> {'cris', 'CRISchou', 'liugege', '11111', 'LILI', 'zhao', 'wang', '2222'}
+DEBUG 2018-01-16 17:53:35,419 CollectCommon 12056 14508 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-16 17:53:35,419 CollectCommon 12056 14508 所有的新用户： ---> {'11111', 'liugege', 'wang', '2222'}
+DEBUG 2018-01-16 17:53:35,419 CollectCommon 12056 14508 写入到UserData中的用户：---> []
+INFO 2018-01-16 17:53:35,419 DailyAUCollect 12056 14508 +++++ 数据更新完毕，耗时：0.0029730796813964844 秒 +++++++
+
+DEBUG 2018-01-16 17:53:35,420 DailyAUCollect 12056 14508 正在处理 DAU 数据...
+DEBUG 2018-01-16 17:53:35,420 DailyAUCollect 12056 14508 DAU：[8]
+DEBUG 2018-01-16 17:53:35,420 DailyAUCollect 12056 14508 NAU：[4]
+INFO 2018-01-16 17:53:35,424 DailyAUCollect 12056 14508 ===== 处理 2018-01-16 完毕，耗时: 0.0039768218994140625 秒。 =======
+
+INFO 2018-01-16 17:53:35,424 DailyAUCollect 12056 14508 ----- 处理结束 -------
+
+
+
+INFO 2018-01-17 14:41:03,029 DailyAUCollect 6864 8696 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-17 14:41:03,029 DailyAUCollect 6864 8696 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-17 14:41:03,029 DailyAUCollect 6864 8696 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:41:03,034 CollectCommon 6864 8696 当天访问用户： ---> {'testuser00000001', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhao', 'testuser0000001', 'CRISchou', 'cris', 'zhang'}
+DEBUG 2018-01-17 14:41:03,036 CollectCommon 6864 8696 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:41:03,036 CollectCommon 6864 8696 所有的新用户： ---> {'testuser00000001', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhao', 'CRISchou', 'cris', 'zhang'}
+DEBUG 2018-01-17 14:41:03,036 CollectCommon 6864 8696 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:41:03,036 DailyAUCollect 6864 8696 +++++ 数据更新完毕，耗时：0.006868839263916016 秒 +++++++
+
+DEBUG 2018-01-17 14:41:03,036 DailyAUCollect 6864 8696 正在处理 DAU 数据...
+DEBUG 2018-01-17 14:41:03,037 DailyAUCollect 6864 8696 DAU：[8, 4]
+DEBUG 2018-01-17 14:41:03,037 DailyAUCollect 6864 8696 NAU：[7, 4]
+INFO 2018-01-17 14:41:03,048 DailyAUCollect 6864 8696 ===== 处理 2018-01-15 完毕，耗时: 0.011776924133300781 秒。 =======
+
+INFO 2018-01-17 14:41:03,049 DailyAUCollect 6864 8696 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-17 14:41:03,049 DailyAUCollect 6864 8696 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:41:03,050 CollectCommon 6864 8696 当天访问用户： ---> {'LILI', '2222', 'zhao', 'wang', 'CRISchou', '11111', 'cris', 'liugege'}
+DEBUG 2018-01-17 14:41:03,051 CollectCommon 6864 8696 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:41:03,051 CollectCommon 6864 8696 所有的新用户： ---> {'liugege', 'wang', '2222', '11111'}
+DEBUG 2018-01-17 14:41:03,051 CollectCommon 6864 8696 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:41:03,051 DailyAUCollect 6864 8696 +++++ 数据更新完毕，耗时：0.0019621849060058594 秒 +++++++
+
+DEBUG 2018-01-17 14:41:03,051 DailyAUCollect 6864 8696 正在处理 DAU 数据...
+DEBUG 2018-01-17 14:41:03,051 DailyAUCollect 6864 8696 DAU：[8]
+DEBUG 2018-01-17 14:41:03,051 DailyAUCollect 6864 8696 NAU：[4]
+INFO 2018-01-17 14:41:03,055 DailyAUCollect 6864 8696 ===== 处理 2018-01-16 完毕，耗时: 0.0040247440338134766 秒。 =======
+
+INFO 2018-01-17 14:41:03,055 DailyAUCollect 6864 8696 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-17 14:41:03,055 DailyAUCollect 6864 8696 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:41:03,056 CollectCommon 6864 8696 当天访问用户： ---> {'6666', '4444', 'zhang', '5555', '3333', '2222 ', 'zhao', 'cris', 'liugege', '7777'}
+DEBUG 2018-01-17 14:41:03,057 CollectCommon 6864 8696 不在UserData中的新用户： ---> {'6666', '4444', '5555', '3333', '2222 ', '7777'}
+DEBUG 2018-01-17 14:41:03,057 CollectCommon 6864 8696 所有的新用户： ---> {'6666', '4444', '5555', '3333', '2222 ', '7777'}
+DEBUG 2018-01-17 14:41:03,057 CollectCommon 6864 8696 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-17 14:41:03,791 DailyPVCollect 10720 12608 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-17 14:41:03,796 DailyPVCollect 10720 12608 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-17 14:41:03,796 DailyPVCollect 10720 12608 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:41:03,798 CollectCommon 10720 12608 当天访问用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser0000001', 'zhao', 'cris', 'testuser00000001', 'zhang', 'LILI', 'CRISchou'}
+DEBUG 2018-01-17 14:41:03,799 CollectCommon 10720 12608 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:41:03,799 CollectCommon 10720 12608 所有的新用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhao', 'cris', 'testuser00000001', 'zhang', 'LILI', 'CRISchou'}
+DEBUG 2018-01-17 14:41:03,799 CollectCommon 10720 12608 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:41:03,799 DailyPVCollect 10720 12608 +++++ 数据更新完毕，耗时：0.003006458282470703 秒 +++++++
+
+DEBUG 2018-01-17 14:41:03,799 DailyPVCollect 10720 12608 正在计算 pv 数据...
+DEBUG 2018-01-17 14:41:03,800 DailyPVCollect 10720 12608 pv：139
+DEBUG 2018-01-17 14:41:03,800 DailyPVCollect 10720 12608 正在计算大厅总用户数...
+DEBUG 2018-01-17 14:41:03,801 DailyPVCollect 10720 12608 大厅总用户数：8
+DEBUG 2018-01-17 14:41:03,801 DailyPVCollect 10720 12608 正在计算大厅新增用户数...
+DEBUG 2018-01-17 14:41:03,801 DailyPVCollect 10720 12608 大厅新增用户数：8
+INFO 2018-01-17 14:41:03,811 DailyPVCollect 10720 12608 ===== 处理 2018-01-15 完毕，耗时: 0.011741161346435547 秒。 =======
+
+INFO 2018-01-17 14:41:03,811 DailyPVCollect 10720 12608 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-17 14:41:03,811 DailyPVCollect 10720 12608 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:41:03,812 CollectCommon 10720 12608 当天访问用户： ---> {'11111', 'liugege', 'zhao', 'cris', '2222', 'wang', 'LILI', 'CRISchou'}
+DEBUG 2018-01-17 14:41:03,814 CollectCommon 10720 12608 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:41:03,814 CollectCommon 10720 12608 所有的新用户： ---> {'11111', '2222', 'wang', 'liugege'}
+DEBUG 2018-01-17 14:41:03,814 CollectCommon 10720 12608 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:41:03,814 DailyPVCollect 10720 12608 +++++ 数据更新完毕，耗时：0.0029554367065429688 秒 +++++++
+
+DEBUG 2018-01-17 14:41:03,814 DailyPVCollect 10720 12608 正在计算 pv 数据...
+DEBUG 2018-01-17 14:41:03,815 DailyPVCollect 10720 12608 pv：73
+DEBUG 2018-01-17 14:41:03,815 DailyPVCollect 10720 12608 正在计算大厅总用户数...
+DEBUG 2018-01-17 14:41:03,816 DailyPVCollect 10720 12608 大厅总用户数：12
+DEBUG 2018-01-17 14:41:03,816 DailyPVCollect 10720 12608 正在计算大厅新增用户数...
+DEBUG 2018-01-17 14:41:03,816 DailyPVCollect 10720 12608 大厅新增用户数：4
+INFO 2018-01-17 14:41:03,819 DailyPVCollect 10720 12608 ===== 处理 2018-01-16 完毕，耗时: 0.004973888397216797 秒。 =======
+
+INFO 2018-01-17 14:41:03,819 DailyPVCollect 10720 12608 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-17 14:41:03,819 DailyPVCollect 10720 12608 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:41:03,821 CollectCommon 10720 12608 当天访问用户： ---> {'6666', 'liugege', '3333', '5555', 'zhao', '7777', 'cris', 'zhang', '2222 ', '4444'}
+DEBUG 2018-01-17 14:41:03,822 CollectCommon 10720 12608 不在UserData中的新用户： ---> {'6666', '3333', '7777', '4444', '2222 ', '5555'}
+DEBUG 2018-01-17 14:41:03,822 CollectCommon 10720 12608 所有的新用户： ---> {'6666', '3333', '5555', '7777', '2222 ', '4444'}
+DEBUG 2018-01-17 14:41:03,822 CollectCommon 10720 12608 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-17 14:42:22,398 DailyAUCollect 12164 10184 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-17 14:42:22,399 DailyAUCollect 12164 10184 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-17 14:42:22,399 DailyAUCollect 12164 10184 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:42:22,403 CollectCommon 12164 10184 当天访问用户： ---> {'zhang', 'zhao', 'testuser00000001', 'testuser0000001', 'CRISchou', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'cris'}
+DEBUG 2018-01-17 14:42:22,404 CollectCommon 12164 10184 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:42:22,404 CollectCommon 12164 10184 所有的新用户： ---> {'zhang', 'zhao', 'LILI', 'testuser00000001', 'CRISchou', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'cris'}
+DEBUG 2018-01-17 14:42:22,405 CollectCommon 12164 10184 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:42:22,405 DailyAUCollect 12164 10184 +++++ 数据更新完毕，耗时：0.006283283233642578 秒 +++++++
+
+DEBUG 2018-01-17 14:42:22,405 DailyAUCollect 12164 10184 正在处理 DAU 数据...
+DEBUG 2018-01-17 14:42:22,406 DailyAUCollect 12164 10184 DAU：[8, 4]
+DEBUG 2018-01-17 14:42:22,406 DailyAUCollect 12164 10184 NAU：[7, 4]
+INFO 2018-01-17 14:42:22,416 DailyAUCollect 12164 10184 ===== 处理 2018-01-15 完毕，耗时: 0.010571479797363281 秒。 =======
+
+INFO 2018-01-17 14:42:22,416 DailyAUCollect 12164 10184 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-17 14:42:22,417 DailyAUCollect 12164 10184 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:42:22,418 CollectCommon 12164 10184 当天访问用户： ---> {'zhao', 'liugege', 'wang', '2222', 'LILI', 'CRISchou', '11111', 'cris'}
+DEBUG 2018-01-17 14:42:22,419 CollectCommon 12164 10184 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:42:22,419 CollectCommon 12164 10184 所有的新用户： ---> {'2222', 'liugege', 'wang', '11111'}
+DEBUG 2018-01-17 14:42:22,419 CollectCommon 12164 10184 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:42:22,419 DailyAUCollect 12164 10184 +++++ 数据更新完毕，耗时：0.0019555091857910156 秒 +++++++
+
+DEBUG 2018-01-17 14:42:22,420 DailyAUCollect 12164 10184 正在处理 DAU 数据...
+DEBUG 2018-01-17 14:42:22,420 DailyAUCollect 12164 10184 DAU：[8]
+DEBUG 2018-01-17 14:42:22,420 DailyAUCollect 12164 10184 NAU：[4]
+INFO 2018-01-17 14:42:22,423 DailyAUCollect 12164 10184 ===== 处理 2018-01-16 完毕，耗时: 0.0038983821868896484 秒。 =======
+
+INFO 2018-01-17 14:42:22,423 DailyAUCollect 12164 10184 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-17 14:42:22,423 DailyAUCollect 12164 10184 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:42:22,424 CollectCommon 12164 10184 当天访问用户： ---> {'6666', '5555', 'zhang', '3333', 'zhao', 'liugege', '4444', '7777', '2222 ', 'cris'}
+DEBUG 2018-01-17 14:42:22,425 CollectCommon 12164 10184 不在UserData中的新用户： ---> {'6666', '5555', '3333', '4444', '7777', '2222 '}
+DEBUG 2018-01-17 14:42:22,425 CollectCommon 12164 10184 所有的新用户： ---> {'6666', '5555', '3333', '4444', '7777', '2222 '}
+DEBUG 2018-01-17 14:42:22,426 CollectCommon 12164 10184 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-17 14:42:23,040 DailyPVCollect 10096 1356 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-17 14:42:23,043 DailyPVCollect 10096 1356 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-17 14:42:23,044 DailyPVCollect 10096 1356 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:42:23,045 CollectCommon 10096 1356 当天访问用户： ---> {'testuser00000001', 'CRISchou', 'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser0000001', 'zhao', 'LILI', 'cris'}
+DEBUG 2018-01-17 14:42:23,047 CollectCommon 10096 1356 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:42:23,047 CollectCommon 10096 1356 所有的新用户： ---> {'testuser00000001', 'CRISchou', 'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhao', 'LILI', 'cris'}
+DEBUG 2018-01-17 14:42:23,047 CollectCommon 10096 1356 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:42:23,047 DailyPVCollect 10096 1356 +++++ 数据更新完毕，耗时：0.0029451847076416016 秒 +++++++
+
+DEBUG 2018-01-17 14:42:23,048 DailyPVCollect 10096 1356 正在计算 pv 数据...
+DEBUG 2018-01-17 14:42:23,049 DailyPVCollect 10096 1356 pv：139
+DEBUG 2018-01-17 14:42:23,049 DailyPVCollect 10096 1356 正在计算大厅总用户数...
+DEBUG 2018-01-17 14:42:23,050 DailyPVCollect 10096 1356 大厅总用户数：8
+DEBUG 2018-01-17 14:42:23,050 DailyPVCollect 10096 1356 正在计算大厅新增用户数...
+DEBUG 2018-01-17 14:42:23,050 DailyPVCollect 10096 1356 大厅新增用户数：8
+INFO 2018-01-17 14:42:23,060 DailyPVCollect 10096 1356 ===== 处理 2018-01-15 完毕，耗时: 0.012755393981933594 秒。 =======
+
+INFO 2018-01-17 14:42:23,060 DailyPVCollect 10096 1356 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-17 14:42:23,060 DailyPVCollect 10096 1356 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:42:23,061 CollectCommon 10096 1356 当天访问用户： ---> {'liugege', '11111', 'CRISchou', '2222', 'wang', 'zhao', 'LILI', 'cris'}
+DEBUG 2018-01-17 14:42:23,062 CollectCommon 10096 1356 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:42:23,063 CollectCommon 10096 1356 所有的新用户： ---> {'liugege', '11111', '2222', 'wang'}
+DEBUG 2018-01-17 14:42:23,063 CollectCommon 10096 1356 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:42:23,063 DailyPVCollect 10096 1356 +++++ 数据更新完毕，耗时：0.002944469451904297 秒 +++++++
+
+DEBUG 2018-01-17 14:42:23,063 DailyPVCollect 10096 1356 正在计算 pv 数据...
+DEBUG 2018-01-17 14:42:23,064 DailyPVCollect 10096 1356 pv：73
+DEBUG 2018-01-17 14:42:23,064 DailyPVCollect 10096 1356 正在计算大厅总用户数...
+DEBUG 2018-01-17 14:42:23,064 DailyPVCollect 10096 1356 大厅总用户数：12
+DEBUG 2018-01-17 14:42:23,064 DailyPVCollect 10096 1356 正在计算大厅新增用户数...
+DEBUG 2018-01-17 14:42:23,065 DailyPVCollect 10096 1356 大厅新增用户数：4
+INFO 2018-01-17 14:42:23,068 DailyPVCollect 10096 1356 ===== 处理 2018-01-16 完毕，耗时: 0.004906415939331055 秒。 =======
+
+INFO 2018-01-17 14:42:23,068 DailyPVCollect 10096 1356 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-17 14:42:23,068 DailyPVCollect 10096 1356 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:42:23,070 CollectCommon 10096 1356 当天访问用户： ---> {'liugege', 'zhang', '6666', '7777', '5555', 'zhao', '3333', '2222 ', 'cris', '4444'}
+DEBUG 2018-01-17 14:42:23,071 CollectCommon 10096 1356 不在UserData中的新用户： ---> {'7777', '6666', '5555', '3333', '2222 ', '4444'}
+DEBUG 2018-01-17 14:42:23,071 CollectCommon 10096 1356 所有的新用户： ---> {'7777', '6666', '5555', '3333', '2222 ', '4444'}
+DEBUG 2018-01-17 14:42:23,071 CollectCommon 10096 1356 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-17 14:43:08,309 DailyAUCollect 14908 15216 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-17 14:43:08,309 DailyAUCollect 14908 15216 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-17 14:43:08,309 DailyAUCollect 14908 15216 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:43:08,313 CollectCommon 14908 15216 当天访问用户： ---> {'CRISchou', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser0000001', 'testuser00000001', 'LILI', 'zhang', 'zhao', 'cris'}
+DEBUG 2018-01-17 14:43:08,315 CollectCommon 14908 15216 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:43:08,315 CollectCommon 14908 15216 所有的新用户： ---> {'CRISchou', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'LILI', 'zhang', 'zhao', 'cris'}
+DEBUG 2018-01-17 14:43:08,315 CollectCommon 14908 15216 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:43:08,315 DailyAUCollect 14908 15216 +++++ 数据更新完毕，耗时：0.006018161773681641 秒 +++++++
+
+DEBUG 2018-01-17 14:43:08,315 DailyAUCollect 14908 15216 正在处理 DAU 数据...
+DEBUG 2018-01-17 14:43:08,316 DailyAUCollect 14908 15216 DAU：[8, 4]
+DEBUG 2018-01-17 14:43:08,316 DailyAUCollect 14908 15216 NAU：[7, 4]
+INFO 2018-01-17 14:43:08,326 DailyAUCollect 14908 15216 ===== 处理 2018-01-15 完毕，耗时: 0.010523796081542969 秒。 =======
+
+INFO 2018-01-17 14:43:08,327 DailyAUCollect 14908 15216 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-17 14:43:08,327 DailyAUCollect 14908 15216 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:43:08,331 CollectCommon 14908 15216 当天访问用户： ---> {'2222', 'liugege', 'CRISchou', '11111', 'LILI', 'zhao', 'wang', 'cris'}
+DEBUG 2018-01-17 14:43:08,333 CollectCommon 14908 15216 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:43:08,333 CollectCommon 14908 15216 所有的新用户： ---> {'2222', 'liugege', '11111', 'wang'}
+DEBUG 2018-01-17 14:43:08,333 CollectCommon 14908 15216 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:43:08,334 DailyAUCollect 14908 15216 +++++ 数据更新完毕，耗时：0.005890607833862305 秒 +++++++
+
+DEBUG 2018-01-17 14:43:08,334 DailyAUCollect 14908 15216 正在处理 DAU 数据...
+DEBUG 2018-01-17 14:43:08,334 DailyAUCollect 14908 15216 DAU：[8]
+DEBUG 2018-01-17 14:43:08,334 DailyAUCollect 14908 15216 NAU：[4]
+INFO 2018-01-17 14:43:08,339 DailyAUCollect 14908 15216 ===== 处理 2018-01-16 完毕，耗时: 0.004909992218017578 秒。 =======
+
+INFO 2018-01-17 14:43:08,339 DailyAUCollect 14908 15216 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-17 14:43:08,339 DailyAUCollect 14908 15216 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:43:08,341 CollectCommon 14908 15216 当天访问用户： ---> {'liugege', '2222 ', '5555', '4444', '3333', '6666', 'zhang', 'zhao', 'cris', '7777'}
+DEBUG 2018-01-17 14:43:08,342 CollectCommon 14908 15216 不在UserData中的新用户： ---> {'2222 ', '5555', '4444', '3333', '6666', '7777'}
+DEBUG 2018-01-17 14:43:08,342 CollectCommon 14908 15216 所有的新用户： ---> {'2222 ', '5555', '4444', '3333', '6666', '7777'}
+DEBUG 2018-01-17 14:43:08,342 CollectCommon 14908 15216 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-17 14:45:17,017 DailyAUCollect 11212 1112 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-17 14:45:17,017 DailyAUCollect 11212 1112 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-17 14:45:17,017 DailyAUCollect 11212 1112 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:45:17,022 CollectCommon 11212 1112 当天访问用户： ---> {'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'zhao', 'testuser0000001', 'CRISchou', 'LILI', 'cris'}
+DEBUG 2018-01-17 14:45:17,023 CollectCommon 11212 1112 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:45:17,023 CollectCommon 11212 1112 所有的新用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'zhao', 'LILI', 'CRISchou', 'zhang', 'cris'}
+DEBUG 2018-01-17 14:45:17,023 CollectCommon 11212 1112 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:45:17,024 DailyAUCollect 11212 1112 +++++ 数据更新完毕，耗时：0.005888223648071289 秒 +++++++
+
+DEBUG 2018-01-17 14:45:17,024 DailyAUCollect 11212 1112 正在处理 DAU 数据...
+DEBUG 2018-01-17 14:45:17,025 DailyAUCollect 11212 1112 DAU：[8, 4]
+DEBUG 2018-01-17 14:45:17,025 DailyAUCollect 11212 1112 NAU：[7, 4]
+INFO 2018-01-17 14:45:17,035 DailyAUCollect 11212 1112 ===== 处理 2018-01-15 完毕，耗时: 0.010796546936035156 秒。 =======
+
+INFO 2018-01-17 14:45:17,035 DailyAUCollect 11212 1112 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-17 14:45:17,036 DailyAUCollect 11212 1112 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:45:17,039 CollectCommon 11212 1112 当天访问用户： ---> {'liugege', 'wang', '11111', 'zhao', 'LILI', 'CRISchou', '2222', 'cris'}
+DEBUG 2018-01-17 14:45:17,043 CollectCommon 11212 1112 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-17 14:45:17,043 CollectCommon 11212 1112 所有的新用户： ---> {'2222', 'liugege', 'wang', '11111'}
+DEBUG 2018-01-17 14:45:17,043 CollectCommon 11212 1112 写入到UserData中的用户：---> []
+INFO 2018-01-17 14:45:17,043 DailyAUCollect 11212 1112 +++++ 数据更新完毕，耗时：0.006868600845336914 秒 +++++++
+
+DEBUG 2018-01-17 14:45:17,043 DailyAUCollect 11212 1112 正在处理 DAU 数据...
+DEBUG 2018-01-17 14:45:17,044 DailyAUCollect 11212 1112 DAU：[8]
+DEBUG 2018-01-17 14:45:17,044 DailyAUCollect 11212 1112 NAU：[4]
+INFO 2018-01-17 14:45:17,052 DailyAUCollect 11212 1112 ===== 处理 2018-01-16 完毕，耗时: 0.00883173942565918 秒。 =======
+
+INFO 2018-01-17 14:45:17,052 DailyAUCollect 11212 1112 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-17 14:45:17,052 DailyAUCollect 11212 1112 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-17 14:45:17,056 CollectCommon 11212 1112 当天访问用户： ---> {'3333', 'cris', '5555', 'liugege', '6666', '2222 ', 'zhao', '7777', 'zhang', '4444'}
+DEBUG 2018-01-17 14:45:17,058 CollectCommon 11212 1112 不在UserData中的新用户： ---> {'3333', '5555', '6666', '2222 ', '7777', '4444'}
+DEBUG 2018-01-17 14:45:17,058 CollectCommon 11212 1112 所有的新用户： ---> {'3333', '5555', '6666', '2222 ', '7777', '4444'}
+DEBUG 2018-01-17 14:45:17,059 CollectCommon 11212 1112 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-17 15:38:48,752 import_tb_to_db 8084 13544 importing 'User' - 'User' into 'main.models.User'...
+INFO 2018-01-17 15:38:48,762 import_tb_to_db 8084 13544 import data 14 rows
+INFO 2018-01-18 09:28:59,828 DailyAUCollect 12564 8232 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-18 09:28:59,828 DailyAUCollect 12564 8232 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:28:59,828 DailyAUCollect 12564 8232 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:28:59,836 CollectCommon 12564 8232 当天访问用户： ---> {'zhang', 'CRISchou', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'testuser0000001', 'zhao', 'cris'}
+DEBUG 2018-01-18 09:28:59,840 CollectCommon 12564 8232 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:28:59,840 CollectCommon 12564 8232 所有的新用户： ---> {'zhang', 'LILI', 'CRISchou', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'zhao', 'cris'}
+DEBUG 2018-01-18 09:28:59,840 CollectCommon 12564 8232 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:28:59,840 DailyAUCollect 12564 8232 +++++ 数据更新完毕，耗时：0.011924982070922852 秒 +++++++
+
+DEBUG 2018-01-18 09:28:59,840 DailyAUCollect 12564 8232 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:28:59,843 DailyAUCollect 12564 8232 DAU：[8, 4, 3]
+DEBUG 2018-01-18 09:28:59,843 DailyAUCollect 12564 8232 NAU：[7, 4, 3]
+INFO 2018-01-18 09:28:59,849 DailyAUCollect 12564 8232 ===== 处理 2018-01-15 完毕，耗时: 0.009128093719482422 秒。 =======
+
+INFO 2018-01-18 09:28:59,849 DailyAUCollect 12564 8232 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:28:59,849 DailyAUCollect 12564 8232 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:28:59,851 CollectCommon 12564 8232 当天访问用户： ---> {'LILI', 'CRISchou', '2222', 'wang', 'liugege', 'zhao', 'cris', '11111'}
+DEBUG 2018-01-18 09:28:59,852 CollectCommon 12564 8232 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:28:59,852 CollectCommon 12564 8232 所有的新用户： ---> {'liugege', '2222', '11111', 'wang'}
+DEBUG 2018-01-18 09:28:59,852 CollectCommon 12564 8232 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:28:59,852 DailyAUCollect 12564 8232 +++++ 数据更新完毕，耗时：0.0019707679748535156 秒 +++++++
+
+DEBUG 2018-01-18 09:28:59,852 DailyAUCollect 12564 8232 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:28:59,854 DailyAUCollect 12564 8232 DAU：[8, 3]
+DEBUG 2018-01-18 09:28:59,854 DailyAUCollect 12564 8232 NAU：[4, 1]
+INFO 2018-01-18 09:28:59,857 DailyAUCollect 12564 8232 ===== 处理 2018-01-16 完毕，耗时: 0.005417823791503906 秒。 =======
+
+INFO 2018-01-18 09:28:59,858 DailyAUCollect 12564 8232 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:28:59,858 DailyAUCollect 12564 8232 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:28:59,859 CollectCommon 12564 8232 当天访问用户： ---> {'7777', 'zhang', '4444', '6666', '2222 ', '5555', 'liugege', 'zhao', 'cris', '3333'}
+DEBUG 2018-01-18 09:28:59,860 CollectCommon 12564 8232 不在UserData中的新用户： ---> {'7777', '4444', '6666', '2222 ', '5555', '3333'}
+DEBUG 2018-01-18 09:28:59,860 CollectCommon 12564 8232 所有的新用户： ---> {'7777', '4444', '6666', '2222 ', '5555', '3333'}
+DEBUG 2018-01-18 09:28:59,860 CollectCommon 12564 8232 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:29:00,605 DailyPVCollect 2664 10760 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-18 09:29:00,610 DailyPVCollect 2664 10760 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:29:00,610 DailyPVCollect 2664 10760 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:29:00,612 CollectCommon 2664 10760 当天访问用户： ---> {'zhang', 'testuser0000001', 'zhao', 'LILI', 'CRISchou', 'testuser00000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-18 09:29:00,613 CollectCommon 2664 10760 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:29:00,614 CollectCommon 2664 10760 所有的新用户： ---> {'zhang', 'zhao', 'LILI', 'CRISchou', 'testuser00000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-18 09:29:00,614 CollectCommon 2664 10760 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:29:00,614 DailyPVCollect 2664 10760 +++++ 数据更新完毕，耗时：0.004004001617431641 秒 +++++++
+
+DEBUG 2018-01-18 09:29:00,614 DailyPVCollect 2664 10760 正在计算 pv 数据...
+DEBUG 2018-01-18 09:29:00,624 DailyPVCollect 2664 10760 pv：139
+DEBUG 2018-01-18 09:29:00,624 DailyPVCollect 2664 10760 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:29:00,625 DailyPVCollect 2664 10760 大厅总用户数：8
+DEBUG 2018-01-18 09:29:00,625 DailyPVCollect 2664 10760 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:29:00,625 DailyPVCollect 2664 10760 大厅新增用户数：8
+INFO 2018-01-18 09:29:00,628 DailyPVCollect 2664 10760 ===== 处理 2018-01-15 完毕，耗时: 0.014037847518920898 秒。 =======
+
+INFO 2018-01-18 09:29:00,628 DailyPVCollect 2664 10760 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:29:00,628 DailyPVCollect 2664 10760 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:29:00,629 CollectCommon 2664 10760 当天访问用户： ---> {'11111', '2222', 'wang', 'liugege', 'zhao', 'LILI', 'CRISchou', 'cris'}
+DEBUG 2018-01-18 09:29:00,630 CollectCommon 2664 10760 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:29:00,630 CollectCommon 2664 10760 所有的新用户： ---> {'11111', '2222', 'liugege', 'wang'}
+DEBUG 2018-01-18 09:29:00,630 CollectCommon 2664 10760 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:29:00,630 DailyPVCollect 2664 10760 +++++ 数据更新完毕，耗时：0.002340078353881836 秒 +++++++
+
+DEBUG 2018-01-18 09:29:00,630 DailyPVCollect 2664 10760 正在计算 pv 数据...
+DEBUG 2018-01-18 09:29:00,631 DailyPVCollect 2664 10760 pv：73
+DEBUG 2018-01-18 09:29:00,631 DailyPVCollect 2664 10760 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:29:00,632 DailyPVCollect 2664 10760 大厅总用户数：12
+DEBUG 2018-01-18 09:29:00,632 DailyPVCollect 2664 10760 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:29:00,632 DailyPVCollect 2664 10760 大厅新增用户数：4
+INFO 2018-01-18 09:29:00,635 DailyPVCollect 2664 10760 ===== 处理 2018-01-16 完毕，耗时: 0.005154848098754883 秒。 =======
+
+INFO 2018-01-18 09:29:00,635 DailyPVCollect 2664 10760 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:29:00,635 DailyPVCollect 2664 10760 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:29:00,636 CollectCommon 2664 10760 当天访问用户： ---> {'zhang', '5555', '3333', '2222 ', 'liugege', 'zhao', '6666', '7777', '4444', 'cris'}
+DEBUG 2018-01-18 09:29:00,637 CollectCommon 2664 10760 不在UserData中的新用户： ---> {'5555', '3333', '2222 ', '7777', '6666', '4444'}
+DEBUG 2018-01-18 09:29:00,637 CollectCommon 2664 10760 所有的新用户： ---> {'5555', '3333', '2222 ', '7777', '6666', '4444'}
+DEBUG 2018-01-18 09:29:00,637 CollectCommon 2664 10760 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:32:51,106 DailyAUCollect 10860 11464 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-18 09:32:51,106 DailyAUCollect 10860 11464 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:32:51,106 DailyAUCollect 10860 11464 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:32:51,111 CollectCommon 10860 11464 当天访问用户： ---> {'cris', 'testuser0000001', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'CRISchou', 'testuser00000001', 'LILI', 'zhang', 'zhao'}
+DEBUG 2018-01-18 09:32:51,112 CollectCommon 10860 11464 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:32:51,112 CollectCommon 10860 11464 所有的新用户： ---> {'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'CRISchou', 'testuser00000001', 'LILI', 'zhang', 'zhao'}
+DEBUG 2018-01-18 09:32:51,112 CollectCommon 10860 11464 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:32:51,113 DailyAUCollect 10860 11464 +++++ 数据更新完毕，耗时：0.006468772888183594 秒 +++++++
+
+DEBUG 2018-01-18 09:32:51,113 DailyAUCollect 10860 11464 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:32:51,121 DailyAUCollect 10860 11464 DAU：[8, 4, 3]
+DEBUG 2018-01-18 09:32:51,121 DailyAUCollect 10860 11464 NAU：[7, 4, 3]
+INFO 2018-01-18 09:32:51,126 DailyAUCollect 10860 11464 ===== 处理 2018-01-15 完毕，耗时: 0.012892007827758789 秒。 =======
+
+INFO 2018-01-18 09:32:51,126 DailyAUCollect 10860 11464 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:32:51,126 DailyAUCollect 10860 11464 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:32:51,127 CollectCommon 10860 11464 当天访问用户： ---> {'cris', 'wang', 'liugege', '11111', 'CRISchou', 'LILI', '2222', 'zhao'}
+DEBUG 2018-01-18 09:32:51,128 CollectCommon 10860 11464 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:32:51,128 CollectCommon 10860 11464 所有的新用户： ---> {'wang', '11111', '2222', 'liugege'}
+DEBUG 2018-01-18 09:32:51,128 CollectCommon 10860 11464 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:32:51,131 DailyAUCollect 10860 11464 +++++ 数据更新完毕，耗时：0.005101442337036133 秒 +++++++
+
+DEBUG 2018-01-18 09:32:51,131 DailyAUCollect 10860 11464 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:32:51,132 DailyAUCollect 10860 11464 DAU：[8, 3]
+DEBUG 2018-01-18 09:32:51,132 DailyAUCollect 10860 11464 NAU：[4, 1]
+INFO 2018-01-18 09:32:51,136 DailyAUCollect 10860 11464 ===== 处理 2018-01-16 完毕，耗时: 0.0054187774658203125 秒。 =======
+
+INFO 2018-01-18 09:32:51,136 DailyAUCollect 10860 11464 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:32:51,136 DailyAUCollect 10860 11464 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:32:51,137 CollectCommon 10860 11464 当天访问用户： ---> {'7777', 'cris', '5555', '6666', '4444', 'liugege', '3333', 'zhang', '2222 ', 'zhao'}
+DEBUG 2018-01-18 09:32:51,139 CollectCommon 10860 11464 不在UserData中的新用户： ---> {'7777', '5555', '6666', '4444', '3333', '2222 '}
+DEBUG 2018-01-18 09:32:51,139 CollectCommon 10860 11464 所有的新用户： ---> {'7777', '5555', '6666', '4444', '3333', '2222 '}
+DEBUG 2018-01-18 09:32:51,139 CollectCommon 10860 11464 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:32:51,719 DailyPVCollect 7748 7128 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-18 09:32:51,723 DailyPVCollect 7748 7128 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:32:51,723 DailyPVCollect 7748 7128 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:32:51,725 CollectCommon 7748 7128 当天访问用户： ---> {'zhao', 'zhang', 'testuser00000001', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'cris', 'CRISchou', 'testuser0000001'}
+DEBUG 2018-01-18 09:32:51,726 CollectCommon 7748 7128 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:32:51,726 CollectCommon 7748 7128 所有的新用户： ---> {'zhao', 'zhang', 'testuser00000001', 'LILI', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'cris', 'CRISchou'}
+DEBUG 2018-01-18 09:32:51,726 CollectCommon 7748 7128 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:32:51,726 DailyPVCollect 7748 7128 +++++ 数据更新完毕，耗时：0.0031359195709228516 秒 +++++++
+
+DEBUG 2018-01-18 09:32:51,726 DailyPVCollect 7748 7128 正在计算 pv 数据...
+DEBUG 2018-01-18 09:32:51,727 DailyPVCollect 7748 7128 pv：139
+DEBUG 2018-01-18 09:32:51,727 DailyPVCollect 7748 7128 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:32:51,728 DailyPVCollect 7748 7128 大厅总用户数：8
+DEBUG 2018-01-18 09:32:51,728 DailyPVCollect 7748 7128 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:32:51,728 DailyPVCollect 7748 7128 大厅新增用户数：8
+INFO 2018-01-18 09:32:51,738 DailyPVCollect 7748 7128 ===== 处理 2018-01-15 完毕，耗时: 0.011473417282104492 秒。 =======
+
+INFO 2018-01-18 09:32:51,738 DailyPVCollect 7748 7128 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:32:51,738 DailyPVCollect 7748 7128 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:32:51,739 CollectCommon 7748 7128 当天访问用户： ---> {'zhao', 'wang', 'liugege', 'LILI', '2222', '11111', 'cris', 'CRISchou'}
+DEBUG 2018-01-18 09:32:51,740 CollectCommon 7748 7128 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:32:51,740 CollectCommon 7748 7128 所有的新用户： ---> {'11111', 'wang', '2222', 'liugege'}
+DEBUG 2018-01-18 09:32:51,740 CollectCommon 7748 7128 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:32:51,740 DailyPVCollect 7748 7128 +++++ 数据更新完毕，耗时：0.0020363330841064453 秒 +++++++
+
+DEBUG 2018-01-18 09:32:51,740 DailyPVCollect 7748 7128 正在计算 pv 数据...
+DEBUG 2018-01-18 09:32:51,741 DailyPVCollect 7748 7128 pv：73
+DEBUG 2018-01-18 09:32:51,741 DailyPVCollect 7748 7128 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:32:51,742 DailyPVCollect 7748 7128 大厅总用户数：12
+DEBUG 2018-01-18 09:32:51,742 DailyPVCollect 7748 7128 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:32:51,742 DailyPVCollect 7748 7128 大厅新增用户数：4
+INFO 2018-01-18 09:32:51,746 DailyPVCollect 7748 7128 ===== 处理 2018-01-16 完毕，耗时: 0.0061261653900146484 秒。 =======
+
+INFO 2018-01-18 09:32:51,746 DailyPVCollect 7748 7128 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:32:51,746 DailyPVCollect 7748 7128 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:32:51,747 CollectCommon 7748 7128 当天访问用户： ---> {'5555', 'zhao', 'zhang', 'liugege', '7777', '2222 ', 'cris', '6666', '4444', '3333'}
+DEBUG 2018-01-18 09:32:51,748 CollectCommon 7748 7128 不在UserData中的新用户： ---> {'5555', '7777', '2222 ', '6666', '4444', '3333'}
+DEBUG 2018-01-18 09:32:51,748 CollectCommon 7748 7128 所有的新用户： ---> {'5555', '7777', '2222 ', '6666', '4444', '3333'}
+DEBUG 2018-01-18 09:32:51,748 CollectCommon 7748 7128 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:33:05,456 DailyAUCollect 7856 13752 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-18 09:33:05,456 DailyAUCollect 7856 13752 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:33:05,456 DailyAUCollect 7856 13752 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:05,460 CollectCommon 7856 13752 当天访问用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser0000001', 'testuser00000001', 'cris', 'LILI', 'zhang', 'zhao', 'CRISchou'}
+DEBUG 2018-01-18 09:33:05,462 CollectCommon 7856 13752 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:33:05,462 CollectCommon 7856 13752 所有的新用户： ---> {'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'LILI', 'cris', 'zhao', 'zhang', 'CRISchou'}
+DEBUG 2018-01-18 09:33:05,462 CollectCommon 7856 13752 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:33:05,462 DailyAUCollect 7856 13752 +++++ 数据更新完毕，耗时：0.005987644195556641 秒 +++++++
+
+DEBUG 2018-01-18 09:33:05,462 DailyAUCollect 7856 13752 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:33:05,464 DailyAUCollect 7856 13752 DAU：[8, 4, 3]
+DEBUG 2018-01-18 09:33:05,464 DailyAUCollect 7856 13752 NAU：[7, 4, 3]
+INFO 2018-01-18 09:33:05,475 DailyAUCollect 7856 13752 ===== 处理 2018-01-15 完毕，耗时: 0.012069940567016602 秒。 =======
+
+INFO 2018-01-18 09:33:05,475 DailyAUCollect 7856 13752 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:33:05,475 DailyAUCollect 7856 13752 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:05,478 CollectCommon 7856 13752 当天访问用户： ---> {'2222', 'LILI', 'cris', 'zhao', '11111', 'CRISchou', 'wang', 'liugege'}
+DEBUG 2018-01-18 09:33:05,480 CollectCommon 7856 13752 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:33:05,480 CollectCommon 7856 13752 所有的新用户： ---> {'wang', '2222', '11111', 'liugege'}
+DEBUG 2018-01-18 09:33:05,480 CollectCommon 7856 13752 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:33:05,484 DailyAUCollect 7856 13752 +++++ 数据更新完毕，耗时：0.009022951126098633 秒 +++++++
+
+DEBUG 2018-01-18 09:33:05,484 DailyAUCollect 7856 13752 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:33:05,486 DailyAUCollect 7856 13752 DAU：[8, 3]
+DEBUG 2018-01-18 09:33:05,486 DailyAUCollect 7856 13752 NAU：[4, 1]
+INFO 2018-01-18 09:33:05,491 DailyAUCollect 7856 13752 ===== 处理 2018-01-16 完毕，耗时: 0.007018089294433594 秒。 =======
+
+INFO 2018-01-18 09:33:05,491 DailyAUCollect 7856 13752 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:33:05,491 DailyAUCollect 7856 13752 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:05,492 CollectCommon 7856 13752 当天访问用户： ---> {'6666', '7777', 'liugege', 'cris', 'zhao', 'zhang', '4444', '3333', '5555', '2222 '}
+DEBUG 2018-01-18 09:33:05,494 CollectCommon 7856 13752 不在UserData中的新用户： ---> {'6666', '7777', '4444', '3333', '5555', '2222 '}
+DEBUG 2018-01-18 09:33:05,494 CollectCommon 7856 13752 所有的新用户： ---> {'6666', '7777', '4444', '3333', '5555', '2222 '}
+DEBUG 2018-01-18 09:33:05,494 CollectCommon 7856 13752 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:33:06,090 DailyPVCollect 13604 7276 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-18 09:33:06,095 DailyPVCollect 13604 7276 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:33:06,095 DailyPVCollect 13604 7276 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:06,097 CollectCommon 13604 7276 当天访问用户： ---> {'testuser0000001', 'zhao', 'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'CRISchou', 'LILI', 'testuser00000001', 'cris'}
+DEBUG 2018-01-18 09:33:06,098 CollectCommon 13604 7276 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:33:06,098 CollectCommon 13604 7276 所有的新用户： ---> {'zhao', 'zhang', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'CRISchou', 'LILI', 'testuser00000001', 'cris'}
+DEBUG 2018-01-18 09:33:06,098 CollectCommon 13604 7276 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:33:06,098 DailyPVCollect 13604 7276 +++++ 数据更新完毕，耗时：0.003508329391479492 秒 +++++++
+
+DEBUG 2018-01-18 09:33:06,098 DailyPVCollect 13604 7276 正在计算 pv 数据...
+DEBUG 2018-01-18 09:33:06,100 DailyPVCollect 13604 7276 pv：139
+DEBUG 2018-01-18 09:33:06,100 DailyPVCollect 13604 7276 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:33:06,101 DailyPVCollect 13604 7276 大厅总用户数：8
+DEBUG 2018-01-18 09:33:06,101 DailyPVCollect 13604 7276 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:33:06,101 DailyPVCollect 13604 7276 大厅新增用户数：8
+INFO 2018-01-18 09:33:06,111 DailyPVCollect 13604 7276 ===== 处理 2018-01-15 完毕，耗时: 0.012789249420166016 秒。 =======
+
+INFO 2018-01-18 09:33:06,111 DailyPVCollect 13604 7276 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:33:06,111 DailyPVCollect 13604 7276 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:06,112 CollectCommon 13604 7276 当天访问用户： ---> {'zhao', '11111', 'CRISchou', 'LILI', 'cris', 'wang', '2222', 'liugege'}
+DEBUG 2018-01-18 09:33:06,113 CollectCommon 13604 7276 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:33:06,113 CollectCommon 13604 7276 所有的新用户： ---> {'wang', '2222', 'liugege', '11111'}
+DEBUG 2018-01-18 09:33:06,114 CollectCommon 13604 7276 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:33:06,114 DailyPVCollect 13604 7276 +++++ 数据更新完毕，耗时：0.0030083656311035156 秒 +++++++
+
+DEBUG 2018-01-18 09:33:06,114 DailyPVCollect 13604 7276 正在计算 pv 数据...
+DEBUG 2018-01-18 09:33:06,115 DailyPVCollect 13604 7276 pv：73
+DEBUG 2018-01-18 09:33:06,115 DailyPVCollect 13604 7276 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:33:06,116 DailyPVCollect 13604 7276 大厅总用户数：12
+DEBUG 2018-01-18 09:33:06,116 DailyPVCollect 13604 7276 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:33:06,116 DailyPVCollect 13604 7276 大厅新增用户数：4
+INFO 2018-01-18 09:33:06,120 DailyPVCollect 13604 7276 ===== 处理 2018-01-16 完毕，耗时: 0.005991935729980469 秒。 =======
+
+INFO 2018-01-18 09:33:06,120 DailyPVCollect 13604 7276 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:33:06,120 DailyPVCollect 13604 7276 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:06,121 CollectCommon 13604 7276 当天访问用户： ---> {'zhao', '7777', 'zhang', '6666', '2222 ', '4444', 'cris', '3333', 'liugege', '5555'}
+DEBUG 2018-01-18 09:33:06,123 CollectCommon 13604 7276 不在UserData中的新用户： ---> {'7777', '6666', '2222 ', '4444', '3333', '5555'}
+DEBUG 2018-01-18 09:33:06,123 CollectCommon 13604 7276 所有的新用户： ---> {'7777', '6666', '2222 ', '4444', '3333', '5555'}
+DEBUG 2018-01-18 09:33:06,123 CollectCommon 13604 7276 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:33:53,045 DailyAUCollect 12224 8500 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-18 09:33:53,045 DailyAUCollect 12224 8500 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:33:53,045 DailyAUCollect 12224 8500 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:53,049 CollectCommon 12224 8500 当天访问用户： ---> {'LILI', 'zhao', 'zhang', 'CRISchou', 'testuser00000001', 'testuser0000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-18 09:33:53,050 CollectCommon 12224 8500 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:33:53,050 CollectCommon 12224 8500 所有的新用户： ---> {'LILI', 'zhao', 'zhang', 'CRISchou', 'testuser00000001', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-18 09:33:53,051 CollectCommon 12224 8500 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:33:53,051 DailyAUCollect 12224 8500 +++++ 数据更新完毕，耗时：0.006298065185546875 秒 +++++++
+
+DEBUG 2018-01-18 09:33:53,051 DailyAUCollect 12224 8500 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:33:53,053 DailyAUCollect 12224 8500 DAU：[8, 4, 3]
+DEBUG 2018-01-18 09:33:53,053 DailyAUCollect 12224 8500 NAU：[7, 4, 3]
+INFO 2018-01-18 09:33:53,062 DailyAUCollect 12224 8500 ===== 处理 2018-01-15 完毕，耗时: 0.011186838150024414 秒。 =======
+
+INFO 2018-01-18 09:33:53,062 DailyAUCollect 12224 8500 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:33:53,062 DailyAUCollect 12224 8500 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:53,064 CollectCommon 12224 8500 当天访问用户： ---> {'LILI', '2222', 'CRISchou', '11111', 'liugege', 'wang', 'cris', 'zhao'}
+DEBUG 2018-01-18 09:33:53,064 CollectCommon 12224 8500 不在UserData中的新用户： ---> {'liugege', 'wang', '11111', '2222'}
+DEBUG 2018-01-18 09:33:53,064 CollectCommon 12224 8500 所有的新用户： ---> {'liugege', '11111', 'wang', '2222'}
+DEBUG 2018-01-18 09:33:53,065 CollectCommon 12224 8500 写入到UserData中的用户：---> ['liugege', 'wang', '11111', '2222']
+INFO 2018-01-18 09:33:53,067 DailyAUCollect 12224 8500 +++++ 数据更新完毕，耗时：0.0050127506256103516 秒 +++++++
+
+DEBUG 2018-01-18 09:33:53,067 DailyAUCollect 12224 8500 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:33:53,068 DailyAUCollect 12224 8500 DAU：[8, 3]
+DEBUG 2018-01-18 09:33:53,068 DailyAUCollect 12224 8500 NAU：[4, 1]
+INFO 2018-01-18 09:33:53,072 DailyAUCollect 12224 8500 ===== 处理 2018-01-16 完毕，耗时: 0.004494190216064453 秒。 =======
+
+INFO 2018-01-18 09:33:53,072 DailyAUCollect 12224 8500 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:33:53,072 DailyAUCollect 12224 8500 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:53,073 CollectCommon 12224 8500 当天访问用户： ---> {'4444', 'zhang', '3333', '5555', '7777', 'liugege', '6666', '2222 ', 'cris', 'zhao'}
+DEBUG 2018-01-18 09:33:53,074 CollectCommon 12224 8500 不在UserData中的新用户： ---> {'4444', '3333', '5555', '7777', '6666', '2222 '}
+DEBUG 2018-01-18 09:33:53,074 CollectCommon 12224 8500 所有的新用户： ---> {'4444', '3333', '5555', '7777', '6666', '2222 '}
+DEBUG 2018-01-18 09:33:53,074 CollectCommon 12224 8500 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:33:53,721 DailyPVCollect 11836 1540 ----- 开始处理：from 2018-01-15 to 2018-01-17 -------
+INFO 2018-01-18 09:33:53,726 DailyPVCollect 11836 1540 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:33:53,726 DailyPVCollect 11836 1540 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:53,728 CollectCommon 11836 1540 当天访问用户： ---> {'LILI', 'cris', 'zhang', 'testuser00000001', 'CRISchou', 'testuser0000001', 'zhao', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-18 09:33:53,729 CollectCommon 11836 1540 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:33:53,729 CollectCommon 11836 1540 所有的新用户： ---> {'LILI', 'cris', 'zhang', 'testuser00000001', 'CRISchou', 'zhao', 'okhttp3.internal.http.RealResponseBody@eeefe2'}
+DEBUG 2018-01-18 09:33:53,729 CollectCommon 11836 1540 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:33:53,729 DailyPVCollect 11836 1540 +++++ 数据更新完毕，耗时：0.0029799938201904297 秒 +++++++
+
+DEBUG 2018-01-18 09:33:53,729 DailyPVCollect 11836 1540 正在计算 pv 数据...
+DEBUG 2018-01-18 09:33:53,731 DailyPVCollect 11836 1540 pv：139
+DEBUG 2018-01-18 09:33:53,731 DailyPVCollect 11836 1540 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:33:53,732 DailyPVCollect 11836 1540 大厅总用户数：8
+DEBUG 2018-01-18 09:33:53,732 DailyPVCollect 11836 1540 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:33:53,732 DailyPVCollect 11836 1540 大厅新增用户数：8
+INFO 2018-01-18 09:33:53,741 DailyPVCollect 11836 1540 ===== 处理 2018-01-15 完毕，耗时: 0.011875629425048828 秒。 =======
+
+INFO 2018-01-18 09:33:53,741 DailyPVCollect 11836 1540 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:33:53,741 DailyPVCollect 11836 1540 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:53,743 CollectCommon 11836 1540 当天访问用户： ---> {'11111', 'LILI', 'cris', '2222', 'wang', 'liugege', 'CRISchou', 'zhao'}
+DEBUG 2018-01-18 09:33:53,744 CollectCommon 11836 1540 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:33:53,744 CollectCommon 11836 1540 所有的新用户： ---> {'11111', '2222', 'liugege', 'wang'}
+DEBUG 2018-01-18 09:33:53,744 CollectCommon 11836 1540 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:33:53,744 DailyPVCollect 11836 1540 +++++ 数据更新完毕，耗时：0.0031638145446777344 秒 +++++++
+
+DEBUG 2018-01-18 09:33:53,744 DailyPVCollect 11836 1540 正在计算 pv 数据...
+DEBUG 2018-01-18 09:33:53,745 DailyPVCollect 11836 1540 pv：73
+DEBUG 2018-01-18 09:33:53,745 DailyPVCollect 11836 1540 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:33:53,746 DailyPVCollect 11836 1540 大厅总用户数：12
+DEBUG 2018-01-18 09:33:53,746 DailyPVCollect 11836 1540 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:33:53,746 DailyPVCollect 11836 1540 大厅新增用户数：4
+INFO 2018-01-18 09:33:53,750 DailyPVCollect 11836 1540 ===== 处理 2018-01-16 完毕，耗时: 0.005533933639526367 秒。 =======
+
+INFO 2018-01-18 09:33:53,750 DailyPVCollect 11836 1540 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:33:53,750 DailyPVCollect 11836 1540 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:33:53,750 CollectCommon 11836 1540 当天访问用户： ---> {'2222 ', '3333', 'cris', 'zhang', '7777', 'liugege', '5555', 'zhao', '6666', '4444'}
+DEBUG 2018-01-18 09:33:53,752 CollectCommon 11836 1540 不在UserData中的新用户： ---> {'2222 ', '3333', '7777', '5555', '6666', '4444'}
+DEBUG 2018-01-18 09:33:53,752 CollectCommon 11836 1540 所有的新用户： ---> {'2222 ', '3333', '7777', '5555', '6666', '4444'}
+DEBUG 2018-01-18 09:33:53,752 CollectCommon 11836 1540 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:37:13,588 DailyAUCollect 13604 2468 ----- 开始处理：from 2018-01-16 to 2018-01-17 -------
+INFO 2018-01-18 09:37:13,588 DailyAUCollect 13604 2468 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:37:13,588 DailyAUCollect 13604 2468 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:37:13,592 CollectCommon 13604 2468 当天访问用户： ---> {'liugege', 'CRISchou', 'wang', 'zhao', '2222', '11111', 'LILI', 'cris'}
+DEBUG 2018-01-18 09:37:13,593 CollectCommon 13604 2468 不在UserData中的新用户： ---> {'11111', 'wang', '2222', 'liugege'}
+DEBUG 2018-01-18 09:37:13,593 CollectCommon 13604 2468 所有的新用户： ---> {'11111', 'wang', 'liugege', '2222'}
+DEBUG 2018-01-18 09:37:13,594 CollectCommon 13604 2468 写入到UserData中的用户：---> ['liugege', 'wang', '11111', '2222']
+INFO 2018-01-18 09:37:13,603 DailyAUCollect 13604 2468 +++++ 数据更新完毕，耗时：0.015082359313964844 秒 +++++++
+
+DEBUG 2018-01-18 09:37:13,603 DailyAUCollect 13604 2468 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:37:13,604 DailyAUCollect 13604 2468 DAU：[8, 3]
+DEBUG 2018-01-18 09:37:13,605 DailyAUCollect 13604 2468 NAU：[4, 1]
+INFO 2018-01-18 09:37:13,609 DailyAUCollect 13604 2468 ===== 处理 2018-01-16 完毕，耗时: 0.006023406982421875 秒。 =======
+
+INFO 2018-01-18 09:37:13,609 DailyAUCollect 13604 2468 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:37:13,609 DailyAUCollect 13604 2468 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:37:13,610 CollectCommon 13604 2468 当天访问用户： ---> {'4444', 'liugege', '3333', '7777', '6666', 'zhang', 'zhao', '2222 ', 'cris', '5555'}
+DEBUG 2018-01-18 09:37:13,611 CollectCommon 13604 2468 不在UserData中的新用户： ---> {'4444', '3333', '7777', '6666', '2222 ', '5555'}
+DEBUG 2018-01-18 09:37:13,612 CollectCommon 13604 2468 所有的新用户： ---> {'4444', '3333', '7777', '6666', '2222 ', '5555'}
+DEBUG 2018-01-18 09:37:13,612 CollectCommon 13604 2468 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:37:14,198 DailyPVCollect 7596 10952 ----- 开始处理：from 2018-01-16 to 2018-01-17 -------
+INFO 2018-01-18 09:37:14,202 DailyPVCollect 7596 10952 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:37:14,202 DailyPVCollect 7596 10952 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:37:14,203 CollectCommon 7596 10952 当天访问用户： ---> {'11111', 'wang', 'zhao', 'cris', 'liugege', 'LILI', '2222', 'CRISchou'}
+DEBUG 2018-01-18 09:37:14,205 CollectCommon 7596 10952 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:37:14,205 CollectCommon 7596 10952 所有的新用户： ---> {'liugege', 'wang', '11111', '2222'}
+DEBUG 2018-01-18 09:37:14,205 CollectCommon 7596 10952 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:37:14,205 DailyPVCollect 7596 10952 +++++ 数据更新完毕，耗时：0.0030112266540527344 秒 +++++++
+
+DEBUG 2018-01-18 09:37:14,205 DailyPVCollect 7596 10952 正在计算 pv 数据...
+DEBUG 2018-01-18 09:37:14,206 DailyPVCollect 7596 10952 pv：73
+DEBUG 2018-01-18 09:37:14,206 DailyPVCollect 7596 10952 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:37:14,206 DailyPVCollect 7596 10952 大厅总用户数：12
+DEBUG 2018-01-18 09:37:14,206 DailyPVCollect 7596 10952 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:37:14,206 DailyPVCollect 7596 10952 大厅新增用户数：4
+INFO 2018-01-18 09:37:14,210 DailyPVCollect 7596 10952 ===== 处理 2018-01-16 完毕，耗时: 0.004987001419067383 秒。 =======
+
+INFO 2018-01-18 09:37:14,210 DailyPVCollect 7596 10952 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:37:14,210 DailyPVCollect 7596 10952 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:37:14,211 CollectCommon 7596 10952 当天访问用户： ---> {'2222 ', '5555', 'cris', 'zhao', '7777', 'zhang', 'liugege', '4444', '6666', '3333'}
+DEBUG 2018-01-18 09:37:14,212 CollectCommon 7596 10952 不在UserData中的新用户： ---> {'2222 ', '7777', '4444', '3333', '6666', '5555'}
+DEBUG 2018-01-18 09:37:14,212 CollectCommon 7596 10952 所有的新用户： ---> {'2222 ', '5555', '7777', '4444', '6666', '3333'}
+DEBUG 2018-01-18 09:37:14,212 CollectCommon 7596 10952 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:38:12,091 DailyAUCollect 6376 3304 ----- 开始处理：from 2018-01-16 to 2018-01-16 -------
+INFO 2018-01-18 09:38:12,092 DailyAUCollect 6376 3304 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:38:12,092 DailyAUCollect 6376 3304 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:38:12,096 CollectCommon 6376 3304 当天访问用户： ---> {'cris', 'CRISchou', 'zhao', '2222', 'LILI', '11111', 'wang', 'liugege'}
+DEBUG 2018-01-18 09:38:12,097 CollectCommon 6376 3304 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:38:12,098 CollectCommon 6376 3304 所有的新用户： ---> {'2222', 'wang', 'liugege', '11111'}
+DEBUG 2018-01-18 09:38:12,098 CollectCommon 6376 3304 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:38:12,098 DailyAUCollect 6376 3304 +++++ 数据更新完毕，耗时：0.005992412567138672 秒 +++++++
+
+DEBUG 2018-01-18 09:38:12,098 DailyAUCollect 6376 3304 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:38:12,099 DailyAUCollect 6376 3304 DAU：[8, 3]
+DEBUG 2018-01-18 09:38:12,099 DailyAUCollect 6376 3304 NAU：[4, 1]
+INFO 2018-01-18 09:38:12,109 DailyAUCollect 6376 3304 ===== 处理 2018-01-16 完毕，耗时: 0.011041402816772461 秒。 =======
+
+INFO 2018-01-18 09:38:12,109 DailyAUCollect 6376 3304 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:38:12,602 DailyPVCollect 9656 6524 ----- 开始处理：from 2018-01-16 to 2018-01-16 -------
+INFO 2018-01-18 09:38:12,606 DailyPVCollect 9656 6524 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:38:12,606 DailyPVCollect 9656 6524 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:38:12,607 CollectCommon 9656 6524 当天访问用户： ---> {'liugege', 'zhao', '2222', '11111', 'wang', 'LILI', 'cris', 'CRISchou'}
+DEBUG 2018-01-18 09:38:12,609 CollectCommon 9656 6524 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:38:12,609 CollectCommon 9656 6524 所有的新用户： ---> {'2222', 'wang', 'liugege', '11111'}
+DEBUG 2018-01-18 09:38:12,609 CollectCommon 9656 6524 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:38:12,609 DailyPVCollect 9656 6524 +++++ 数据更新完毕，耗时：0.002536296844482422 秒 +++++++
+
+DEBUG 2018-01-18 09:38:12,609 DailyPVCollect 9656 6524 正在计算 pv 数据...
+DEBUG 2018-01-18 09:38:12,610 DailyPVCollect 9656 6524 pv：73
+DEBUG 2018-01-18 09:38:12,610 DailyPVCollect 9656 6524 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:38:12,611 DailyPVCollect 9656 6524 大厅总用户数：12
+DEBUG 2018-01-18 09:38:12,611 DailyPVCollect 9656 6524 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:38:12,611 DailyPVCollect 9656 6524 大厅新增用户数：4
+INFO 2018-01-18 09:38:12,621 DailyPVCollect 9656 6524 ===== 处理 2018-01-16 完毕，耗时: 0.011866092681884766 秒。 =======
+
+INFO 2018-01-18 09:38:12,621 DailyPVCollect 9656 6524 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:38:31,347 DailyAUCollect 6660 9088 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:38:31,347 DailyAUCollect 6660 9088 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:38:31,347 DailyAUCollect 6660 9088 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:38:31,352 CollectCommon 6660 9088 当天访问用户： ---> {'5555', '7777', 'zhao', 'zhang', 'cris', '3333', 'liugege', '4444', '6666', '2222 '}
+DEBUG 2018-01-18 09:38:31,353 CollectCommon 6660 9088 不在UserData中的新用户： ---> {'5555', '7777', '3333', '4444', '6666', '2222 '}
+DEBUG 2018-01-18 09:38:31,353 CollectCommon 6660 9088 所有的新用户： ---> {'5555', '7777', '3333', '4444', '6666', '2222 '}
+DEBUG 2018-01-18 09:38:31,353 CollectCommon 6660 9088 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:38:31,918 DailyPVCollect 11952 13476 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:38:31,922 DailyPVCollect 11952 13476 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:38:31,922 DailyPVCollect 11952 13476 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:38:31,924 CollectCommon 11952 13476 当天访问用户： ---> {'zhao', '7777', '2222 ', '4444', 'cris', 'zhang', '5555', '3333', 'liugege', '6666'}
+DEBUG 2018-01-18 09:38:31,925 CollectCommon 11952 13476 不在UserData中的新用户： ---> {'2222 ', '3333', '4444', '5555', '7777', '6666'}
+DEBUG 2018-01-18 09:38:31,926 CollectCommon 11952 13476 所有的新用户： ---> {'7777', '2222 ', '4444', '5555', '3333', '6666'}
+DEBUG 2018-01-18 09:38:31,926 CollectCommon 11952 13476 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:40:02,636 DailyAUCollect 13024 8360 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:40:02,636 DailyAUCollect 13024 8360 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:40:02,636 DailyAUCollect 13024 8360 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:02,641 CollectCommon 13024 8360 当天访问用户： ---> {'4444', '3333', 'zhang', '5555', 'cris', 'liugege', '2222 ', '7777', '6666', 'zhao'}
+DEBUG 2018-01-18 09:40:02,642 CollectCommon 13024 8360 不在UserData中的新用户： ---> {'4444', '3333', '5555', '2222 ', '7777', '6666'}
+DEBUG 2018-01-18 09:40:02,642 CollectCommon 13024 8360 所有的新用户： ---> {'4444', '3333', '5555', '2222 ', '7777', '6666'}
+DEBUG 2018-01-18 09:40:02,642 CollectCommon 13024 8360 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:40:03,216 DailyPVCollect 7660 8892 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:40:03,221 DailyPVCollect 7660 8892 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:40:03,221 DailyPVCollect 7660 8892 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:03,222 CollectCommon 7660 8892 当天访问用户： ---> {'cris', 'liugege', 'zhao', 'zhang', '5555', '6666', '3333', '4444', '7777', '2222 '}
+DEBUG 2018-01-18 09:40:03,224 CollectCommon 7660 8892 不在UserData中的新用户： ---> {'5555', '6666', '3333', '4444', '7777', '2222 '}
+DEBUG 2018-01-18 09:40:03,224 CollectCommon 7660 8892 所有的新用户： ---> {'5555', '6666', '3333', '4444', '7777', '2222 '}
+DEBUG 2018-01-18 09:40:03,224 CollectCommon 7660 8892 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:41:11,364 DailyAUCollect 13520 11744 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:41:11,364 DailyAUCollect 13520 11744 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:41:11,364 DailyAUCollect 13520 11744 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:41:11,369 CollectCommon 13520 11744 当天访问用户： ---> {'2222 ', 'cris', '6666', '3333', 'liugege', 'zhao', '4444', '5555', '7777', 'zhang'}
+DEBUG 2018-01-18 09:41:11,370 CollectCommon 13520 11744 不在UserData中的新用户： ---> {'2222 ', '6666', '3333', '4444', '5555', '7777'}
+DEBUG 2018-01-18 09:41:11,370 CollectCommon 13520 11744 所有的新用户： ---> {'2222 ', '6666', '3333', '4444', '5555', '7777'}
+DEBUG 2018-01-18 09:41:11,370 CollectCommon 13520 11744 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:41:11,951 DailyPVCollect 6292 11920 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:41:11,955 DailyPVCollect 6292 11920 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:41:11,955 DailyPVCollect 6292 11920 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:41:11,957 CollectCommon 6292 11920 当天访问用户： ---> {'zhang', '6666', '7777', 'zhao', '4444', '2222 ', '5555', '3333', 'liugege', 'cris'}
+DEBUG 2018-01-18 09:41:11,958 CollectCommon 6292 11920 不在UserData中的新用户： ---> {'6666', '7777', '4444', '2222 ', '5555', '3333'}
+DEBUG 2018-01-18 09:41:11,958 CollectCommon 6292 11920 所有的新用户： ---> {'6666', '7777', '4444', '2222 ', '5555', '3333'}
+DEBUG 2018-01-18 09:41:11,958 CollectCommon 6292 11920 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:42:00,449 DailyAUCollect 6136 1792 ----- 开始处理：from 2018-01-17 to 2018-01-18 -------
+INFO 2018-01-18 09:42:00,449 DailyAUCollect 6136 1792 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:42:00,449 DailyAUCollect 6136 1792 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:42:00,454 CollectCommon 6136 1792 当天访问用户： ---> {'7777', '2222 ', 'liugege', 'zhang', '6666', '4444', 'cris', '5555', '3333', 'zhao'}
+DEBUG 2018-01-18 09:42:00,455 CollectCommon 6136 1792 不在UserData中的新用户： ---> {'7777', '2222 ', '4444', '6666', '5555', '3333'}
+DEBUG 2018-01-18 09:42:00,455 CollectCommon 6136 1792 所有的新用户： ---> {'7777', '2222 ', '6666', '4444', '5555', '3333'}
+DEBUG 2018-01-18 09:42:00,455 CollectCommon 6136 1792 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:42:01,066 DailyPVCollect 12920 9728 ----- 开始处理：from 2018-01-17 to 2018-01-18 -------
+INFO 2018-01-18 09:42:01,071 DailyPVCollect 12920 9728 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:42:01,071 DailyPVCollect 12920 9728 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:42:01,072 CollectCommon 12920 9728 当天访问用户： ---> {'liugege', '2222 ', '5555', 'cris', '6666', 'zhao', '7777', '3333', '4444', 'zhang'}
+DEBUG 2018-01-18 09:42:01,073 CollectCommon 12920 9728 不在UserData中的新用户： ---> {'2222 ', '5555', '6666', '7777', '3333', '4444'}
+DEBUG 2018-01-18 09:42:01,074 CollectCommon 12920 9728 所有的新用户： ---> {'2222 ', '5555', '6666', '7777', '3333', '4444'}
+DEBUG 2018-01-18 09:42:01,074 CollectCommon 12920 9728 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:44:02,396 DailyAUCollect 2828 10904 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:44:02,397 DailyAUCollect 2828 10904 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:44:02,397 DailyAUCollect 2828 10904 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:44:02,402 CollectCommon 2828 10904 当天访问用户： ---> {'4444', '5555', '2222 ', 'liugege', '7777', 'zhang', '3333', 'zhao', 'cris', '6666'}
+DEBUG 2018-01-18 09:44:02,403 CollectCommon 2828 10904 不在UserData中的新用户： ---> {'4444', '5555', '2222 ', '7777', '3333', '6666'}
+DEBUG 2018-01-18 09:44:02,403 CollectCommon 2828 10904 所有的新用户： ---> {'4444', '5555', '2222 ', '7777', '3333', '6666'}
+DEBUG 2018-01-18 09:44:02,403 CollectCommon 2828 10904 写入到UserData中的用户：---> ['2222 ', '3333', '4444', '5555', '6666', '7777']
+INFO 2018-01-18 09:44:02,411 DailyAUCollect 2828 10904 +++++ 数据更新完毕，耗时：0.014166116714477539 秒 +++++++
+
+DEBUG 2018-01-18 09:44:02,411 DailyAUCollect 2828 10904 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:44:02,411 DailyAUCollect 2828 10904 DAU：[10]
+DEBUG 2018-01-18 09:44:02,411 DailyAUCollect 2828 10904 NAU：[6]
+INFO 2018-01-18 09:44:02,416 DailyAUCollect 2828 10904 ===== 处理 2018-01-17 完毕，耗时: 0.005002021789550781 秒。 =======
+
+INFO 2018-01-18 09:44:02,416 DailyAUCollect 2828 10904 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:44:02,927 DailyPVCollect 4052 8904 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:44:02,932 DailyPVCollect 4052 8904 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:44:02,932 DailyPVCollect 4052 8904 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:44:02,933 CollectCommon 4052 8904 当天访问用户： ---> {'3333', 'zhang', '6666', 'liugege', 'cris', 'zhao', '2222 ', '7777', '5555', '4444'}
+DEBUG 2018-01-18 09:44:02,935 CollectCommon 4052 8904 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:44:02,935 CollectCommon 4052 8904 所有的新用户： ---> {'3333', '6666', '2222 ', '7777', '5555', '4444'}
+DEBUG 2018-01-18 09:44:02,935 CollectCommon 4052 8904 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:44:02,935 DailyPVCollect 4052 8904 +++++ 数据更新完毕，耗时：0.0029773712158203125 秒 +++++++
+
+DEBUG 2018-01-18 09:44:02,935 DailyPVCollect 4052 8904 正在计算 pv 数据...
+DEBUG 2018-01-18 09:44:02,936 DailyPVCollect 4052 8904 pv：100
+DEBUG 2018-01-18 09:44:02,936 DailyPVCollect 4052 8904 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:44:02,938 DailyPVCollect 4052 8904 大厅总用户数：18
+DEBUG 2018-01-18 09:44:02,938 DailyPVCollect 4052 8904 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:44:02,938 DailyPVCollect 4052 8904 大厅新增用户数：6
+INFO 2018-01-18 09:44:02,949 DailyPVCollect 4052 8904 ===== 处理 2018-01-17 完毕，耗时: 0.01381540298461914 秒。 =======
+
+INFO 2018-01-18 09:44:02,949 DailyPVCollect 4052 8904 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:45:16,697 DailyAUCollect 2136 732 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:45:16,697 DailyAUCollect 2136 732 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:45:16,697 DailyAUCollect 2136 732 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:45:16,701 CollectCommon 2136 732 当天访问用户： ---> {'3333', '7777', 'zhang', '5555', 'cris', 'liugege', '2222', 'zhao', '4444', '6666'}
+DEBUG 2018-01-18 09:45:16,702 CollectCommon 2136 732 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:45:16,702 CollectCommon 2136 732 所有的新用户： ---> {'3333', '7777', '5555', '2222', '4444', '6666', '2222 '}
+DEBUG 2018-01-18 09:45:16,703 CollectCommon 2136 732 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:45:17,756 DailyPVCollect 1860 7608 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:45:17,760 DailyPVCollect 1860 7608 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:45:17,760 DailyPVCollect 1860 7608 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:45:17,762 CollectCommon 1860 7608 当天访问用户： ---> {'zhao', '2222', 'cris', '4444', '7777', '5555', 'liugege', '6666', '3333', 'zhang'}
+DEBUG 2018-01-18 09:45:17,763 CollectCommon 1860 7608 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:45:17,763 CollectCommon 1860 7608 所有的新用户： ---> {'2222', '2222 ', '4444', '7777', '5555', '6666', '3333'}
+DEBUG 2018-01-18 09:45:17,763 CollectCommon 1860 7608 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:45:38,661 DailyAUCollect 12140 10164 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:45:38,661 DailyAUCollect 12140 10164 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:45:38,661 DailyAUCollect 12140 10164 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:45:38,666 CollectCommon 12140 10164 当天访问用户： ---> {'zhang', '7777', '3333', '6666', 'liugege', 'cris', '5555', '4444', 'zhao'}
+DEBUG 2018-01-18 09:45:38,667 CollectCommon 12140 10164 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:45:38,667 CollectCommon 12140 10164 所有的新用户： ---> {'7777', '3333', '6666', '5555', '4444'}
+DEBUG 2018-01-18 09:45:38,667 CollectCommon 12140 10164 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:45:38,668 DailyAUCollect 12140 10164 +++++ 数据更新完毕，耗时：0.005513191223144531 秒 +++++++
+
+DEBUG 2018-01-18 09:45:38,668 DailyAUCollect 12140 10164 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:45:38,668 DailyAUCollect 12140 10164 DAU：[9]
+DEBUG 2018-01-18 09:45:38,668 DailyAUCollect 12140 10164 NAU：[5]
+INFO 2018-01-18 09:45:38,678 DailyAUCollect 12140 10164 ===== 处理 2018-01-17 完毕，耗时: 0.010123491287231445 秒。 =======
+
+INFO 2018-01-18 09:45:38,678 DailyAUCollect 12140 10164 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:45:39,212 DailyPVCollect 9900 11500 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:45:39,217 DailyPVCollect 9900 11500 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:45:39,217 DailyPVCollect 9900 11500 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:45:39,218 CollectCommon 9900 11500 当天访问用户： ---> {'6666', 'cris', '4444', '5555', 'zhang', '7777', 'liugege', '3333', 'zhao'}
+DEBUG 2018-01-18 09:45:39,220 CollectCommon 9900 11500 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:45:39,220 CollectCommon 9900 11500 所有的新用户： ---> {'6666', '4444', '5555', '7777', '3333'}
+DEBUG 2018-01-18 09:45:39,220 CollectCommon 9900 11500 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:45:39,220 DailyPVCollect 9900 11500 +++++ 数据更新完毕，耗时：0.002963542938232422 秒 +++++++
+
+DEBUG 2018-01-18 09:45:39,220 DailyPVCollect 9900 11500 正在计算 pv 数据...
+DEBUG 2018-01-18 09:45:39,221 DailyPVCollect 9900 11500 pv：100
+DEBUG 2018-01-18 09:45:39,221 DailyPVCollect 9900 11500 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:45:39,221 DailyPVCollect 9900 11500 大厅总用户数：18
+DEBUG 2018-01-18 09:45:39,221 DailyPVCollect 9900 11500 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:45:39,221 DailyPVCollect 9900 11500 大厅新增用户数：6
+INFO 2018-01-18 09:45:39,230 DailyPVCollect 9900 11500 ===== 处理 2018-01-17 完毕，耗时: 0.010717153549194336 秒。 =======
+
+INFO 2018-01-18 09:45:39,231 DailyPVCollect 9900 11500 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:50:21,613 DailyAUCollect 3660 2064 ----- 开始处理：from 2018-01-16 to 2018-01-16 -------
+INFO 2018-01-18 09:50:21,613 DailyAUCollect 3660 2064 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:50:21,613 DailyAUCollect 3660 2064 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:50:21,617 CollectCommon 3660 2064 当天访问用户： ---> {'wang', 'liugege', '11111', '2222', 'zhao', 'cris', 'CRISchou', 'LILI'}
+DEBUG 2018-01-18 09:50:21,619 CollectCommon 3660 2064 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:50:21,619 CollectCommon 3660 2064 所有的新用户： ---> {'2222 ', 'liugege', '11111', '2222', 'wang'}
+DEBUG 2018-01-18 09:50:21,619 CollectCommon 3660 2064 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:50:22,556 DailyPVCollect 6644 7192 ----- 开始处理：from 2018-01-16 to 2018-01-16 -------
+INFO 2018-01-18 09:50:22,560 DailyPVCollect 6644 7192 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:50:22,560 DailyPVCollect 6644 7192 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:50:22,562 CollectCommon 6644 7192 当天访问用户： ---> {'LILI', 'cris', 'liugege', 'zhao', '11111', '2222', 'CRISchou', 'wang'}
+DEBUG 2018-01-18 09:50:22,563 CollectCommon 6644 7192 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:50:22,563 CollectCommon 6644 7192 所有的新用户： ---> {'liugege', '2222 ', '11111', '2222', 'wang'}
+DEBUG 2018-01-18 09:50:22,563 CollectCommon 6644 7192 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:50:47,340 DailyAUCollect 14332 8892 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:50:47,340 DailyAUCollect 14332 8892 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:50:47,340 DailyAUCollect 14332 8892 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:50:47,345 CollectCommon 14332 8892 当天访问用户： ---> {'4444', 'cris', 'zhang', '6666', '5555', '7777', 'zhao', '3333', 'liugege'}
+DEBUG 2018-01-18 09:50:47,346 CollectCommon 14332 8892 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:50:47,346 CollectCommon 14332 8892 所有的新用户： ---> {'4444', '6666', '5555', '7777', '3333'}
+DEBUG 2018-01-18 09:50:47,346 CollectCommon 14332 8892 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:50:47,346 DailyAUCollect 14332 8892 +++++ 数据更新完毕，耗时：0.006016969680786133 秒 +++++++
+
+DEBUG 2018-01-18 09:50:47,346 DailyAUCollect 14332 8892 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:50:47,346 DailyAUCollect 14332 8892 DAU：[9]
+DEBUG 2018-01-18 09:50:47,346 DailyAUCollect 14332 8892 NAU：[5]
+INFO 2018-01-18 09:50:47,357 DailyAUCollect 14332 8892 ===== 处理 2018-01-17 完毕，耗时: 0.01009511947631836 秒。 =======
+
+INFO 2018-01-18 09:50:47,358 DailyAUCollect 14332 8892 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:50:47,876 DailyPVCollect 12276 9060 ----- 开始处理：from 2018-01-17 to 2018-01-17 -------
+INFO 2018-01-18 09:50:47,881 DailyPVCollect 12276 9060 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:50:47,881 DailyPVCollect 12276 9060 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:50:47,882 CollectCommon 12276 9060 当天访问用户： ---> {'liugege', '3333', '6666', 'cris', '4444', '7777', '5555', 'zhang', 'zhao'}
+DEBUG 2018-01-18 09:50:47,884 CollectCommon 12276 9060 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:50:47,884 CollectCommon 12276 9060 所有的新用户： ---> {'3333', '6666', '4444', '7777', '5555'}
+DEBUG 2018-01-18 09:50:47,884 CollectCommon 12276 9060 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:50:47,884 DailyPVCollect 12276 9060 +++++ 数据更新完毕，耗时：0.003119230270385742 秒 +++++++
+
+DEBUG 2018-01-18 09:50:47,884 DailyPVCollect 12276 9060 正在计算 pv 数据...
+DEBUG 2018-01-18 09:50:47,885 DailyPVCollect 12276 9060 pv：100
+DEBUG 2018-01-18 09:50:47,885 DailyPVCollect 12276 9060 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:50:47,886 DailyPVCollect 12276 9060 大厅总用户数：18
+DEBUG 2018-01-18 09:50:47,886 DailyPVCollect 12276 9060 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:50:47,886 DailyPVCollect 12276 9060 大厅新增用户数：6
+INFO 2018-01-18 09:50:47,896 DailyPVCollect 12276 9060 ===== 处理 2018-01-17 完毕，耗时: 0.012002706527709961 秒。 =======
+
+INFO 2018-01-18 09:50:47,896 DailyPVCollect 12276 9060 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:36:09,640 DailyAUCollect 3592 9064 ----- 开始处理：from 2018-01-18 to 2018-01-18 -------
+INFO 2018-01-18 09:36:09,649 DailyAUCollect 3592 9064 ===== 正在处理 2018-01-18 =======
+INFO 2018-01-18 09:36:09,649 DailyAUCollect 3592 9064 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:36:09,653 CollectCommon 3592 9064 当天访问用户： ---> {'zhang3', 'zhang4', 'zhang2', 'zhang5', 'zhao', 'zhang1', 'cris', 'zhang', 'liugege'}
+DEBUG 2018-01-18 09:36:09,656 CollectCommon 3592 9064 不在UserData中的新用户： ---> {'zhang3', 'zhang4', 'zhang5', 'zhang2', 'zhang1'}
+DEBUG 2018-01-18 09:36:09,656 CollectCommon 3592 9064 所有的新用户： ---> {'zhang3', 'zhang4', 'zhang5', 'zhang2', 'zhang1'}
+DEBUG 2018-01-18 09:36:09,656 CollectCommon 3592 9064 写入到UserData中的用户：---> ['zhang1', 'zhang2', 'zhang3', 'zhang4', 'zhang5']
+INFO 2018-01-18 09:36:09,660 DailyAUCollect 3592 9064 +++++ 数据更新完毕，耗时：0.010976314544677734 秒 +++++++
+
+DEBUG 2018-01-18 09:36:09,660 DailyAUCollect 3592 9064 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:36:09,660 DailyAUCollect 3592 9064 DAU：[9]
+DEBUG 2018-01-18 09:36:09,660 DailyAUCollect 3592 9064 NAU：[5]
+INFO 2018-01-18 09:36:09,665 DailyAUCollect 3592 9064 ===== 处理 2018-01-18 完毕，耗时: 0.005014657974243164 秒。 =======
+
+INFO 2018-01-18 09:36:09,665 DailyAUCollect 3592 9064 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:36:10,254 DailyPVCollect 13148 8160 ----- 开始处理：from 2018-01-18 to 2018-01-18 -------
+INFO 2018-01-18 09:36:10,259 DailyPVCollect 13148 8160 ===== 正在处理 2018-01-18 =======
+INFO 2018-01-18 09:36:10,259 DailyPVCollect 13148 8160 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:36:10,260 CollectCommon 13148 8160 当天访问用户： ---> {'zhang', 'zhang4', 'zhang1', 'zhang3', 'zhao', 'zhang2', 'zhang5', 'cris', 'liugege'}
+DEBUG 2018-01-18 09:36:10,261 CollectCommon 13148 8160 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:36:10,261 CollectCommon 13148 8160 所有的新用户： ---> {'zhang4', 'zhang1', 'zhang3', 'zhang2', 'zhang5'}
+DEBUG 2018-01-18 09:36:10,261 CollectCommon 13148 8160 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:36:10,262 DailyPVCollect 13148 8160 +++++ 数据更新完毕，耗时：0.0030059814453125 秒 +++++++
+
+DEBUG 2018-01-18 09:36:10,262 DailyPVCollect 13148 8160 正在计算 pv 数据...
+DEBUG 2018-01-18 09:36:10,263 DailyPVCollect 13148 8160 pv：84
+DEBUG 2018-01-18 09:36:10,263 DailyPVCollect 13148 8160 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:36:10,264 DailyPVCollect 13148 8160 大厅总用户数：23
+DEBUG 2018-01-18 09:36:10,264 DailyPVCollect 13148 8160 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:36:10,264 DailyPVCollect 13148 8160 大厅新增用户数：5
+INFO 2018-01-18 09:36:10,273 DailyPVCollect 13148 8160 ===== 处理 2018-01-18 完毕，耗时: 0.011002779006958008 秒。 =======
+
+INFO 2018-01-18 09:36:10,273 DailyPVCollect 13148 8160 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:40:06,966 DailyAUCollect 8956 5176 ----- 开始处理：from 2018-01-15 to 2018-01-18 -------
+INFO 2018-01-18 09:40:06,966 DailyAUCollect 8956 5176 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:40:06,966 DailyAUCollect 8956 5176 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:06,970 CollectCommon 8956 5176 当天访问用户： ---> {'cris', 'LILI', 'zhao', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhang', 'testuser0000001', 'CRISchou', 'testuser00000001'}
+DEBUG 2018-01-18 09:40:06,971 CollectCommon 8956 5176 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:40:06,972 CollectCommon 8956 5176 所有的新用户： ---> {'cris', 'LILI', 'zhao', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'zhang', 'CRISchou', 'testuser00000001'}
+DEBUG 2018-01-18 09:40:06,972 CollectCommon 8956 5176 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:40:06,972 DailyAUCollect 8956 5176 +++++ 数据更新完毕，耗时：0.0063304901123046875 秒 +++++++
+
+DEBUG 2018-01-18 09:40:06,972 DailyAUCollect 8956 5176 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:40:06,981 DailyAUCollect 8956 5176 DAU：[8, 4, 3]
+DEBUG 2018-01-18 09:40:06,982 DailyAUCollect 8956 5176 NAU：[7, 4, 3]
+INFO 2018-01-18 09:40:06,986 DailyAUCollect 8956 5176 ===== 处理 2018-01-15 完毕，耗时: 0.01382756233215332 秒。 =======
+
+INFO 2018-01-18 09:40:06,986 DailyAUCollect 8956 5176 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:40:06,986 DailyAUCollect 8956 5176 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:06,987 CollectCommon 8956 5176 当天访问用户： ---> {'cris', 'LILI', 'zhao', '11111', 'CRISchou', 'wang', 'liugege', '2222'}
+DEBUG 2018-01-18 09:40:06,988 CollectCommon 8956 5176 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:40:06,988 CollectCommon 8956 5176 所有的新用户： ---> {'11111', '2222 ', 'wang', 'liugege', '2222'}
+DEBUG 2018-01-18 09:40:06,988 CollectCommon 8956 5176 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:40:07,699 DailyPVCollect 11224 5524 ----- 开始处理：from 2018-01-15 to 2018-01-18 -------
+INFO 2018-01-18 09:40:07,703 DailyPVCollect 11224 5524 ===== 正在处理 2018-01-15 =======
+INFO 2018-01-18 09:40:07,703 DailyPVCollect 11224 5524 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:07,704 CollectCommon 11224 5524 当天访问用户： ---> {'zhao', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'LILI', 'testuser00000001', 'zhang', 'CRISchou', 'testuser0000001'}
+DEBUG 2018-01-18 09:40:07,706 CollectCommon 11224 5524 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:40:07,706 CollectCommon 11224 5524 所有的新用户： ---> {'zhao', 'LILI', 'cris', 'okhttp3.internal.http.RealResponseBody@eeefe2', 'testuser00000001', 'zhang', 'CRISchou'}
+DEBUG 2018-01-18 09:40:07,706 CollectCommon 11224 5524 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:40:07,706 DailyPVCollect 11224 5524 +++++ 数据更新完毕，耗时：0.003033876419067383 秒 +++++++
+
+DEBUG 2018-01-18 09:40:07,706 DailyPVCollect 11224 5524 正在计算 pv 数据...
+DEBUG 2018-01-18 09:40:07,707 DailyPVCollect 11224 5524 pv：139
+DEBUG 2018-01-18 09:40:07,707 DailyPVCollect 11224 5524 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:40:07,707 DailyPVCollect 11224 5524 大厅总用户数：8
+DEBUG 2018-01-18 09:40:07,707 DailyPVCollect 11224 5524 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:40:07,708 DailyPVCollect 11224 5524 大厅新增用户数：8
+INFO 2018-01-18 09:40:07,717 DailyPVCollect 11224 5524 ===== 处理 2018-01-15 完毕，耗时: 0.011008501052856445 秒。 =======
+
+INFO 2018-01-18 09:40:07,717 DailyPVCollect 11224 5524 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:40:07,717 DailyPVCollect 11224 5524 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:07,720 CollectCommon 11224 5524 当天访问用户： ---> {'zhao', 'liugege', 'LILI', 'cris', '11111', '2222', 'wang', 'CRISchou'}
+DEBUG 2018-01-18 09:40:07,723 CollectCommon 11224 5524 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:40:07,723 CollectCommon 11224 5524 所有的新用户： ---> {'liugege', '2222', '11111', '2222 ', 'wang'}
+DEBUG 2018-01-18 09:40:07,723 CollectCommon 11224 5524 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:40:19,031 DailyAUCollect 1700 9680 ----- 开始处理：from 2018-01-16 to 2018-01-18 -------
+INFO 2018-01-18 09:40:19,031 DailyAUCollect 1700 9680 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:40:19,031 DailyAUCollect 1700 9680 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:19,035 CollectCommon 1700 9680 当天访问用户： ---> {'zhao', 'wang', 'CRISchou', 'LILI', 'cris', '2222', 'liugege', '11111'}
+DEBUG 2018-01-18 09:40:19,037 CollectCommon 1700 9680 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:40:19,037 CollectCommon 1700 9680 所有的新用户： ---> {'2222 ', 'wang', '2222', 'liugege', '11111'}
+DEBUG 2018-01-18 09:40:19,037 CollectCommon 1700 9680 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:40:19,584 DailyPVCollect 3600 6704 ----- 开始处理：from 2018-01-16 to 2018-01-18 -------
+INFO 2018-01-18 09:40:19,588 DailyPVCollect 3600 6704 ===== 正在处理 2018-01-16 =======
+INFO 2018-01-18 09:40:19,589 DailyPVCollect 3600 6704 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:19,590 CollectCommon 3600 6704 当天访问用户： ---> {'cris', 'CRISchou', '11111', 'LILI', 'wang', '2222', 'liugege', 'zhao'}
+DEBUG 2018-01-18 09:40:19,591 CollectCommon 3600 6704 不在UserData中的新用户： ---> {'2222'}
+DEBUG 2018-01-18 09:40:19,591 CollectCommon 3600 6704 所有的新用户： ---> {'11111', 'wang', '2222', '2222 ', 'liugege'}
+DEBUG 2018-01-18 09:40:19,591 CollectCommon 3600 6704 写入到UserData中的用户：---> ['2222']
+INFO 2018-01-18 09:40:29,027 DailyAUCollect 12176 12472 ----- 开始处理：from 2018-01-17 to 2018-01-18 -------
+INFO 2018-01-18 09:40:29,027 DailyAUCollect 12176 12472 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:40:29,027 DailyAUCollect 12176 12472 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:29,031 CollectCommon 12176 12472 当天访问用户： ---> {'6666', '3333', '4444', '7777', '5555', 'zhao', 'liugege', 'cris', 'zhang'}
+DEBUG 2018-01-18 09:40:29,032 CollectCommon 12176 12472 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:40:29,032 CollectCommon 12176 12472 所有的新用户： ---> {'6666', '3333', '4444', '7777', '5555'}
+DEBUG 2018-01-18 09:40:29,033 CollectCommon 12176 12472 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:40:29,033 DailyAUCollect 12176 12472 +++++ 数据更新完毕，耗时：0.006155490875244141 秒 +++++++
+
+DEBUG 2018-01-18 09:40:29,033 DailyAUCollect 12176 12472 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:40:29,033 DailyAUCollect 12176 12472 DAU：[9]
+DEBUG 2018-01-18 09:40:29,033 DailyAUCollect 12176 12472 NAU：[5]
+INFO 2018-01-18 09:40:29,043 DailyAUCollect 12176 12472 ===== 处理 2018-01-17 完毕，耗时: 0.009883880615234375 秒。 =======
+
+INFO 2018-01-18 09:40:29,043 DailyAUCollect 12176 12472 ===== 正在处理 2018-01-18 =======
+INFO 2018-01-18 09:40:29,043 DailyAUCollect 12176 12472 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:29,047 CollectCommon 12176 12472 当天访问用户： ---> {'zhang2', 'zhao', 'liugege', 'cris', 'zhang1', 'zhang3', 'zhang', 'zhang4', 'zhang5'}
+DEBUG 2018-01-18 09:40:29,049 CollectCommon 12176 12472 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:40:29,049 CollectCommon 12176 12472 所有的新用户： ---> {'zhang2', 'zhang1', 'zhang3', 'zhang4', 'zhang5'}
+DEBUG 2018-01-18 09:40:29,049 CollectCommon 12176 12472 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:40:29,049 DailyAUCollect 12176 12472 +++++ 数据更新完毕，耗时：0.005018472671508789 秒 +++++++
+
+DEBUG 2018-01-18 09:40:29,049 DailyAUCollect 12176 12472 正在处理 DAU 数据...
+DEBUG 2018-01-18 09:40:29,050 DailyAUCollect 12176 12472 DAU：[9]
+DEBUG 2018-01-18 09:40:29,050 DailyAUCollect 12176 12472 NAU：[5]
+INFO 2018-01-18 09:40:29,055 DailyAUCollect 12176 12472 ===== 处理 2018-01-18 完毕，耗时: 0.005836963653564453 秒。 =======
+
+INFO 2018-01-18 09:40:29,055 DailyAUCollect 12176 12472 ----- 处理结束 -------
+
+
+
+INFO 2018-01-18 09:40:29,562 DailyPVCollect 8252 7668 ----- 开始处理：from 2018-01-17 to 2018-01-18 -------
+INFO 2018-01-18 09:40:29,566 DailyPVCollect 8252 7668 ===== 正在处理 2018-01-17 =======
+INFO 2018-01-18 09:40:29,566 DailyPVCollect 8252 7668 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:29,567 CollectCommon 8252 7668 当天访问用户： ---> {'3333', 'cris', 'zhang', '4444', '7777', '5555', 'liugege', 'zhao', '6666'}
+DEBUG 2018-01-18 09:40:29,569 CollectCommon 8252 7668 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:40:29,569 CollectCommon 8252 7668 所有的新用户： ---> {'3333', '4444', '7777', '5555', '6666'}
+DEBUG 2018-01-18 09:40:29,569 CollectCommon 8252 7668 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:40:29,569 DailyPVCollect 8252 7668 +++++ 数据更新完毕，耗时：0.0029959678649902344 秒 +++++++
+
+DEBUG 2018-01-18 09:40:29,569 DailyPVCollect 8252 7668 正在计算 pv 数据...
+DEBUG 2018-01-18 09:40:29,570 DailyPVCollect 8252 7668 pv：100
+DEBUG 2018-01-18 09:40:29,570 DailyPVCollect 8252 7668 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:40:29,571 DailyPVCollect 8252 7668 大厅总用户数：18
+DEBUG 2018-01-18 09:40:29,571 DailyPVCollect 8252 7668 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:40:29,571 DailyPVCollect 8252 7668 大厅新增用户数：6
+INFO 2018-01-18 09:40:29,573 DailyPVCollect 8252 7668 ===== 处理 2018-01-17 完毕，耗时: 0.004011392593383789 秒。 =======
+
+INFO 2018-01-18 09:40:29,573 DailyPVCollect 8252 7668 ===== 正在处理 2018-01-18 =======
+INFO 2018-01-18 09:40:29,573 DailyPVCollect 8252 7668 +++++ 开始从LogVisit中更新用户数据到UserData中... +++++++
+
+DEBUG 2018-01-18 09:40:29,575 CollectCommon 8252 7668 当天访问用户： ---> {'zhang1', 'zhang', 'zhang2', 'cris', 'zhang3', 'liugege', 'zhang4', 'zhao', 'zhang5'}
+DEBUG 2018-01-18 09:40:29,576 CollectCommon 8252 7668 不在UserData中的新用户： ---> set()
+DEBUG 2018-01-18 09:40:29,576 CollectCommon 8252 7668 所有的新用户： ---> {'zhang1', 'zhang2', 'zhang3', 'zhang4', 'zhang5'}
+DEBUG 2018-01-18 09:40:29,576 CollectCommon 8252 7668 写入到UserData中的用户：---> []
+INFO 2018-01-18 09:40:29,576 DailyPVCollect 8252 7668 +++++ 数据更新完毕，耗时：0.002004861831665039 秒 +++++++
+
+DEBUG 2018-01-18 09:40:29,576 DailyPVCollect 8252 7668 正在计算 pv 数据...
+DEBUG 2018-01-18 09:40:29,577 DailyPVCollect 8252 7668 pv：84
+DEBUG 2018-01-18 09:40:29,577 DailyPVCollect 8252 7668 正在计算大厅总用户数...
+DEBUG 2018-01-18 09:40:29,577 DailyPVCollect 8252 7668 大厅总用户数：23
+DEBUG 2018-01-18 09:40:29,577 DailyPVCollect 8252 7668 正在计算大厅新增用户数...
+DEBUG 2018-01-18 09:40:29,577 DailyPVCollect 8252 7668 大厅新增用户数：5
+INFO 2018-01-18 09:40:29,580 DailyPVCollect 8252 7668 ===== 处理 2018-01-18 完毕，耗时: 0.004014730453491211 秒。 =======
+
+INFO 2018-01-18 09:40:29,580 DailyPVCollect 8252 7668 ----- 处理结束 -------
+
+
+
