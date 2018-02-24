@@ -71,7 +71,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary submit_rename">Enter</button>
+                <button type="button" class="btn btn-primary submit_mv_dir">Enter</button>
             </div>
         </div>
     </div>
@@ -247,7 +247,7 @@
         file_path += data.node.text
         $.post(
             '/file_manage/api/delete_dir',
-            {'file_path':file_path},
+            {'file_path[]':[file_path,]},
             function(value){
             },
             'json'
@@ -405,9 +405,27 @@
     )
     $('.delete_button').click(
         function(){
-            var select_item = $('.list-group-item-info')
-            for(var i=0;i<select_item.length;i++){
-                console.log(select_item[i])
+            var file_item = null
+            var item_type = null
+            var delete_path_list = []
+            if($('#file_list').css('display') != 'none'){
+                file_item = $('#file_list').children()
+                for(var i=0;i<file_item.length;i++){
+                    if($(li[i]).hasClass('list-group-item-info')){
+                        file_path_list.push($(li[i]).attr('file_path'))
+                    }
+                }
+            }else{
+                file_item = $('#file_box').children()
+                for(var i=0;i<file_item.length;i++){
+                    if($(div[i]).children('a').hasClass('my_active')){
+                        file_path_list.push($(div[i]).attr('file_path'))
+                    }
+                }
+            }
+            
+            for(var i=0;i<file_item.length;i++){
+                console.log($(file_item[i]).attr('file_path'))
             }
         }
     )
@@ -443,7 +461,7 @@
     $('.btn-info').click(function(){
         $('#file_path_choices').modal()
         $('#move_jstree').jstree({ 
-            "plugins" : ['contextmenu','unique','state'],
+            "plugins" : ['contextmenu', 'unique', 'state'],
             'core' : {
                 'data' : {
                     "url" : "/file_manage/api/request_file_tree?lazy",
@@ -468,10 +486,39 @@
         for(var i=0;i<parents.length-1;i++){
             file_path += parents[i] + '/'
         }
-        file_path += data.node.text    
-        $('#file_list').css
-        }).jstree(true);
+        file_path += data.node.text
+        var file_path_list = []    
+        var file_list_display = $('#file_list').css('display')
+        if(file_list_display=='none'){
+            var div =  $('#file_box').children()
+            for(var i=0;i<div.length;i++){
+                if($(div[i]).children('a').hasClass('my_active')){
+                    file_path_list.push($(div[i]).attr('file_path'))
+                }
+            }
+        }else{
+            var li = $('#file_list').children()
+            for(var i=0;i<li.length;i++){
+                if($(li[i]).hasClass('list-group-item-info')){
+                    file_path_list.push($(li[i]).attr('file_path'))
+                }
+            }
+        }
+        $('.submit_mv_dir').click(
+            function(){
+                $.post(
+                '/file_manage/api/mv_dir',
+                {'new_path':file_path,'file_path_list[]':file_path_list},
+                function(){
+                    location.reload()
+                },
+                'json'
+        )
+            }
+        )
         
+        }).jstree(true);
+
      
     function init_page(){
         request_page_mode()

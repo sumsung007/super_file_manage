@@ -5,6 +5,7 @@ from django.http import JsonResponse, HttpResponse
 from common.Define import RETURN_CODE
 from django.core import serializers
 import shutil
+import json
 from concurrent.futures import ThreadPoolExecutor
 # Create your views here.
 
@@ -57,9 +58,12 @@ def rename_dir(request):
         POST = request.POST.get
         file_path = POST('file_path')
         old_file_path = POST('old_file_path')
-        if "#" in file_path:
+        new_file_name = POST('new_file_name')
+        if new_file_name:
+            file_path = os.path.join(os.path.dirname(old_file_path),new_file_name)
+        if file_path and "#" in file_path:
             file_path = file_path.replace('#', media_base_dir)
-        if "#" in old_file_path:
+        if old_file_path and "#" in old_file_path:
             old_file_path = old_file_path.replace('#', media_base_dir)
         if os.path.exists(old_file_path):
             os.renames(old_file_path,file_path)
@@ -71,15 +75,14 @@ def rename_dir(request):
 
 def delete_dir(request):
     if request.method == "POST":
-        POST = request.POST.get
-        file_path = POST('file_path')
-        file_path = file_path.replace('#',media_base_dir)
-        if os.path.exists(file_path):
-            if os.path.basename(file_path) == "root":
+        file_path_list = request.POST.getlist('file_path[]')
+        for file_path in file_path_list:
+            file_path = file_path.replace('#',media_base_dir)
+            if os.path.exists(file_path):
+                if os.path.basename(file_path) == "root":
+                    return JsonResponse({'return_code':'SUCCESS'})
+                shutil.rmtree(file_path)
                 return JsonResponse({'return_code':'SUCCESS'})
-            shutil.rmtree(file_path)
-            return JsonResponse({'return_code':'SUCCESS'})
-
 
 
 
@@ -120,9 +123,9 @@ def request_file_list(request):
         </li>
         """
         div_ele = """
-        <div class="col-xs-6 col-md-2 file_item" file_type="{0}" file_path="{1}">
+        <div class="col-xs-6 col-md-3 file_item" file_type="{0}" file_path="{1}">
             <a class="thumbnail" style="text-align: center;">
-            <img src="{2}" alt="..." style="max-height: 72.8px;">
+            <img src="{2}" alt="..." style="max-height: 80px;">
             {3}
             </a>
         </div>
@@ -183,7 +186,6 @@ def add_files(request):
 
 
 def request_page_mode(request):
-    import json
     page_mode = None
     if request.method == 'GET':
         with open(base_dir+'/static/file_manage/page_conf.json', 'r')as f:
@@ -198,7 +200,13 @@ def request_page_mode(request):
 
 def mv_dir(request):
     if request.method == 'POST':
-        POST = request.POST.get
-        file_path_list = POST('file_path_list')
-        new_path = POST('new_path')
+        file_path_list = request.POST.getlist('file_path_list[]')
+        new_path = request.POST.get('new_path')
+        new_path = new_path.replace('#', media_base_dir)
+        for i in file_path_list:
+            i = i.replace('#', media_base_dir)
+            if new_path == os.path.dirname(i):
+                continue
+            shutil.move(i,new_path)
+        return JsonResponse({})
 

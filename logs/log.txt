@@ -15387,3 +15387,467 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
 request full path: b'/file_manage/api/request_page_mode'
 }}}
+CRITICAL 2018-02-24 15:57:51,300 middleware 8868 6752 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 203, in mv_dir
+    print(json.loads(request.body))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 15:57:52,580 middleware 8868 6336 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 203, in mv_dir
+    print(json.loads(request.body))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 15:59:25,071 middleware 13812 12872 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 203, in mv_dir
+    print(json.loads(request.body,encoding='utf-8'))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:01:32,168 middleware 8960 3652 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 203, in mv_dir
+    print(request.body.encode('utf-8'))
+
+AttributeError: 'bytes' object has no attribute 'encode'
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:06:47,335 middleware 15032 12252 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 202, in mv_dir
+    file_path_list = request.POST.get_list('file_path_list[]')
+
+AttributeError: 'QueryDict' object has no attribute 'get_list'
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:09:08,396 middleware 12580 6128 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 544, in move
+    os.rename(src, real_dst)
+
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media/root/才艺同盟\\gamersky_120origin_239_2018221818C1F.jpg' -> '#/root/才艺同盟'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 204, in mv_dir
+    shutil.move(i,new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 558, in move
+    copy_function(src, real_dst)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+
+FileNotFoundError: [Errno 2] No such file or directory: '#/root/才艺同盟'
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:09:12,388 middleware 12580 15208 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 544, in move
+    os.rename(src, real_dst)
+
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media/root/才艺同盟\\gamersky_120origin_239_2018221818C1F.jpg' -> '#/root/英语同步学'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 204, in mv_dir
+    shutil.move(i,new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 558, in move
+    copy_function(src, real_dst)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+
+FileNotFoundError: [Errno 2] No such file or directory: '#/root/英语同步学'
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:09:23,942 middleware 12580 4976 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 544, in move
+    os.rename(src, real_dst)
+
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media/root/才艺同盟\\gamersky_120origin_239_2018221818C1F.jpg' -> '#/root/才艺同盟'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 204, in mv_dir
+    shutil.move(i,new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 558, in move
+    copy_function(src, real_dst)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+
+FileNotFoundError: [Errno 2] No such file or directory: '#/root/才艺同盟'
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:09:25,275 middleware 12580 12516 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 544, in move
+    os.rename(src, real_dst)
+
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media/root/才艺同盟\\gamersky_120origin_239_2018221818C1F.jpg' -> '#/root/创维'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 204, in mv_dir
+    shutil.move(i,new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 558, in move
+    copy_function(src, real_dst)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+
+FileNotFoundError: [Errno 2] No such file or directory: '#/root/创维'
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:09:44,784 middleware 12580 2176 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 544, in move
+    os.rename(src, real_dst)
+
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media/root/才艺同盟\\gamersky_120origin_239_2018221818C1F.jpg' -> '#/root/才艺同盟'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 204, in mv_dir
+    shutil.move(i,new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 558, in move
+    copy_function(src, real_dst)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+
+FileNotFoundError: [Errno 2] No such file or directory: '#/root/才艺同盟'
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:09:47,388 middleware 12580 14832 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 544, in move
+    os.rename(src, real_dst)
+
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media/root/才艺同盟\\gamersky_120origin_239_2018221818C1F.jpg' -> '#/root/创维'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 204, in mv_dir
+    shutil.move(i,new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 558, in move
+    copy_function(src, real_dst)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+
+FileNotFoundError: [Errno 2] No such file or directory: '#/root/创维'
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:11:33,462 middleware 15072 3048 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 206, in mv_dir
+    shutil.move(i,new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/才艺同盟\gamersky_120origin_239_2018221818C1F.jpg' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-24 16:18:44,979 middleware 9260 6876 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 61, in rename_dir
+    if "#" in file_path:
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+request full path: b'/file_manage/api/rename_dir'
+}}}
+CRITICAL 2018-02-24 16:18:48,290 middleware 9260 7940 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 61, in rename_dir
+    if "#" in file_path:
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+request full path: b'/file_manage/api/rename_dir'
+}}}
+CRITICAL 2018-02-24 16:18:57,906 middleware 9260 12148 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 61, in rename_dir
+    if "#" in file_path:
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+request full path: b'/file_manage/api/rename_dir'
+}}}
+CRITICAL 2018-02-24 16:19:52,050 middleware 9260 4060 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 61, in rename_dir
+    if "#" in file_path:
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+request full path: b'/file_manage/api/rename_dir'
+}}}
+CRITICAL 2018-02-24 16:21:23,420 middleware 14636 764 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 62, in rename_dir
+    if "#" in file_path:
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+request full path: b'/file_manage/api/rename_dir'
+}}}
+CRITICAL 2018-02-24 16:21:44,589 middleware 9556 10616 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 62, in rename_dir
+    if "#" in file_path:
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+request full path: b'/file_manage/api/rename_dir'
+}}}
+CRITICAL 2018-02-24 16:33:05,081 middleware 13828 15264 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 64, in rename_dir
+    if "#" in file_path:
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+request full path: b'/file_manage/api/rename_dir'
+}}}
+CRITICAL 2018-02-24 16:34:26,292 middleware 4868 3588 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 64, in rename_dir
+    if "#" in file_path and file_path:
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+request full path: b'/file_manage/api/rename_dir'
+}}}
+CRITICAL 2018-02-24 16:35:01,437 middleware 9016 13696 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 69, in rename_dir
+    os.renames(old_file_path,file_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\os.py", line 264, in renames
+    head, tail = path.split(new)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\ntpath.py", line 204, in split
+    p = os.fspath(p)
+
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+
+request full path: b'/file_manage/api/rename_dir'
+}}}
+CRITICAL 2018-02-24 16:48:38,953 middleware 13124 9336 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 79, in delete_dir
+    file_path = file_path.replace('#',media_base_dir)
+
+AttributeError: 'list' object has no attribute 'replace'
+
+
+request full path: b'/file_manage/api/delete_dir'
+}}}

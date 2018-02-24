@@ -31,6 +31,6 @@ urlpatterns += [
     url('^api/delete_dir$',                 views_api.delete_dir),
     url('^api/request_file_list$',          views_api.request_file_list),
     url('^api/add_files$',                  views_api.add_files),
-    url('^api/request_page_mode',           views_api.request_page_mode),
-    url('^api/mv_dir',                      views_api.mv_dir),
+    url('^api/request_page_mode$',           views_api.request_page_mode),
+    url('^api/mv_dir$',                      views_api.mv_dir),
 ]
