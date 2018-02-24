@@ -57,12 +57,9 @@ def rename_dir(request):
         POST = request.POST.get
         file_path = POST('file_path')
         old_file_path = POST('old_file_path')
-        new_file_name = POST('new_file_name')
-        if new_file_name:
-            file_path = os.path.join(os.path.dirname(old_file_path),new_file_name)
         if "#" in file_path:
             file_path = file_path.replace('#', media_base_dir)
-        if "#" in media_base_dir:
+        if "#" in old_file_path:
             old_file_path = old_file_path.replace('#', media_base_dir)
         if os.path.exists(old_file_path):
             os.renames(old_file_path,file_path)
@@ -197,4 +194,11 @@ def request_page_mode(request):
         with open(base_dir+'/static/file_manage/page_conf.json', 'w')as f:
             json.dump({'page_mode':mode},f)
         return JsonResponse({})
+
+
+def mv_dir(request):
+    if request.method == 'POST':
+        POST = request.POST.get
+        file_path_list = POST('file_path_list')
+        new_path = POST('new_path')
 

@@ -110,7 +110,7 @@
                 
                 </ul>
                 <div class="row" id="file_box" style="display:none;">
-                   
+                    
                 </div>
             </div>
         </div>
@@ -462,7 +462,16 @@
         });
 
     })
-
+    $('#move_jstree').on('select_node.jstree', function (e, data) {
+        var parents = $('#jstree').jstree(true).get_path(data.node)
+        var file_path = '#/'
+        for(var i=0;i<parents.length-1;i++){
+            file_path += parents[i] + '/'
+        }
+        file_path += data.node.text    
+        $('#file_list').css
+        }).jstree(true);
+        
      
     function init_page(){
         request_page_mode()
