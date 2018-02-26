@@ -15851,3 +15851,26 @@ AttributeError: 'list' object has no attribute 'replace'
 
 request full path: b'/file_manage/api/delete_dir'
 }}}
+CRITICAL 2018-02-26 09:26:03,658 middleware 12588 8788 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 84, in delete_dir
+    shutil.rmtree(file_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 494, in rmtree
+    return _rmtree_unsafe(path, onerror)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 376, in _rmtree_unsafe
+    onerror(os.listdir, path, sys.exc_info())
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 374, in _rmtree_unsafe
+    names = os.listdir(path)
+
+NotADirectoryError: [WinError 267] 目录名称无效。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media/root/英语同步学\\IMG_0055 （已编辑）.PNG'
+
+
+request full path: b'/file_manage/api/delete_dir'
+}}}

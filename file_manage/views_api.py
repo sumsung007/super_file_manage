@@ -81,7 +81,10 @@ def delete_dir(request):
             if os.path.exists(file_path):
                 if os.path.basename(file_path) == "root":
                     return JsonResponse({'return_code':'SUCCESS'})
-                shutil.rmtree(file_path)
+                if os.path.isdir(file_path):
+                    shutil.rmtree(file_path)
+                else:
+                    os.remove(file_path)
                 return JsonResponse({'return_code':'SUCCESS'})
 
 
@@ -89,6 +92,7 @@ def delete_dir(request):
 def request_file_list(request):
     file_type_dict = {
         "png": "glyphicon glyphicon-picture",
+        "PNG": "glyphicon glyphicon-picture",
         "JPG" : "glyphicon glyphicon-picture",
         "jpg" : "glyphicon glyphicon-picture",
         "txt": "glyphicon glyphicon-book",
@@ -144,7 +148,7 @@ def request_file_list(request):
                         data['div_ele'] += div_ele.format(i.split('.')[1], server_path+"/" + i, file_type_image[i.split('.')[1]], i)
                     else:
                         data['li_ele'] += li_ele.format(i.split('.')[1], file_abs_dir, file_type_dict[i.split('.')[1]], i)
-                        if i.split('.')[1] in ['png','JPG','jpg']:
+                        if i.split('.')[1] in ['png', 'JPG', 'jpg', 'PNG']:
                             data['div_ele'] += div_ele.format(i.split('.')[1], file_abs_dir, file_abs_dir.replace(base_dir,'').replace('\\','/'), i)
                             img_path = server_path+"/"+i
                             data['li_ele'] += img_ele.format(img_path)
@@ -209,4 +213,5 @@ def mv_dir(request):
                 continue
             shutil.move(i,new_path)
         return JsonResponse({})
+
 
