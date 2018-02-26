@@ -479,10 +479,10 @@
     };
    
     $('.view_mode').click(function(){
-        var mode = $(this).text()
+        var view_mode = $(this).text()
         $.post(
             '/file_manage/api/request_page_mode',
-            {'mode':mode},
+            {'mode':view_mode},
             function(data){
                 location.reload()   
             },
@@ -544,14 +544,30 @@
                 function(){
                     location.reload()
                 },
-                'json'
-        )
+                'json',
+            )
             }
         )
         
         }).jstree(true);
-
-        
+    
+    
+    $('.select_all_button').click(function(){
+        var view_mode = $('#file_list').css('display')
+        if(view_mode != 'none'){
+            $('ul .file_item').addClass('list-group-item-info')
+        }else{
+            $('div .file_item').children('a').addClass('my_active')
+        }
+    })
+    $('.unselect_all_button').click(function(){
+        var view_mode = $('#file_list').css('display')
+        if(view_mode != 'none'){
+            $('ul .file_item').removeClass('list-group-item-info')
+        }else{
+            $('div .file_item').children('a').removeClass('my_active')
+        }
+    })
 
      
     function init_page(){
