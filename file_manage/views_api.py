@@ -111,50 +111,45 @@ def request_file_list(request):
     if request.method == "GET":
         GET = request.GET.get
         file_path = GET('file_path')
-        server_path = None
-        if "#" in file_path:
-            server_path = file_path.replace('#', '/media')
+        file_path = file_path.replace('/', os.sep)
+        if file_path.startswith('#'):
             file_path = file_path.replace('#', media_base_dir)
-        else:
-            server_path = file_path.replace(media_base_dir, '/media')
+        
         data = {
             'li_ele':'',
             'div_ele':'',
         }
         li_ele = """
-        <li class="list-group-item file_item" file_type="{0}" file_path="{1}">
-            <span class="{2}"></span> {3}
+        <li class="list-group-item file_item" file_type="{0}" file_path="{1}" file_server_path="{2}">
+            <span class="{3}"></span> {4}
         </li>
         """
         div_ele = """
-        <div class="col-xs-6 col-md-3 file_item" file_type="{0}" file_path="{1}">
+        <div class="col-xs-6 col-md-3 file_item" file_type="{0}" file_path="{1}" file_server_path="{2}">
             <a class="thumbnail" style="text-align: center;">
-            <img src="{2}" alt="..." style="max-height: 80px;">
-            {3}
+            <img src="{3}" alt="..." style="max-height: 80px;">
+            {4}
             </a>
         </div>
         """
-        img_ele = '<img src="{0}" height="200px" width="200px" style="display:none;position:fixed;z-index: 1001;">'
         if os.path.exists(file_path):
             file_list = os.listdir(file_path)
             for i in file_list:
                 file_abs_dir = os.path.join(file_path,i)
+                file_server_dir = file_abs_dir.replace(base_dir,'').replace('\\','/')
                 if os.path.isdir(file_abs_dir):
-                    data['li_ele'] += li_ele.format("dir", file_abs_dir, file_type_dict['dir'], i)
-                    data['div_ele'] += div_ele.format("dir", file_abs_dir, file_type_image['dir'], i)
+                    data['li_ele'] += li_ele.format("dir", file_abs_dir, '', file_type_dict['dir'], i)
+                    data['div_ele'] += div_ele.format("dir", file_abs_dir, '', file_type_image['dir'], i)
                 elif '.' in i and i.split('.')[1] in file_type_dict:
                     if i.split('.')[1] in ['mp4','ts',]:
-                        data['li_ele'] += li_ele.format(i.split('.')[1], server_path+"/" + i, file_type_dict[i.split('.')[1]], i)
-                        data['div_ele'] += div_ele.format(i.split('.')[1], server_path+"/" + i, file_type_image[i.split('.')[1]], i)
-                    else:
-                        data['li_ele'] += li_ele.format(i.split('.')[1], file_abs_dir, file_type_dict[i.split('.')[1]], i)
-                        if i.split('.')[1] in ['png', 'JPG', 'jpg', 'PNG']:
-                            data['div_ele'] += div_ele.format(i.split('.')[1], file_abs_dir, file_abs_dir.replace(base_dir,'').replace('\\','/'), i)
-                            img_path = server_path+"/"+i
-                            data['li_ele'] += img_ele.format(img_path)
+                        data['li_ele'] += li_ele.format(i.split('.')[1], file_abs_dir, file_server_dir, file_type_dict[i.split('.')[1]], i)
+                        data['div_ele'] += div_ele.format(i.split('.')[1], file_abs_dir, file_server_dir, file_type_image[i.split('.')[1]], i)
+                    elif i.split('.')[1] in ['png', 'JPG', 'jpg', 'PNG']:
+                        data['li_ele'] += li_ele.format(i.split('.')[1], file_abs_dir, file_server_dir, file_type_dict[i.split('.')[1]], i)
+                        data['div_ele'] += div_ele.format(i.split('.')[1], file_abs_dir, file_server_dir, file_server_dir, i)
                 else:
-                     data['li_ele'] += li_ele.format("other", file_abs_dir, file_type_dict['other'], i)
-                     data['div_ele'] += div_ele.format("other", file_abs_dir, file_type_image['other'], i)
+                     data['li_ele'] += li_ele.format("other", file_abs_dir, file_server_dir, file_type_dict['other'], i)
+                     data['div_ele'] += div_ele.format("other", file_abs_dir, file_server_dir, file_type_image['other'], i)
         return JsonResponse(data)
 
 

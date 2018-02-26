@@ -24,7 +24,7 @@
 <!-- Start right Content here -->
 <!-- ============================================================== -->
 
-<div id="modale_back" style="top: 0%;left: 0%;width: 100%;height: 100%;background-color:black;position:fixed;opacity: .80;z-index:1001;display:none;">
+<div id="modale_back" style="top: 0%;left: 0%;width: 100%;height: 100%;background-color:black;position:fixed;opacity: .95;z-index:1001;display:none;">
     <div id="progressbar" style="width:400px;top: 35%;left: 40%;position:absolute;display:none;"></div>
     <div id='video_box' style="top: 30%;left: 35%;position:absolute;display:none;">
         <span class="video_close_button"><span class="glyphicon glyphicon-remove"></span>关闭</span>
@@ -32,6 +32,11 @@
             <source src=""  type='video/mp4'>
         </video>
     </div>
+    <div id="image_box" style="top: 20%;left: 28%;position:absolute;display:none;">
+        <span class="video_close_button" style="position:absolute;top: -3%;right: -5%;"><span class="glyphicon glyphicon-remove"></span>关闭</span>
+        <img src="/media/root/才艺同盟/啦啦啦啊.jpg" alt="" width="800" height="600">
+    </div>
+
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -95,7 +100,7 @@
 <!-- this is mouse rbutton -->
 <div id="context-menu">
     <ul class="dropdown-menu" role="menu">
-        <li><a tabindex="-1" href="#" operator="top" href="#" operator="top" >ReName</a></li>
+        <li><a tabindex="-1" href="#" operator="top" href="#" operator="top" >Rename</a></li>
     </ul>
 </div>
 
@@ -143,10 +148,64 @@
 <script src="/static/file_manage/js/videojs-contrib-hls.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap-contextmenu/0.3.4/bootstrap-contextmenu.min.js"></script>
 <script>
-
     $(function (){
     $('#jstree').jstree({ 
         "plugins" : ['contextmenu','unique','state'],
+        'contextmenu':{
+            'items':{
+                "ccp":null,
+                "create" : {
+					"separator_before"	: false,
+					"separator_after"	: true,
+					"_disabled"			: false, //(this.check("create_node", data.reference, {}, "last")),
+					"label"				: "Create",
+					"action"			: function (data) {
+						var inst = $.jstree.reference(data.reference),
+							obj = inst.get_node(data.reference);
+						inst.create_node(obj, {}, "last", function (new_node) {
+							try {
+								inst.edit(new_node);
+							} catch (ex) {
+								setTimeout(function () { inst.edit(new_node); },0);
+							}
+						});
+					}
+				},
+				"rename" : {
+					"separator_before"	: false,
+					"separator_after"	: false,
+					"_disabled"			: false, //(this.check("rename_node", data.reference, this.get_parent(data.reference), "")),
+					"label"				: "Rename",
+					/*!
+					"shortcut"			: 113,
+					"shortcut_label"	: 'F2',
+					"icon"				: "glyphicon glyphicon-leaf",
+					*/
+					"action"			: function (data) {
+						var inst = $.jstree.reference(data.reference),
+							obj = inst.get_node(data.reference);
+						inst.edit(obj);
+					}
+				},
+				"remove" : {
+					"separator_before"	: false,
+					"icon"				: false,
+					"separator_after"	: false,
+					"_disabled"			: false, //(this.check("delete_node", data.reference, this.get_parent(data.reference), "")),
+					"label"				: "Delete",
+					"action"			: function (data) {
+						var inst = $.jstree.reference(data.reference),
+							obj = inst.get_node(data.reference);
+						if(inst.is_selected(obj)) {
+							inst.delete_node(inst.get_selected());
+						}
+						else {
+							inst.delete_node(obj);
+						}
+					}
+				},
+            }
+        },
         'core' : {
             'data' : {
                 "url" : "/file_manage/api/request_file_tree?lazy",
@@ -186,16 +245,22 @@
                 function(){
                     $(this).removeClass('list-group-item-warning')
                 })
+                $('.file_item').each(function(index,ele){
+                    if($(ele).attr('file_type')=='dir'){
+                        $(ele).dblclick(
+                            request_file_list
+                        )
+                    }else if(["mp4","ts",].indexOf($(ele).attr('file_type'))!=-1){
+                        $(ele).dblclick(
+                            play_video
+                        )
+                    }else if(['png', 'JPG', 'jpg', 'PNG'].indexOf($(ele).attr('file_type'))!=-1){
+                        $(ele).dblclick(
+                            view_image
+                        )
+                    }
+                })
                 
-                if($('.file_item').attr('file_type')=='dir'){
-                    $('.file_item').dblclick(
-                        request_file_list
-                    )
-                }else if(["mp4","ts",].indexOf($('.file_item').attr('file_type'))!=-1){
-                    $('.file_item').dblclick(
-                        play_video
-                    )
-                }
                 $('ul .file_item').click(
                     selected_list_item
                 )
@@ -212,7 +277,7 @@
                         // execute on menu item selection
                         // click button(e.target)  select ele context[0]
                         var text = $(e.target)[0].innerText
-                        if(text == 'ReName'){
+                        if(text == 'Rename'){
                             $('#exampleModal').modal()
                             rename_click(context[0])
                         }
@@ -277,7 +342,6 @@
     var last_path = null
     function request_file_list(){
         var file_path = $(this).attr('file_path')
-        var file_type = $(this).attr('file_type')
         $.get(
             '/file_manage/api/request_file_list',
             {'file_path':file_path},
@@ -292,15 +356,22 @@
                 function(){
                     $(this).removeClass('list-group-item-warning')
                 })
-                if($('.file_item').attr('file_type')=='dir'){
-                    $('.file_item').dblclick(
-                        request_file_list
-                    )
-                }else if(["mp4","ts",].indexOf($('.file_item').attr('file_type'))!=-1){
-                    $('.file_item').dblclick(
-                        play_video
-                    )
-                }
+                $('.file_item').each(function(index,ele){
+                    if($(ele).attr('file_type')=='dir'){
+                        $(ele).dblclick(
+                            request_file_list
+                        )
+                    }else if(["mp4","ts",].indexOf($(ele).attr('file_type'))!=-1){
+                        $(ele).dblclick(
+                            play_video
+                        )
+                    }else if(['png', 'JPG', 'jpg', 'PNG'].indexOf($(ele).attr('file_type'))!=-1){
+                        $(ele).dblclick(
+                            view_image
+                        )
+                    }
+                })
+                
                 $('ul .file_item').click(
                     selected_list_item
                 )
@@ -400,14 +471,7 @@
         })
     })
     var video_obj = null
-    function play_video(){
-        var video_path = $(this).attr('file_path')
-        $('#modale_back').css("display", "block");
-        $('#video_box').css("display", "block");
-        $('#my_video_1').children().attr('src',video_path)
-        var video_obj = videojs('my_video_1');
-        video_obj.play();
-    }
+    
     $('.video_close_button').hover(
         function(){
             $(this).css('background-color','darkgray')
@@ -493,7 +557,7 @@
     $('.btn-info').click(function(){
         $('#file_path_choices').modal()
         $('#move_jstree').jstree({ 
-            "plugins" : ['contextmenu', 'unique', 'state'],
+            "plugins" : ['unique', 'state'],
             'core' : {
                 'data' : {
                     "url" : "/file_manage/api/request_file_tree?lazy",
@@ -560,6 +624,7 @@
             $('div .file_item').children('a').addClass('my_active')
         }
     })
+
     $('.unselect_all_button').click(function(){
         var view_mode = $('#file_list').css('display')
         if(view_mode != 'none'){
@@ -569,6 +634,20 @@
         }
     })
 
+    function play_video(){
+        var video_path = $(this).attr('file_server_path')
+        $('#modale_back').css("display", "block");
+        $('#video_box').css("display", "block");
+        $('#my_video_1').children().attr('src',video_path)
+        var video_obj = videojs('my_video_1');
+        video_obj.play();
+    }
+
+    function view_image(){
+        $('#modale_back').css('display','block')
+        $('#image_box').children('img').attr('src',$(this).attr('file_server_path'))
+        $('#image_box').css('display','block')
+    }
      
     function init_page(){
         request_page_mode()
