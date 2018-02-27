@@ -7,6 +7,8 @@ from django.core import serializers
 import shutil
 import json
 from concurrent.futures import ThreadPoolExecutor
+from file_manage import models
+from django import forms
 # Create your views here.
 
 
@@ -182,7 +184,6 @@ def add_files(request):
         return JsonResponse(return_value)
 
     except Exception as error:
-        
         return_value['return_code'] = RETURN_CODE.FAIL
         return_value['return_msg'] = "服务器出错，错误：{0}".format(error)
         return JsonResponse(return_value)
@@ -202,6 +203,7 @@ def request_page_mode(request):
         return JsonResponse({})
 
 
+
 def mv_dir(request):
     if request.method == 'POST':
         file_path_list = request.POST.getlist('file_path_list[]')
@@ -211,7 +213,70 @@ def mv_dir(request):
             i = i.replace('#', media_base_dir)
             if new_path == os.path.dirname(i):
                 continue
-            shutil.move(i,new_path)
+            shutil.move(i, new_path)
         return JsonResponse({})
+
+
+def request_user_list(request):
+    if request.method == 'GET':
+        user_info = models.UserInfo.objects.values()
+        tr_ele = "<tr><td user_is={0}>{1}</td></tr>"
+        tr_data = ''
+        for i in user_info:
+            tr_data += tr_ele.format(i['id'], i['username'])
+        return JsonResponse({'data':tr_data})
+
+
+def request_permission_list(request):
+    if request.method == 'GET':
+        permission_list = models.UserInfo._meta.permissions
+        op_data = []
+        for i in permission_list:
+            op_data.append({"value":i[0], "text":i[1],})
+        return JsonResponse({'data':op_data})
+
+
+
+class UserCreationForm(forms.ModelForm):
+    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
+
+    class Meta:
+        model = models.UserInfo
+        fields = ('id', 'email', 'username', 'first_name', 'is_superuser', 'is_staff', 'is_active')
+
+
+    def clean_password2(self):
+		# Check that the two password entries match
+        password1 = self.cleaned_data.get("password1")
+        password2 = self.cleaned_data.get("password2")
+        if password1 and password2 and password1 != password2:
+            raise forms.ValidationError("Passwords don't match")
+        return password2
+
+
+    def save(self, commit=True):
+        # Save the provided password in hashed format
+        user = super(UserCreationForm, self).save(commit=False)
+        user.set_password(self.cleaned_data["password1"])
+        if commit:
+            user.save()
+        return user
+
+
+
+def create_user(request):
+    if request.method == 'POST':
+        o = UserCreationForm(request.POST)
+    permission_list = request.POST.get('permission_list', None)
+
+
+
+def update_user(request):
+    pass
+
+
+def delete_user(request):
+    pass
 
 

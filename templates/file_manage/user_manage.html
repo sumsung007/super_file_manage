@@ -1,9 +1,61 @@
 {% extends "file_manage/base.html" %}
 
 {% block css %}
+<link rel="stylesheet" href="/static/file_manage/multiselect/css/multi-select.css">
 {% endblock css %}
 
 {% block content %}
+<div class="modal fade" id="add_user_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">AddUser</h4>
+            </div>
+            <div class="modal-body">
+                <form id="add_user_form">
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">UserName:</label>
+                        <input type="text" name="id" style="display:none;">
+                        <input type="text" class="form-control" id="recipient-name" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Nicname:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="first_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Password:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">ConfirmPassword:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="password1">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">SuperUser:</label>
+                        <button type="button" class="btn btn-danger super_user_button">OFF</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">CanLogin:</label>
+                        <button type="button" class="btn btn-danger can_login_button">OFF</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Permission:</label>
+                        <select multiple="multiple" id="my_select" name="my_select[]">
+                        </select>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary submit_add_user">Enter</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="content-page">
     <!-- Start content -->
     <div class="content">
@@ -15,29 +67,8 @@
                             <td><h2>User</h2></td>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                U1
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                U2
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                U3
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                U4
-                            </td>
-                        </tr>
-                        <tr>
-                       <tr>     
+                    <tbody id="user_data_list">
+                        
                     </tbody>
                 </table>
             </div>
@@ -68,7 +99,52 @@
 {% endblock content %}
 
 {% block js %}
+<script src="/static/file_manage/multiselect/js/jquery.multi-select.js" type="text/javascript"></script>
 <script>
-    $('#page1').addClass('active')
+    
+    $(function(){
+        $('#page1').addClass('active')
+        function init_user_table(){
+            $.get(
+                '/file_manage/api/request_user_list',
+                function(data){
+                    var data_list = data.data
+                    $('#user_data_list').children().remove()
+                    $('#user_data_list').append(data_list)
+                },
+                'json',
+            )
+        }
+        $('.add_user_button').click(function(){
+            $('#add_user_modal').modal()
+            $('.submit_add_user').click(function(){
+                var $form_input = $('#add_user_form input')
+                $form_input.each(function(index,ele){
+                    console.log(ele)
+                })
+            })
+        })
+
+        function init_permission_list(){
+            $.get(
+                '/file_manage/api/request_permission_list',
+                function(data){
+                    var value_data = data.data
+                    $('#my_select').multiSelect()
+                    for(var i=0;i<value_data.length;i++){
+                        $('#my_select').multiSelect('addOption', value_data[i])
+                    }
+                    
+                },
+                'json',
+            )
+            
+        }
+        function init_page(){
+            init_user_table()
+            init_permission_list()
+        }
+        init_page()
+    })
 </script>
 {% endblock js %}

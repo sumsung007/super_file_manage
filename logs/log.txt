@@ -15874,3 +15874,816 @@ NotADirectoryError: [WinError 267] 目录名称无效。: 'D:\\mycode\\UBOX_MEDI
 
 request full path: b'/file_manage/api/delete_dir'
 }}}
+CRITICAL 2018-02-27 15:33:04,151 middleware 8412 764 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 15:38:45,803 middleware 8412 5180 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 15:38:47,151 middleware 8412 13696 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 15:38:50,921 middleware 8412 11680 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 15:39:03,674 middleware 8412 12920 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 15:42:02,804 middleware 8412 7144 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 15:43:21,041 middleware 8412 8452 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 15:54:43,039 middleware 8412 1480 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 15:55:34,174 middleware 8412 10676 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 16:08:31,482 middleware 3868 6028 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 226, in request_user_list
+    for i in user_info:
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 250, in __iter__
+    self._fetch_all()
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 841, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 179, in _execute_wrapper
+    utils.ProgrammingError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.ProgrammingError: Table 'file_manage.file_manage_userinfo' doesn't exist
+
+
+request full path: b'/file_manage/api/request_user_list'
+}}}
+CRITICAL 2018-02-27 16:30:36,810 middleware 7136 7416 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views.py", line 23, in user_login
+    return render(request, 'file_manage/login.html', {'msg':'用户名不存在或密码错误'})
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\template\loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+
+django.template.exceptions.TemplateDoesNotExist: file_manage/login.html
+
+
+request full path: b'/file_manage/login'
+}}}

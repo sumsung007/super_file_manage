@@ -1,5 +1,36 @@
-
 perm_dict = {
+    "user_manage":[
+        [
+            'user_manage',
+        ],
+        ['GET', ],
+        [],
+        {},
+    ],
+    "create_user":[
+        [
+            'create_user',
+        ],
+        ['POST',],
+        [],
+        {},
+    ],
+    "update_user":[
+        [
+            'update_user',
+        ],
+        ['GET', 'POST',],
+        [],
+        {},
+    ],
+    "delete_user":[
+        [
+            'delete_user',
+        ],
+        ['POST',],
+        [],
+        {},
+    ],
     "file_manage_show_index":[
         [
             'index',
@@ -21,9 +52,8 @@ perm_dict = {
     "file_manage_rename_dir":[
         [
             'rename_dir',
-            
         ],
-        ['POST',],
+        ['POST', ],
         [],
         {},
     ],
@@ -31,7 +61,7 @@ perm_dict = {
         [
             'delete_dir',
         ],
-        ['POST',],
+        ['POST', ],
         [],
         {},
     ],
@@ -39,7 +69,7 @@ perm_dict = {
         [
             'add_files',
         ],
-        ['POST',],
+        ['POST', ],
         [],
         {},
     ],
@@ -47,17 +77,17 @@ perm_dict = {
         [
             'mv_dir',
         ],
-        ['POST',],
+        ['POST', ],
         [],
         {},
     ],
 }
 
 permission_list = (
-    ("show_index",		        "查看首页数据"),
-	("create_dir", 		        "可以创建文件夹"),
-	("rename_dir",		        "可以更改文件名"),
-	("delete_dir",	            "可以删除文件"),
-	("add_files",		        "可以上传文件"),
-	("mv_dir",		            "可以移动文件"),
+    ("show_index", "查看首页数据"),
+    ("create_dir", "可以创建文件夹"),
+    ("rename_dir", "可以更改文件名"),
+    ("delete_dir", "可以删除文件"),
+    ("add_files", "可以上传文件"),
+    ("mv_dir", "可以移动文件"),
 )
