@@ -134,9 +134,11 @@ def request_file_list(request):
         """
         if os.path.exists(file_path):
             file_list = os.listdir(file_path)
+            print(file_list)
             for i in file_list:
                 file_abs_dir = os.path.join(file_path,i)
                 file_server_dir = file_abs_dir.replace(base_dir,'').replace('\\','/')
+                print(file_abs_dir)
                 if os.path.isdir(file_abs_dir):
                     data['li_ele'] += li_ele.format("dir", file_abs_dir, '', file_type_dict['dir'], i)
                     data['div_ele'] += div_ele.format("dir", file_abs_dir, '', file_type_image['dir'], i)
@@ -147,6 +149,9 @@ def request_file_list(request):
                     elif i.split('.')[1] in ['png', 'JPG', 'jpg', 'PNG']:
                         data['li_ele'] += li_ele.format(i.split('.')[1], file_abs_dir, file_server_dir, file_type_dict[i.split('.')[1]], i)
                         data['div_ele'] += div_ele.format(i.split('.')[1], file_abs_dir, file_server_dir, file_server_dir, i)
+                    else:
+                        data['li_ele'] += li_ele.format(i.split('.')[1], file_abs_dir, file_server_dir, file_type_dict[i.split('.')[1]], i)
+                        data['div_ele'] += div_ele.format(i.split('.')[1], file_abs_dir, file_server_dir, file_type_image[i.split('.')[1]], i)
                 else:
                      data['li_ele'] += li_ele.format("other", file_abs_dir, file_server_dir, file_type_dict['other'], i)
                      data['div_ele'] += div_ele.format("other", file_abs_dir, file_server_dir, file_type_image['other'], i)

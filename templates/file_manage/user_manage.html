@@ -1,0 +1,74 @@
+{% extends "file_manage/base.html" %}
+
+{% block css %}
+{% endblock css %}
+
+{% block content %}
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="row" >
+            <div class="col-md-3" style="position:relative;overflow:auto;height:800px;top:10px;" >
+                <table class="table table-striped" style="max-width:400;">
+                    <thead>
+                        <tr>
+                            <td><h2>User</h2></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                U1
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                U2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                U3
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                U4
+                            </td>
+                        </tr>
+                        <tr>
+                       <tr>     
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-9">
+                <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default btn-success add_user_button"><span class="glyphicon glyphicon-plus"></span>AddUser</button>
+                        <input type="file" name="add_new_file" multiple style="display:none;">
+                    </div>
+                    <!-- <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-new-window"></span>Move</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-warning select_all_button"><span class="glyphicon glyphicon-ok"></span>SelectAll</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary unselect_all_button"><span class="glyphicon glyphicon-ban-circle"></span>UnselectAll</button>
+                    </div> -->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-danger delete_user_button"><span class="glyphicon glyphicon-trash"></span>DeleteUser</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}
+<script>
+    $('#page1').addClass('active')
+</script>
+{% endblock js %}

@@ -22,7 +22,7 @@ def user_login(request):
 			login(request, user)
 			return HttpResponseRedirect('/file_manage/index')
 		else:
-			return render(request, 'myadmin/login.html', {'msg':'用户名不存在或密码错误'})
+			return render(request, 'file_manage/login.html', {'msg':'用户名不存在或密码错误'})
 	return render(request,'login.html',{})
 
 
@@ -34,3 +34,6 @@ def user_logout(request):
 	return HttpResponseRedirect("/file_manage/login")
 
 
+
+def user_manage(request):
+	return render(request,'file_manage/user_manage.html')

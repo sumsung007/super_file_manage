@@ -56,7 +56,6 @@ INSTALLED_APPS = [
 
     'file_manage.apps.MyadminConfig',
     'crond.apps.CrondConfig',
-    'main.apps.MainConfig',
     # 入口
 ]
 

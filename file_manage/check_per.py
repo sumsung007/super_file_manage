@@ -1,6 +1,6 @@
 from django.core.urlresolvers import resolve
 from django.shortcuts import render, redirect
-from myadmin.permission_list import perm_dict1
+from file_manage.permission_list import perm_dict
 from django.conf import settings
 
 
@@ -13,7 +13,7 @@ def perm_check(*args, **kwargs):
     if request.user.is_authenticated() is False:
         return redirect(settings.LOGIN_URL)
 
-    for permission_key, permission_val in perm_dict1.items():
+    for permission_key, permission_val in perm_dict.items():
 
         per_url_name = permission_val[0]
         per_method = permission_val[1]

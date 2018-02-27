@@ -19,18 +19,19 @@ from django.conf.urls import url, include
 from . import views, views_api
 
 urlpatterns = [
-    url('^index$',                         views.index),
-    url('^login$',                         views.user_login, name='login'),
-    url('^logout$',                         views.user_logout, name='logout'),
+    url('^index$',                          views.index,        name='index'),
+    url('^login$',                          views.user_login,   name='login'),
+    url('^logout$',                         views.user_logout,  name='logout'),
+    url('^user_manage',                     views.user_manage)
 ]
 
 urlpatterns += [
-    url('^api/request_file_tree$',          views_api.request_file_tree),
-    url('^api/create_dir$',                 views_api.create_dir),
-    url('^api/rename_dir$',                 views_api.rename_dir),
-    url('^api/delete_dir$',                 views_api.delete_dir),
-    url('^api/request_file_list$',          views_api.request_file_list),
-    url('^api/add_files$',                  views_api.add_files),
-    url('^api/request_page_mode$',           views_api.request_page_mode),
-    url('^api/mv_dir$',                      views_api.mv_dir),
+    url('^api/request_file_tree$',          views_api.request_file_tree,name='request_file_tree'),
+    url('^api/create_dir$',                 views_api.create_dir,       name='create_dir'),
+    url('^api/rename_dir$',                 views_api.rename_dir,       name='rename_dir'),
+    url('^api/delete_dir$',                 views_api.delete_dir,       name='delete_dir'),
+    url('^api/request_file_list$',          views_api.request_file_list,name='request_file_list'),
+    url('^api/add_files$',                  views_api.add_files,        name='add_files'),
+    url('^api/request_page_mode$',          views_api.request_page_mode),
+    url('^api/mv_dir$',                     views_api.mv_dir,           name='mv_dir'),
 ]
