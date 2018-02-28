@@ -3,7 +3,7 @@
     <link href="/static/file_manage/css/video-js.css" rel="stylesheet">
     <style>
         .my_active{
-            background-color: skyblue;
+            background-color: skyblue; 
         }
     </style>
 {% endblock css %}  
@@ -92,6 +92,20 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary delete_file">Enter</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="return_msg_box" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">error</h4>
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -487,6 +501,7 @@
             $('#video_box').css("display", "none");
             var video_obj = videojs('my_video_1');
             video_obj.pause();
+            $('#my_video_1').children().attr('src','')
         }
     )
     $('.delete_button').click(
@@ -601,18 +616,31 @@
                 }
             }
         }
-        $('.submit_mv_dir').click(
+        if(file_path_list.length>0){
+            $('.submit_mv_dir').click(
             function(){
+                $('#modale_back').css("display", "block");
+                $('#progressbar').css("display", "block")
+                var i = setInterval(set_progressbar_value,1000);
                 $.post(
                 '/file_manage/api/mv_dir',
                 {'new_path':file_path,'file_path_list[]':file_path_list},
-                function(){
-                    location.reload()
+                function(data){
+                    if(data.return_code=='SUCCESS'){
+                        clearInterval(i)
+                        location.reload()
+                    }else{
+                        $('#return_msg_box p').text(data.return_msg)
+                        $('#return_msg_box').modal()
+                    }
+                    
                 },
                 'json',
             )
             }
         )
+        }
+        
         
         }).jstree(true);
     

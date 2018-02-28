@@ -16687,3 +16687,351 @@ django.template.exceptions.TemplateDoesNotExist: file_manage/login.html
 
 request full path: b'/file_manage/login'
 }}}
+CRITICAL 2018-02-28 10:17:10,588 middleware 12356 14960 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 282, in create_user
+    print(O.errors)
+
+NameError: name 'O' is not defined
+
+
+request full path: b'/file_manage/api/create_user'
+}}}
+CRITICAL 2018-02-28 13:02:21,702 middleware 11080 14184 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/英语同步学\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:02:21,702 middleware 11080 7604 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/才艺同盟\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:02:26,045 middleware 11080 784 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/才艺同盟\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:02:26,045 middleware 11080 9080 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/英语同步学\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:02:34,820 middleware 11080 3140 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/英语同步学/视频文件\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:32:45,763 middleware 11080 7596 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/英语同步学\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:32:45,763 middleware 11080 6520 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/才艺同盟\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:38:24,586 middleware 11080 14704 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/才艺同盟\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:38:24,586 middleware 11080 14792 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/英语同步学\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:39:46,179 middleware 11080 14168 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/英语同步学\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:39:46,180 middleware 11080 7640 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/才艺同盟\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:40:12,330 middleware 11080 15032 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/才艺同盟/图片文件\创维' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:40:47,347 middleware 11080 10192 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/创维/图片文件/才艺同盟\图片文件' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:40:56,042 middleware 11080 7136 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/创维/图片文件\才艺同盟' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:41:38,130 middleware 11080 1060 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root\创维' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 13:41:42,928 middleware 11080 8532 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 215, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 542, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+
+shutil.Error: Destination path 'D:\mycode\UBOX_MEDIA_ASSET\trunk\media/root/才艺同盟\创维' already exists
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 14:23:36,427 middleware 12176 72 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 544, in move
+    os.rename(src, real_dst)
+
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media\\root\\才艺同盟\\图片文件' -> 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media/root/英语同步学/图片文件\\图片文件'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 217, in mv_dir
+    shutil.move(i, new_path)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 558, in move
+    copy_function(src, real_dst)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media\\root\\才艺同盟\\图片文件'
+
+
+request full path: b'/file_manage/api/mv_dir'
+}}}
+CRITICAL 2018-02-28 14:54:52,292 middleware 12176 5340 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 90, in delete_dir
+    os.remove(file_path)
+
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media\\root\\才艺同盟\\视频文件\\10100000050001_TV001-秘密 -家族版本.mp4'
+
+
+request full path: b'/file_manage/api/delete_dir'
+}}}
+CRITICAL 2018-02-28 14:55:01,435 middleware 12176 13324 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\10504\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 90, in delete_dir
+    os.remove(file_path)
+
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\mycode\\UBOX_MEDIA_ASSET\\trunk\\media\\root\\才艺同盟\\视频文件\\10100000050001_TV001-秘密 -家族版本.mp4'
+
+
+request full path: b'/file_manage/api/delete_dir'
+}}}

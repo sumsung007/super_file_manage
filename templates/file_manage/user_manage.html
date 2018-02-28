@@ -16,32 +16,31 @@
                 <form id="add_user_form">
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">UserName:</label>
-                        <input type="text" name="id" style="display:none;">
-                        <input type="text" class="form-control" id="recipient-name" name="username">
+                        <input type="text" class="form-control"  name="username">
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">Nicname:</label>
-                        <input type="text" class="form-control" id="recipient-name" name="first_name">
+                        <input type="text" class="form-control"  name="first_name">
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">Password:</label>
-                        <input type="text" class="form-control" id="recipient-name" name="password">
+                        <input type="password" class="form-control"  name="password1">
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">ConfirmPassword:</label>
-                        <input type="text" class="form-control" id="recipient-name" name="password1">
+                        <input type="password" class="form-control"  name="password2">
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">SuperUser:</label>
-                        <button type="button" class="btn btn-danger super_user_button">OFF</button>
+                        <button type="button" class="btn btn-danger super_user_button user_info_button">OF</button>
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">CanLogin:</label>
-                        <button type="button" class="btn btn-danger can_login_button">OFF</button>
+                        <button type="button" class="btn btn-danger can_login_button user_info_button">OF</button>
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">Permission:</label>
-                        <select multiple="multiple" id="my_select" name="my_select[]">
+                        <select multiple="multiple" class="my_select" name="permission_list[]">
                         </select>
                     </div>
                     
@@ -61,18 +60,6 @@
     <div class="content">
         <div class="row" >
             <div class="col-md-3" style="position:relative;overflow:auto;height:800px;top:10px;" >
-                <table class="table table-striped" style="max-width:400;">
-                    <thead>
-                        <tr>
-                            <td><h2>User</h2></td>
-                        </tr>
-                    </thead>
-                    <tbody id="user_data_list">
-                        
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-9">
                 <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default btn-success add_user_button"><span class="glyphicon glyphicon-plus"></span>AddUser</button>
@@ -89,6 +76,49 @@
                     </div> -->
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-danger delete_user_button"><span class="glyphicon glyphicon-trash"></span>DeleteUser</button>
+                    </div>
+                </div>
+                <h2>User</h2>
+                <div class="list-group" id="user_data_list">
+                    
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h2>UserInfo</h2>
+                <div class="user_info_box" style="display:none;">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="recipient-name" class="control-label">UserName:</label>
+                            <input type="text" class="form-control" name="username">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="recipient-name" class="control-label">Nicname:</label>
+                            <input type="text" class="form-control" name="first_name">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="recipient-name" class="control-label">SuperUser:</label>
+                            <button type="button" class="btn btn-danger super_user_button user_info_button">OF</button>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="recipient-name" class="control-label">CanLogin:</label>
+                            <button type="button" class="btn btn-danger can_login_button user_info_button">OF</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Permission:</label>
+                        <select multiple="multiple" class="my_select" name="permission_list[]">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-info user_info_box_commit">Commit</button>
                     </div>
                 </div>
                 
@@ -111,6 +141,45 @@
                     var data_list = data.data
                     $('#user_data_list').children().remove()
                     $('#user_data_list').append(data_list)
+                    $('.user_item').click(function(){
+                        $(this).siblings().removeClass('active')
+                        $(this).addClass('active')
+                        $.get(
+                            '/file_manage/api/update_user',
+                            {'user_id':$(this).attr('user_id')},
+                            function(data){
+                                $('.user_info_box').css('display','block')
+                                var $input = $('.user_info_box input')
+                                $input.each(function(index,ele){
+                                    $(ele).val(data.data[$(ele).attr('name')])
+                                })
+                                var is_super_user = data.data['is_superuser'] ? 'OP' : 'OF'
+                                if(is_super_user == 'OP'){
+                                    $('.user_info_box .super_user_button').removeClass('btn-danger')
+                                    $('.user_info_box .super_user_button').addClass('btn-success')
+                                    $('.user_info_box .super_user_button').text('OP')
+                                }else{
+                                    $('.user_info_box .super_user_button').removeClass('btn-success')
+                                    $('.user_info_box .super_user_button').addClass('btn-danger')
+                                    $('.user_info_box .super_user_button').text('OF')
+                                }
+                                var is_login = data.data['is_active'] ? 'OP' : 'OF'
+                                if(is_login == 'OP'){
+                                    $('.user_info_box .can_login_button').removeClass('btn-danger')
+                                    $('.user_info_box .can_login_button').addClass('btn-success')
+                                    $('.user_info_box .can_login_button').text('OP')
+                                }else{
+                                    $('.user_info_box .can_login_button').removeClass('btn-success')
+                                    $('.user_info_box .can_login_button').addClass('btn-danger')
+                                    $('.user_info_box .can_login_button').text('OF')
+                                }
+                                $('.user_info_box .my_select').multiSelect('deselect_all');
+                                $('.user_info_box .my_select').multiSelect('select',data.permission_list)
+
+                            },
+                            'json'
+                        )
+                    })
                 },
                 'json',
             )
@@ -119,8 +188,34 @@
             $('#add_user_modal').modal()
             $('.submit_add_user').click(function(){
                 var $form_input = $('#add_user_form input')
+                var formData = new FormData();
                 $form_input.each(function(index,ele){
-                    console.log(ele)
+                    formData.append($(ele).attr('name'), $(ele).val())
+                })
+                var $form_select = $('#add_user_form select')
+                $form_select.each(function(index,ele){
+                    formData.append($(ele).attr('name'), $(ele).val())
+                })
+                var super_user = $('.super_user_button').text()
+                super_user = (super_user == 'OF') ? 0 : 1
+                var can_login = $('.can_login_button').text()
+                can_login = (can_login == 'OF') ? 0 : 1
+                formData.append('is_super_user',super_user)
+                formData.append('is_active',can_login)
+                $.ajax({
+                    type:'post',
+                    url:'/file_manage/api/create_user',
+                    data:formData,
+                    dataType:'json',
+                    contentType:false,
+                    processData:false,
+                    success:function(data){
+                        if(data.return_code=='SUCCESS'){
+                            location.reload()
+                        }else{
+                            alert(data.return_msg)
+                        }
+                    }
                 })
             })
         })
@@ -130,11 +225,21 @@
                 '/file_manage/api/request_permission_list',
                 function(data){
                     var value_data = data.data
-                    $('#my_select').multiSelect()
+                    $('.my_select').multiSelect()
                     for(var i=0;i<value_data.length;i++){
-                        $('#my_select').multiSelect('addOption', value_data[i])
+                        $('.my_select').multiSelect('addOption', value_data[i])
                     }
-                    
+                    $('.user_info_button').click(function(){
+                        if($(this).text()=='OF'){
+                            $(this).removeClass('btn-danger')
+                            $(this).addClass('btn-success')
+                            $(this).text('OP')
+                        }else{
+                            $(this).removeClass('btn-success')
+                            $(this).addClass('btn-danger')
+                            $(this).text('OF')
+                        }
+                    })
                 },
                 'json',
             )

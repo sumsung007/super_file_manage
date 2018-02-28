@@ -9,11 +9,12 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 from file_manage import models
 from django import forms
+from django.contrib.auth.models import Permission
 # Create your views here.
 
 
 base_dir = settings.BASE_DIR
-media_base_dir = os.path.join(base_dir,'media')
+media_base_dir = os.path.join(base_dir, 'media')
 
 
 def request_file_tree(request):
@@ -87,7 +88,7 @@ def delete_dir(request):
                     shutil.rmtree(file_path)
                 else:
                     os.remove(file_path)
-                return JsonResponse({'return_code':'SUCCESS'})
+        return JsonResponse({'return_code':'SUCCESS'})
 
 
 
@@ -127,7 +128,7 @@ def request_file_list(request):
         </li>
         """
         div_ele = """
-        <div class="col-xs-6 col-md-3 file_item" file_type="{0}" file_path="{1}" file_server_path="{2}">
+        <div class="col-xs-6 col-md-3 file_item" file_type="{0}" file_path="{1}" file_server_path="{2}" style="max-height: 130px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
             <a class="thumbnail" style="text-align: center;">
             <img src="{3}" alt="..." style="max-height: 80px;">
             {4}
@@ -136,11 +137,9 @@ def request_file_list(request):
         """
         if os.path.exists(file_path):
             file_list = os.listdir(file_path)
-            print(file_list)
             for i in file_list:
-                file_abs_dir = os.path.join(file_path,i)
-                file_server_dir = file_abs_dir.replace(base_dir,'').replace('\\','/')
-                print(file_abs_dir)
+                file_abs_dir = os.path.join(file_path, i)
+                file_server_dir = file_abs_dir.replace(base_dir, '').replace('\\', '/')
                 if os.path.isdir(file_abs_dir):
                     data['li_ele'] += li_ele.format("dir", file_abs_dir, '', file_type_dict['dir'], i)
                     data['div_ele'] += div_ele.format("dir", file_abs_dir, '', file_type_image['dir'], i)
@@ -162,7 +161,7 @@ def request_file_list(request):
 
 
 def write_file(file_path, file_obj):
-        with open(file_path,'wb')as w:
+        with open(file_path, 'wb')as w:
             for chunk in file_obj.chunks():
                 w.write(chunk)
 
@@ -180,7 +179,7 @@ def add_files(request):
         with ThreadPoolExecutor(max_workers=10) as pool:
             for k, v in FILES.items():
                 w_file_path = os.path.join(file_dir_name, k)
-                pool.submit(write_file,**{'file_path':w_file_path, 'file_obj':v})
+                pool.submit(write_file, **{'file_path':w_file_path, 'file_obj':v})
         return JsonResponse(return_value)
 
     except Exception as error:
@@ -199,7 +198,7 @@ def request_page_mode(request):
     else:
         mode = request.POST.get('mode')
         with open(base_dir+'/static/file_manage/page_conf.json', 'w')as f:
-            json.dump({'page_mode':mode},f)
+            json.dump({'page_mode':mode}, f)
         return JsonResponse({})
 
 
@@ -211,20 +210,25 @@ def mv_dir(request):
         new_path = new_path.replace('#', media_base_dir)
         for i in file_path_list:
             i = i.replace('#', media_base_dir)
+            i = i.replace('/', os.sep)
             if new_path == os.path.dirname(i):
                 continue
-            shutil.move(i, new_path)
-        return JsonResponse({})
+            try:
+                shutil.move(i, new_path)
+            except shutil.Error:
+                return JsonResponse({'return_code':RETURN_CODE.FAIL, 'return_msg':'移动失败，可能路径已存在'})
+        return JsonResponse({'return_code':RETURN_CODE.SUCCESS})
 
 
 def request_user_list(request):
     if request.method == 'GET':
         user_info = models.UserInfo.objects.values()
-        tr_ele = "<tr><td user_is={0}>{1}</td></tr>"
+        tr_ele = '<button type="button" class="list-group-item user_item" user_id={0}>{1}</button>'
         tr_data = ''
         for i in user_info:
-            tr_data += tr_ele.format(i['id'], i['username'])
+            tr_data += tr_ele.format(i['id'], i['first_name'] if i['first_name'] else i['username'])
         return JsonResponse({'data':tr_data})
+
 
 
 def request_permission_list(request):
@@ -266,14 +270,39 @@ class UserCreationForm(forms.ModelForm):
 
 
 def create_user(request):
+    return_value = {
+        "return_code" : RETURN_CODE.SUCCESS,
+        "return_msg"  : "",
+        "datas"       : None,
+        }
     if request.method == 'POST':
         o = UserCreationForm(request.POST)
-    permission_list = request.POST.get('permission_list', None)
+    permission_list = request.POST.get('permission_list[]', None)
+    if permission_list:
+        permission_list = permission_list.split(',')
+    if not o.is_valid():
+        return_value["return_code"] = RETURN_CODE.INVALID_PARAMS
+        return_value['return_msg'] = "参数无效"
+        return JsonResponse(return_value)
+    user_obj = o.save()
+    if permission_list:
+        for i in permission_list:
+            per_obj = Permission.objects.filter(codename=i).first()
+            user_obj.user_permissions.add(per_obj.id)
+    return JsonResponse(return_value)
 
 
 
 def update_user(request):
-    pass
+    if request.method == 'GET':
+        user_id = request.GET.get('user_id')
+        user_obj = models.UserInfo.objects.filter(id=user_id).values().first()
+        permission_obj = models.UserInfo.objects.filter(id=user_id).first().user_permissions.all()
+        permission_list = [i.codename for i in permission_obj]
+        return JsonResponse({'data':user_obj,'permission_list':permission_list,})
+    else:
+        pass
+
 
 
 def delete_user(request):

@@ -34,7 +34,8 @@ urlpatterns += [
     url('^api/add_files$',                  views_api.add_files,        name='add_files'),
     url('^api/request_page_mode$',          views_api.request_page_mode),
     url('^api/mv_dir$',                     views_api.mv_dir,           name='mv_dir'),
-    url('^api/request_user_list',           views_api.request_user_list,name='request_user_list'),
-    url('^api/create_user',                 views_api.create_user,      name='create_user'),
-    url('^api/request_permission_list',     views_api.request_permission_list)
+    url('^api/request_user_list$',          views_api.request_user_list,name='request_user_list'),
+    url('^api/create_user$',                views_api.create_user,      name='create_user'),
+    url('^api/update_user$',                views_api.update_user,      name='update_user'),
+    url('^api/request_permission_list$',    views_api.request_permission_list),
 ]
