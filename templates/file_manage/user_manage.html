@@ -63,7 +63,6 @@
                 <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default btn-success add_user_button"><span class="glyphicon glyphicon-plus"></span>AddUser</button>
-                        <input type="file" name="add_new_file" multiple style="display:none;">
                     </div>
                     <!-- <div class="btn-group" role="group">
                         <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-new-window"></span>Move</button>
@@ -89,14 +88,15 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="recipient-name" class="control-label">UserName:</label>
-                            <input type="text" class="form-control" name="username">
+                            <input type="text" name="id" old_data="" style="display:none">
+                            <input type="text" class="form-control" old_data="" name="username" >
                         </div>
                     </div>
                     
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="recipient-name" class="control-label">Nicname:</label>
-                            <input type="text" class="form-control" name="first_name">
+                            <input type="text" class="form-control" old_data="" name="first_name">
                         </div>
                     </div>
                     
@@ -104,11 +104,11 @@
                     <div class="row">
                         <div class="form-group col-md-3">
                             <label for="recipient-name" class="control-label">SuperUser:</label>
-                            <button type="button" class="btn btn-danger super_user_button user_info_button">OF</button>
+                            <button type="button" class="btn btn-danger super_user_button user_info_button " old_data="">OF</button>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="recipient-name" class="control-label">CanLogin:</label>
-                            <button type="button" class="btn btn-danger can_login_button user_info_button">OF</button>
+                            <button type="button" class="btn btn-danger can_login_button user_info_button" old_data="">OF</button>
                         </div>
                     </div>
                     
@@ -152,29 +152,70 @@
                                 var $input = $('.user_info_box input')
                                 $input.each(function(index,ele){
                                     $(ele).val(data.data[$(ele).attr('name')])
+                                    if($(ele).attr('name') != 'id'){
+                                        $(ele).attr('old_data',data.data[$(ele).attr('name')])
+                                    }
                                 })
                                 var is_super_user = data.data['is_superuser'] ? 'OP' : 'OF'
                                 if(is_super_user == 'OP'){
                                     $('.user_info_box .super_user_button').removeClass('btn-danger')
                                     $('.user_info_box .super_user_button').addClass('btn-success')
                                     $('.user_info_box .super_user_button').text('OP')
+                                    $('.user_info_box .super_user_button').attr('old_data','OP')
                                 }else{
                                     $('.user_info_box .super_user_button').removeClass('btn-success')
                                     $('.user_info_box .super_user_button').addClass('btn-danger')
                                     $('.user_info_box .super_user_button').text('OF')
+                                    $('.user_info_box .super_user_button').attr('old_data','OF')
                                 }
                                 var is_login = data.data['is_active'] ? 'OP' : 'OF'
                                 if(is_login == 'OP'){
                                     $('.user_info_box .can_login_button').removeClass('btn-danger')
                                     $('.user_info_box .can_login_button').addClass('btn-success')
                                     $('.user_info_box .can_login_button').text('OP')
+                                    $('.user_info_box .can_login_button').attr('old_data','OP')
                                 }else{
                                     $('.user_info_box .can_login_button').removeClass('btn-success')
                                     $('.user_info_box .can_login_button').addClass('btn-danger')
                                     $('.user_info_box .can_login_button').text('OF')
+                                    $('.user_info_box .can_login_button').attr('old_data','OF')
                                 }
                                 $('.user_info_box .my_select').multiSelect('deselect_all');
                                 $('.user_info_box .my_select').multiSelect('select',data.permission_list)
+                                $('.user_info_box_commit').click(function(){
+                                    var $input = $('.user_info_box input')
+                                    var formData = new FormData()
+                                    $input.each(function(index,ele){
+                                        if($(ele).attr('old_data')!=$(ele).val()){
+                                            formData.append($(ele).attr('name'),$(ele).val())
+                                        }
+                                    })
+                                    if($('.user_info_box .super_user_button').text()!=$('.user_info_box .super_user_button').attr('old_data')){
+                                        var is_super_user = ($('.user_info_box .super_user_button').text()=='OP') ? true : false
+                                        formData.append('is_superuser',is_super_user)
+                                    }
+                                    if($('.user_info_box .can_login_button').text()!=$('.user_info_box .can_login_button').attr('old_data')){
+                                        var is_login = ($('.user_info_box .can_login_button').text()=='OP') ? true : false
+                                        formData.append('is_active',is_login)
+                                    }
+                                    formData.append($('.user_info_box .my_select').attr('name'),$('.user_info_box .my_select').val())
+                                    $.ajax({
+                                        type:'post',
+                                        url:'/file_manage/api/update_user',
+                                        data:formData,
+                                        dataType:'json',
+                                        contentType:false,
+                                        processData:false,
+                                        success:function(data){
+                                            if(data.return_code=='SUCCESS'){
+                                                init_user_table()
+                                            }else{
+                                                $('#return_msg_box p').text(data.return_msg)
+                                                $('#return_msg_box').modal()
+                                            }
+                                        }
+                                    })
+                                })
 
                             },
                             'json'
@@ -211,15 +252,38 @@
                     processData:false,
                     success:function(data){
                         if(data.return_code=='SUCCESS'){
-                            location.reload()
+                            init_user_table()
                         }else{
-                            alert(data.return_msg)
+                            $('#return_msg_box p').text(data.return_msg)
+                            $('#return_msg_box').modal()
                         }
                     }
                 })
             })
         })
-
+        $('.delete_user_button').click(function(){
+            var user_item = null
+            $('.user_item').each(function(index,ele){
+                if($(ele).hasClass('active')){
+                    user_item = ele
+                }
+                
+            })
+            $.post(
+                '/file_manage/api/delete_user',
+                {'user_id':$(user_item).attr('user_id')},
+                function(data){
+                    if(data.return_code=='SUCCESS'){
+                        init_user_table()
+                        $('.user_info_box').css('display','none')
+                    }else{
+                        $('#return_msg_box p').text(data.return_msg)
+                        $('#return_msg_box').modal()
+                    }
+                },
+                'json',
+            )
+        })
         function init_permission_list(){
             $.get(
                 '/file_manage/api/request_permission_list',

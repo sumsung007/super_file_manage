@@ -249,7 +249,6 @@ class UserCreationForm(forms.ModelForm):
         model = models.UserInfo
         fields = ('id', 'email', 'username', 'first_name', 'is_superuser', 'is_staff', 'is_active')
 
-
     def clean_password2(self):
 		# Check that the two password entries match
         password1 = self.cleaned_data.get("password1")
@@ -277,19 +276,36 @@ def create_user(request):
         }
     if request.method == 'POST':
         o = UserCreationForm(request.POST)
-    permission_list = request.POST.get('permission_list[]', None)
-    if permission_list:
-        permission_list = permission_list.split(',')
-    if not o.is_valid():
-        return_value["return_code"] = RETURN_CODE.INVALID_PARAMS
-        return_value['return_msg'] = "参数无效"
-        return JsonResponse(return_value)
-    user_obj = o.save()
-    if permission_list:
-        for i in permission_list:
-            per_obj = Permission.objects.filter(codename=i).first()
-            user_obj.user_permissions.add(per_obj.id)
-    return JsonResponse(return_value)
+        permission_list = request.POST.get('permission_list[]')
+        if permission_list:
+            permission_list = permission_list.split(',')
+        if not o.is_valid():
+            return_value["return_code"] = RETURN_CODE.INVALID_PARAMS
+            return_value['return_msg'] = "参数无效"
+            return JsonResponse(return_value)
+        else:
+            user_obj = o.save()
+            if permission_list and permission_list[0] != 'null':
+                for i in permission_list:
+                    per_obj = Permission.objects.filter(codename=i).first()
+                    user_obj.user_permissions.add(per_obj.id)
+            return JsonResponse(return_value)
+
+
+
+class Form_UpdateUser(forms.Form):
+    id = forms.IntegerField()
+    is_active = forms.BooleanField(required=False)
+    is_superuser = forms.BooleanField(required=False)
+    first_name = forms.CharField(max_length=32, required=False)
+    username = forms.CharField(max_length=32, required=False)
+
+    def clean_username(self):
+        obj = models.UserInfo.objects.filter(username=self.cleaned_data['username']).exists()
+        if obj:
+            raise forms.ValidationError("当前用户名已经存在")
+        return self.cleaned_data['username']
+
 
 
 
@@ -299,13 +315,57 @@ def update_user(request):
         user_obj = models.UserInfo.objects.filter(id=user_id).values().first()
         permission_obj = models.UserInfo.objects.filter(id=user_id).first().user_permissions.all()
         permission_list = [i.codename for i in permission_obj]
-        return JsonResponse({'data':user_obj,'permission_list':permission_list,})
+        return JsonResponse({'data':user_obj, 'permission_list':permission_list,})
     else:
-        pass
+        o = Form_UpdateUser(request.POST)
+        permission_list = request.POST.get('permission_list[]', None)
+        if permission_list:
+            permission_list = permission_list.split(',')
+        if not o.is_valid():
+            return JsonResponse({'return_code':RETURN_CODE.FAIL, 'return_msg':'参数错误{0}'.format(o.errors)})
+        else:
+            cleaned_data = o.cleaned_data
+            new_data = {k:v for k, v in cleaned_data.items() if k in request.POST}
+            qs_obj = models.UserInfo.objects.filter(id=new_data.get('id'))
+            user_obj = qs_obj.first()
+            if permission_list[0] != 'null':
+                per_obj = Permission.objects.filter(codename__in=permission_list).values_list('id')
+                per_id_list = [i[0] for i in per_obj]
+                user_obj.user_permissions.set(per_id_list)
+            else:
+                user_obj.user_permissions.clear()
+            qs_obj.update(**new_data)
+            return JsonResponse({'return_code':RETURN_CODE.SUCCESS})
 
 
 
 def delete_user(request):
+    if request.method == 'POST':
+        try:
+            user_id = request.POST.get('user_id')
+            qs_obj = models.UserInfo.objects.filter(id=user_id)
+            qs_obj.delete()
+            return JsonResponse({'return_code':RETURN_CODE.SUCCESS})
+        except Exception as error:
+            return JsonResponse({'return_code':RETURN_CODE.FAIL, 'return_msg':'删除失败，服务器出错:{0}'.format(error)})
+
+
+
+
+class Form_ChangePassword(forms.Form):
+	
+	password1   	= forms.CharField(max_length=32, required=False)
+	password2   	= forms.CharField(max_length=32, required=False)
+
+	def clean_password2(self):
+		# Check that the two password entries match
+		password1 = self.cleaned_data.get("password1")
+		password2 = self.cleaned_data.get("password2")
+		if password1 and password2 and password1 != password2:
+			raise forms.ValidationError("Passwords don't match")
+		return password2
+
+
+
+def change_password(request):
     pass
-
-
