@@ -77,6 +77,6 @@ def check_permission(func):
     def inner(*args, **kwargs):
         if not perm_check(*args, **kwargs):
             request = args[0]
-            return render(request, 'myadmin/page_403.html')
+            return render(request, 'file_manage/page_403.html')
         return func(*args, **kwargs)
     return inner

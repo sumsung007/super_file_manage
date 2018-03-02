@@ -31,6 +31,14 @@ perm_dict = {
         [],
         {},
     ],
+    "change_password":[
+        [
+            'change_password',
+        ],
+        ['POST',],
+        [],
+        {},
+    ],
     "file_manage_show_index":[
         [
             'index',

@@ -10,6 +10,7 @@ from concurrent.futures import ThreadPoolExecutor
 from file_manage import models
 from django import forms
 from django.contrib.auth.models import Permission
+from file_manage.check_per import check_permission
 # Create your views here.
 
 
@@ -353,19 +354,34 @@ def delete_user(request):
 
 
 class Form_ChangePassword(forms.Form):
-	
-	password1   	= forms.CharField(max_length=32, required=False)
-	password2   	= forms.CharField(max_length=32, required=False)
+    password1 = forms.CharField(max_length=32, required=False)
+    password2 = forms.CharField(max_length=32, required=False)
 
-	def clean_password2(self):
+    def clean_password2(self):
 		# Check that the two password entries match
-		password1 = self.cleaned_data.get("password1")
-		password2 = self.cleaned_data.get("password2")
-		if password1 and password2 and password1 != password2:
-			raise forms.ValidationError("Passwords don't match")
-		return password2
+        password1 = self.cleaned_data.get("password1")
+        password2 = self.cleaned_data.get("password2")
+        if password1 and password2 and password1 != password2:
+            raise forms.ValidationError("Passwords don't match")
+        return password2
 
 
 
 def change_password(request):
-    pass
+    if request.method == "POST":
+        o = Form_ChangePassword(request.POST)
+        if not o.is_valid():
+            return JsonResponse({'return_code':RETURN_CODE.FAIL, 'return_msg':'两次密码不一致'})
+        else:
+            user_id = request.POST.get('id')
+            qs_obj = models.UserInfo.objects.filter(id=user_id)
+            data = o.cleaned_data
+            password = data['password2']
+            if not password:
+                return JsonResponse({'return_code':RETURN_CODE.FAIL, 'return_msg':'密码不能为空'})
+            else:
+                qs_obj.first().set_password(password)
+                qs_obj.first().save()
+                return JsonResponse({'return_code':RETURN_CODE.SUCCESS})
+
+

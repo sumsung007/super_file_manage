@@ -59,12 +59,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">ReName</h4>
+                <h4 class="modal-title" id="exampleModalLabel">RePassword</h4>
             </div>
             <div class="modal-body">
                 <form id="change_password_form">
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">Password:</label>
+                        <input type="text" name="id" style="display:none;">
                         <input type="password" class="form-control"  name="password1">
                     </div>
                     <div class="form-group">
@@ -75,7 +76,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary submit_rename">Enter</button>
+                <button type="button" class="btn btn-primary submit_repassword">Enter</button>
             </div>
         </div>
     </div>
@@ -184,9 +185,36 @@
                             var text = $(e.target)[0].innerText
                             if(text == 'RePassword'){
                                 $('#change_password_modal').modal()
-                                
+                                $('#change_password_modal input[name=id]').val($(context[0]).attr('user_id'))
                             }
                         }
+                    })
+                    $('.submit_repassword').click(function(){
+                        var $form_input = $('#change_password_modal input')
+                        var data = {}
+                        $form_input.each(function(index,ele){
+                            data[$(ele).attr('name')]=$(ele).val()
+                        })
+                        $.post(
+                            '/file_manage/api/change_password',
+                            data,
+                            function(rsp){
+                                if(rsp.return_code=='SUCCESS'){
+                                    $form_input.each(function(index,ele){
+                                        if($(ele).attr('name')!='id'){
+                                            $(ele).val('')
+                                        }
+                                    })
+                                    $('#change_password_modal').modal('hide')
+                                }else{
+                                    $('#change_password_modal').modal('hide')
+                                    $('#return_msg_box p').text(rsp.return_msg)
+                                    $('#return_msg_box').modal()
+                                }
+                                
+                            },
+                            'json',
+                        )
                     })   
                     $('.user_item').click(function(){
                         $(this).siblings().removeClass('active')
@@ -331,6 +359,7 @@
                 'json',
             )
         })
+
         function init_permission_list(){
             $.get(
                 '/file_manage/api/request_permission_list',

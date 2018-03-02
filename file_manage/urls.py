@@ -38,5 +38,6 @@ urlpatterns += [
     url('^api/create_user$',                views_api.create_user,      name='create_user'),
     url('^api/update_user$',                views_api.update_user,      name='update_user'),
     url('^api/delete_user$',                views_api.delete_user,      name='delete_user'),
+    url('^api/change_password$',             views_api.change_password,  name='change_password'),
     url('^api/request_permission_list$',    views_api.request_permission_list),
 ]
