@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from file_manage.check_per import check_permission
 
 
 @login_required
@@ -28,8 +29,13 @@ def user_logout(request):
     logout(request)
     return HttpResponseRedirect("/file_manage/login")
 
-
-
+@check_permission
+@login_required
 def user_manage(request):
     if request.method == 'GET':
         return render(request, 'file_manage/user_manage.html')
+
+
+
+def no_permission(request):
+    return render(request,'file_manage/page_403.html')

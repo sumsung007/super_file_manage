@@ -59,14 +59,11 @@ def perm_check(*args, **kwargs):
                     match_key = permission_key
                     break
     if all(match_results):
-        app_name, pername = match_key.split('_',1)
-        perm_obj = '%s.%s' % (app_name, pername)
+        perm_obj = match_key.replace('/','.')
         if request.user.has_perm(perm_obj):
-            print('数据库有权限')
             return True
 
-        else:
-            print('无权限')
+        else:  
             return False
     else:
         return False
@@ -77,6 +74,6 @@ def check_permission(func):
     def inner(*args, **kwargs):
         if not perm_check(*args, **kwargs):
             request = args[0]
-            return render(request, 'file_manage/page_403.html')
+            return render(request, 'file_manage/no_permission.html')
         return func(*args, **kwargs)
     return inner

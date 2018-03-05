@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'GlobalSettings.wsgi.application'
 
 DATABASES = {
     'default' : {
-        #'ENGINE'   : 'django.db.backends.mysql',
+        # 'ENGINE'   : 'django.db.backends.mysql',
         'ENGINE'   : 'mysql.connector.django',
         'NAME'     : 'file_manage',
         'USER'     : 'root',

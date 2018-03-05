@@ -22,7 +22,8 @@ urlpatterns = [
     url('^index$',                          views.index,        name='index'),
     url('^login$',                          views.user_login,   name='login'),
     url('^logout$',                         views.user_logout,  name='logout'),
-    url('^user_manage',                     views.user_manage)
+    url('^user_manage',                     views.user_manage,  name='user_manage'),
+    url('^no_permission',                   views.no_permission,name='no_permission'),
 ]
 
 urlpatterns += [
@@ -38,6 +39,6 @@ urlpatterns += [
     url('^api/create_user$',                views_api.create_user,      name='create_user'),
     url('^api/update_user$',                views_api.update_user,      name='update_user'),
     url('^api/delete_user$',                views_api.delete_user,      name='delete_user'),
-    url('^api/change_password$',             views_api.change_password,  name='change_password'),
+    url('^api/change_password$',             views_api.change_password, name='change_password'),
     url('^api/request_permission_list$',    views_api.request_permission_list),
 ]

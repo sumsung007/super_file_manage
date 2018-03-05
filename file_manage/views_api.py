@@ -11,6 +11,7 @@ from file_manage import models
 from django import forms
 from django.contrib.auth.models import Permission
 from file_manage.check_per import check_permission
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -18,6 +19,9 @@ base_dir = settings.BASE_DIR
 media_base_dir = os.path.join(base_dir, 'media')
 
 
+
+@check_permission
+@login_required
 def request_file_tree(request):
     if request.method == "GET":
         GET = request.GET.get
@@ -43,6 +47,10 @@ def request_file_tree(request):
         return JsonResponse(data_list,safe=False)
 
 
+
+
+@check_permission
+@login_required
 def create_dir(request):
     if request.method == "POST":
         POST = request.POST.get
@@ -57,6 +65,9 @@ def create_dir(request):
         return JsonResponse({'dir_name':dir_name,'id':file_path})
 
 
+
+@check_permission
+@login_required
 def rename_dir(request):
     if request.method == "POST":
         POST = request.POST.get
@@ -76,12 +87,13 @@ def rename_dir(request):
 
 
 
-
+@check_permission
+@login_required
 def delete_dir(request):
     if request.method == "POST":
         file_path_list = request.POST.getlist('file_path[]')
         for file_path in file_path_list:
-            file_path = file_path.replace('#',media_base_dir)
+            file_path = file_path.replace('#', media_base_dir)
             if os.path.exists(file_path):
                 if os.path.basename(file_path) == "root":
                     return JsonResponse({'return_code':'SUCCESS'})
@@ -93,6 +105,8 @@ def delete_dir(request):
 
 
 
+@check_permission
+@login_required
 def request_file_list(request):
     file_type_dict = {
         "png": "glyphicon glyphicon-picture",
@@ -161,12 +175,15 @@ def request_file_list(request):
 
 
 
+
 def write_file(file_path, file_obj):
         with open(file_path, 'wb')as w:
             for chunk in file_obj.chunks():
                 w.write(chunk)
 
 
+@check_permission
+@login_required
 def add_files(request):
     return_value = {
         'return_code':RETURN_CODE.SUCCESS,
@@ -204,6 +221,8 @@ def request_page_mode(request):
 
 
 
+@check_permission
+@login_required
 def mv_dir(request):
     if request.method == 'POST':
         file_path_list = request.POST.getlist('file_path_list[]')
@@ -221,6 +240,9 @@ def mv_dir(request):
         return JsonResponse({'return_code':RETURN_CODE.SUCCESS})
 
 
+
+@check_permission
+@login_required
 def request_user_list(request):
     if request.method == 'GET':
         user_info = models.UserInfo.objects.values()
@@ -269,6 +291,9 @@ class UserCreationForm(forms.ModelForm):
 
 
 
+
+@check_permission
+@login_required
 def create_user(request):
     return_value = {
         "return_code" : RETURN_CODE.SUCCESS,
@@ -310,6 +335,8 @@ class Form_UpdateUser(forms.Form):
 
 
 
+@check_permission
+@login_required
 def update_user(request):
     if request.method == 'GET':
         user_id = request.GET.get('user_id')
@@ -340,6 +367,8 @@ def update_user(request):
 
 
 
+@check_permission
+@login_required
 def delete_user(request):
     if request.method == 'POST':
         try:
@@ -367,6 +396,8 @@ class Form_ChangePassword(forms.Form):
 
 
 
+@check_permission
+@login_required
 def change_password(request):
     if request.method == "POST":
         o = Form_ChangePassword(request.POST)

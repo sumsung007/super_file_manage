@@ -164,7 +164,6 @@
 {% block js %}
 <script src="/static/file_manage/multiselect/js/jquery.multi-select.js" type="text/javascript"></script>
 <script>
-    
     $(function(){
         $('#page1').addClass('active')
         function init_user_table(){
@@ -213,7 +212,7 @@
                                 }
                                 
                             },
-                            'json',
+                            'json'
                         )
                     })   
                     $('.user_item').click(function(){
@@ -297,7 +296,7 @@
                         )
                     })
                 },
-                'json',
+                'json'
             )
         }
         $('.add_user_button').click(function(){
@@ -328,6 +327,7 @@
                     success:function(data){
                         if(data.return_code=='SUCCESS'){
                             init_user_table()
+                            $('#add_user_modal').modal('hide')
                         }else{
                             $('#return_msg_box p').text(data.return_msg)
                             $('#return_msg_box').modal()
@@ -356,7 +356,7 @@
                         $('#return_msg_box').modal()
                     }
                 },
-                'json',
+                'json'
             )
         })
 
@@ -381,7 +381,7 @@
                         }
                     })
                 },
-                'json',
+                'json'
             )
             
         }

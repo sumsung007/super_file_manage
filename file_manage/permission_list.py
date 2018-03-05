@@ -39,7 +39,15 @@ perm_dict = {
         [],
         {},
     ],
-    "file_manage_show_index":[
+    "request_user_list":[
+        [
+            'request_user_list',
+        ],
+        ['GET',],
+        [],
+        {},
+    ],
+    "file_manage/show_index":[
         [
             'index',
             'request_file_tree',
@@ -49,7 +57,7 @@ perm_dict = {
         [],
         {},
     ],
-    'file_manage_create_dir':[
+    'file_manage/create_dir':[
         [
             'create_dir',
         ],
@@ -57,7 +65,7 @@ perm_dict = {
         [],
         {},
     ],
-    "file_manage_rename_dir":[
+    "file_manage/rename_dir":[
         [
             'rename_dir',
         ],
@@ -65,7 +73,7 @@ perm_dict = {
         [],
         {},
     ],
-    "file_manage_delete_dir":[
+    "file_manage/delete_dir":[
         [
             'delete_dir',
         ],
@@ -73,7 +81,7 @@ perm_dict = {
         [],
         {},
     ],
-    "file_manage_add_files":[
+    "file_manage/add_files":[
         [
             'add_files',
         ],
@@ -81,7 +89,7 @@ perm_dict = {
         [],
         {},
     ],
-    "file_manage_mv_dir":[
+    "file_manage/mv_dir":[
         [
             'mv_dir',
         ],
