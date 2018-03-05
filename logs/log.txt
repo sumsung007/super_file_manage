@@ -1,0 +1,264 @@
+CRITICAL 2018-03-05 16:43:49,719 middleware 12180 14364 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 566, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 530, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 432, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.IntegrityError: 1062 (23000): Duplicate entry '3-27' for key 'auth_user_user_permissions_user_id_permission_id_14a6b632_uniq'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\check_per.py", line 78, in inner
+    return func(*args, **kwargs)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 362, in update_user
+    user_obj.user_permissions.set(per_id_list)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\fields\related_descriptors.py", line 1007, in set
+    self.add(*new_objs)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\fields\related_descriptors.py", line 934, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\fields\related_descriptors.py", line 1103, in _add_items
+    for obj_id in new_ids
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 443, in bulk_create
+    ids = self._batched_insert(objs_without_pk, fields, batch_size)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1099, in _batched_insert
+    self._insert(item, fields=fields, using=self.db)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 182, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 566, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 530, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 432, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.IntegrityError: Duplicate entry '3-27' for key 'auth_user_user_permissions_user_id_permission_id_14a6b632_uniq'
+
+
+request full path: b'/file_manage/api/update_user'
+}}}
+CRITICAL 2018-03-05 16:43:52,158 middleware 12180 3768 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 566, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 530, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 432, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.IntegrityError: 1062 (23000): Duplicate entry '3-28' for key 'auth_user_user_permissions_user_id_permission_id_14a6b632_uniq'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\check_per.py", line 78, in inner
+    return func(*args, **kwargs)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 362, in update_user
+    user_obj.user_permissions.set(per_id_list)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\fields\related_descriptors.py", line 1007, in set
+    self.add(*new_objs)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\fields\related_descriptors.py", line 934, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\fields\related_descriptors.py", line 1103, in _add_items
+    for obj_id in new_ids
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 443, in bulk_create
+    ids = self._batched_insert(objs_without_pk, fields, batch_size)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1099, in _batched_insert
+    self._insert(item, fields=fields, using=self.db)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 182, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 566, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 530, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 432, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.IntegrityError: Duplicate entry '3-28' for key 'auth_user_user_permissions_user_id_permission_id_14a6b632_uniq'
+
+
+request full path: b'/file_manage/api/update_user'
+}}}
+CRITICAL 2018-03-05 16:43:52,159 middleware 12180 5204 {{{
+Traceback (most recent call last):
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 566, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 530, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 432, in _handle_result
+    raise errors.get_exception(packet)
+
+mysql.connector.errors.IntegrityError: 1062 (23000): Duplicate entry '3-28' for key 'auth_user_user_permissions_user_id_permission_id_14a6b632_uniq'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\check_per.py", line 78, in inner
+    return func(*args, **kwargs)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+
+  File "D:\mycode\UBOX_MEDIA_ASSET\trunk\file_manage\views_api.py", line 362, in update_user
+    user_obj.user_permissions.set(per_id_list)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\fields\related_descriptors.py", line 1007, in set
+    self.add(*new_objs)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\fields\related_descriptors.py", line 934, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\fields\related_descriptors.py", line 1103, in _add_items
+    for obj_id in new_ids
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 443, in bulk_create
+    ids = self._batched_insert(objs_without_pk, fields, batch_size)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1099, in _batched_insert
+    self._insert(item, fields=fields, using=self.db)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 226, in execute
+    return self._execute_wrapper(self.cursor.execute, query, new_args)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 182, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\django-1.11.8-py3.6.egg\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\django\base.py", line 176, in _execute_wrapper
+    return method(query, args)
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\cursor.py", line 566, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 530, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+
+  File "C:\Users\Cris\AppData\Local\Programs\Python\Python36\lib\site-packages\mysql\connector\connection.py", line 432, in _handle_result
+    raise errors.get_exception(packet)
+
+django.db.utils.IntegrityError: Duplicate entry '3-28' for key 'auth_user_user_permissions_user_id_permission_id_14a6b632_uniq'
+
+
+request full path: b'/file_manage/api/update_user'
+}}}
